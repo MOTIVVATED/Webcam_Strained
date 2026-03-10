@@ -1,7 +1,8 @@
-using UnityEngine;
-using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class ResultsUI : MonoBehaviour
 {
@@ -10,6 +11,13 @@ public class ResultsUI : MonoBehaviour
 
     void OnEnable()
     {
+        StartCoroutine(WaitAndRefresh());
+    }
+
+    private IEnumerator WaitAndRefresh()
+    {
+        // Wait a frame to ensure GameResultsManager has saved the latest result
+        yield return new WaitUntil(() => GameResultsManager.Instance != null);
         RefreshUI();
     }
 
@@ -34,9 +42,9 @@ public class ResultsUI : MonoBehaviour
         for (int i = results.Count - 1; i >= start; i--)
         {
             var r = results[i];
-            sb.AppendLine($"{r.dateTime}] Score: {r.score}" +
-                        $"Caught: {r.itemsCaught} Dodged: {r.itemsDodged}" +
-                        $"Time: {r.timeSurvived:F1}s"); // last two strings I'll delete later :)
+            sb.AppendLine($"{r.dateTime}] Score: {r.score}"); 
+                        //+$"Caught: {r.itemsCaught} Dodged: {r.itemsDodged}" +
+                        //$"Time: {r.timeSurvived:F1}s"); // last two strings I'll delete later :)
         }
         historyText.text = sb.ToString();
     }

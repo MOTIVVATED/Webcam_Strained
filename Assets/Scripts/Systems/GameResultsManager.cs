@@ -20,14 +20,17 @@ public class GameResultsManager : MonoBehaviour
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
+
+        transform.SetParent(null); // Detach from any parent to ensure it persists across scenes
         DontDestroyOnLoad(gameObject);
 
         _savePath = Path.Combine(Application.persistentDataPath, "game_results.json");
         Load();
     }
-    public void SaveResult(int score, int itemsCaught, int itemsDodged, float timeSurvived)
+
+    public void SaveResult(int score)
     {
-        var result = new GameResult(score, itemsCaught, itemsDodged, timeSurvived);
+        var result = new GameResult(score);
         _data.results.Add(result);
         Save();
         Debug.Log($"Result saved: Score ={score}, Date={result.dateTime}");

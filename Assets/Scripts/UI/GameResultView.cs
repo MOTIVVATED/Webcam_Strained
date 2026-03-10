@@ -27,6 +27,13 @@ public class GameResultView : MonoBehaviour
     }
     private void ShowWin(int total)
     {
+        GameResultsManager.Instance.SaveResult(
+            score: total
+            //itemsCaught: 0, // I'll add this later
+            //itemsDodged: 0, // and this too
+            //timeSurvived: 0f // and this too
+        );
+
         resultText.text = $"W W! \nтотал: {total}tk";
 
         resultText.gameObject.SetActive(true);
