@@ -9,7 +9,10 @@ public class ResultsUI : MonoBehaviour
     [SerializeField] private Text historyText; // Assign a UI Text component in the Inspector
     [SerializeField] private Text bestScoreText; // Assign another UI Text element
 
-    void OnEnable()
+  [Header("Root")]
+  [SerializeField] private GameObject panelRoot;
+
+  void OnEnable()
     {
         StartCoroutine(WaitAndRefresh());
     }
@@ -27,7 +30,7 @@ public class ResultsUI : MonoBehaviour
         var best = GameResultsManager.Instance.GetBestScore();
 
         bestScoreText.text = best != null
-            ? $"Best Score: {best.score} ({best.dateTime})"
+            ? $"Best Score: {best.score} \n{best.dateTime}"
             : "No games played yet.";
 
         if (results.Count == 0)
@@ -42,10 +45,18 @@ public class ResultsUI : MonoBehaviour
         for (int i = results.Count - 1; i >= start; i--)
         {
             var r = results[i];
-            sb.AppendLine($"{r.dateTime}] Score: {r.score}"); 
+            sb.AppendLine($"Score: {r.score}    {r.dateTime}"); 
                         //+$"Caught: {r.itemsCaught} Dodged: {r.itemsDodged}" +
                         //$"Time: {r.timeSurvived:F1}s"); // last two strings I'll delete later :)
         }
         historyText.text = sb.ToString();
     }
+  public void Open()
+  {
+    panelRoot.SetActive(true);
+  }
+  public void Close()
+  {
+    panelRoot.SetActive(false);
+  }
 }
