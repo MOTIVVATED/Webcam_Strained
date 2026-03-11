@@ -3333,7 +3333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bb62cfc20df5d4689f62a73f890ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameDuration: 60
+  gameDuration: 140
   initialTimeScale: 0.6
   timeScaleIncrement: 0.1
   maxTimeScale: 1.4
@@ -7170,6 +7170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResultsUI
   historyText: {fileID: 37834519}
   bestScoreText: {fileID: 2123847120}
+  panelRoot: {fileID: 0}
 --- !u!1 &2051319534
 GameObject:
   m_ObjectHideFlags: 0
