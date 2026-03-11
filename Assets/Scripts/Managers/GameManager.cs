@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public event Action<int> OnWin;
-    public event Action OnLose;
+    public event Action<int> OnLose;
 
     public event Action OnGameStarted;
     public event Action OnGameEnded;
@@ -86,10 +86,10 @@ public class GameManager : MonoBehaviour
 
             OnTimeChanged?.Invoke(timer, gameDuration);
             
-            WinGame();
+            WinGame(timer);
         }
     }
-    private void WinGame()
+    private void WinGame(float timer)
     {
         if (state != GameState.playing) return;
 
@@ -120,7 +120,10 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("the tilt level is max! you lost! 8===D");
 
-        OnLose?.Invoke();
+        int total = ScoreManager.Instance != null
+            ? ScoreManager.Instance.Total : 0;
+
+        OnLose?.Invoke(total);
     }
     public void RestartGame()
     {

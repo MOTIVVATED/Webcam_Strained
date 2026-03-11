@@ -40,9 +40,9 @@ public class GameResultView : MonoBehaviour
 
         restartLabels.SetActive(true);
     }
-    private void ShowLose()
+    private void ShowLose(int total)
     {
-        resultText.text = "ÒÈËÜÒ!";
+        resultText.text = $"ÒÈËÜÒ! \nòîòïë: {total}tk";
 
         resultText.gameObject.SetActive(true);
 

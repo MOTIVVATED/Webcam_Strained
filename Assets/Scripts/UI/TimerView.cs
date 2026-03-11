@@ -7,6 +7,8 @@ public class TimerView : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private int seconsdInHour = 20;
 
+    public float SeconsdInHour => seconsdInHour;
+
     private void Start()
     {
         StartCoroutine(Init());
