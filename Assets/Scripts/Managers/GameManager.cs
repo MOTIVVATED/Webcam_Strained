@@ -6,8 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public event Action<int> OnWin;
-    public event Action<int> OnLose;
+    public event Action<int, float, float> OnWin;
+    public event Action<int, float, float> OnLose;
 
     public event Action OnGameStarted;
     public event Action OnGameEnded;
@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
         // adding results to the total score, so it can be displayed in the end screen
         GameResultsManager.Instance.SaveResult(total);
 
-        OnWin?.Invoke(total);
+        OnWin?.Invoke(total, timer, gameDuration);
     }
     private void LoseGame()
     {
@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
         int total = ScoreManager.Instance != null
             ? ScoreManager.Instance.Total : 0;
 
-        OnLose?.Invoke(total);
+        OnLose?.Invoke(total, timer, gameDuration);
     }
     public void RestartGame()
     {

@@ -1,17 +1,36 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TimerView : MonoBehaviour
 {
-    [SerializeField] private TMP_Text timerText;
-    [SerializeField] private int seconsdInHour = 20;
+    public static TimerView Instance { get; private set; }
 
-    public float SeconsdInHour => seconsdInHour;
+    [SerializeField] private TMP_Text timerText;
+    [SerializeField] private int secondsInHour = 20;
+    
+    public float SecondsInHour => secondsInHour;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
 
     private void Start()
     {
         StartCoroutine(Init());
+
+        if (secondsInHour == 0)
+        {
+            Debug.LogWarning("Seconds in hour is set to 0. Defaulting to 20.");
+            secondsInHour = 20;
+        }
     }
     private IEnumerator Init()
     {
@@ -36,8 +55,8 @@ public class TimerView : MonoBehaviour
 
     private void UpdateTimer(float elapsed, float duration)
     {
-        int e = Mathf.FloorToInt(elapsed)/seconsdInHour;
-        int d = Mathf.FloorToInt(duration)/seconsdInHour;
+        int e = Mathf.FloorToInt(elapsed)/secondsInHour;
+        int d = Mathf.FloorToInt(duration)/secondsInHour;
         timerText.text = $"{e}/{d}h";
     }
 }

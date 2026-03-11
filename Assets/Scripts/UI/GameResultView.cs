@@ -25,7 +25,7 @@ public class GameResultView : MonoBehaviour
         
         GameManager.Instance.OnLose -= ShowLose;
     }
-    private void ShowWin(int total)
+    private void ShowWin(int total, float timer, float duration)
     {
         GameResultsManager.Instance.SaveResult(
             score: total
@@ -34,15 +34,24 @@ public class GameResultView : MonoBehaviour
             //timeSurvived: 0f // and this too
         );
 
-        resultText.text = $"W W! \nÚÓÚ‡Î: {total}tk";
+        int t = (int)(timer / TimerView.Instance.SecondsInHour);
+        int d = (int)(duration / TimerView.Instance.SecondsInHour);
+
+        resultText.text = 
+            $"W W! \ntotal: {total}tk | stream time: {t}/{d}h";
 
         resultText.gameObject.SetActive(true);
 
         restartLabels.SetActive(true);
     }
-    private void ShowLose(int total)
-    {
-        resultText.text = $"“»À‹“! \nÚÓÚÔÎ: {total}tk";
+    private void ShowLose(int total, float timer, float duration)
+    {   
+        
+        int t = (int)(timer/ TimerView.Instance.SecondsInHour);
+        int d = (int)(duration/ TimerView.Instance.SecondsInHour);
+
+        resultText.text = 
+            $"“»À‹“! \ntotal: {total}tk | stream time: {t}/{d}h";
 
         resultText.gameObject.SetActive(true);
 
