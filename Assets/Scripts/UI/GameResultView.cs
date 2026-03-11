@@ -27,12 +27,7 @@ public class GameResultView : MonoBehaviour
     }
     private void ShowWin(int total, float timer, float duration)
     {
-        GameResultsManager.Instance.SaveResult(
-            score: total
-            //itemsCaught: 0, // I'll add this later
-            //itemsDodged: 0, // and this too
-            //timeSurvived: 0f // and this too
-        );
+        GameResultsManager.Instance.SaveResult(score: total);
 
         int t = (int)(timer / TimerView.Instance.SecondsInHour);
         int d = (int)(duration / TimerView.Instance.SecondsInHour);

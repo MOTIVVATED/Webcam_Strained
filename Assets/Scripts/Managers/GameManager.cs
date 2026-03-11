@@ -102,10 +102,6 @@ public class GameManager : MonoBehaviour
 
         int total = ScoreManager.Instance != null 
             ? ScoreManager.Instance.Total : 0;
-      
-
-        // adding results to the total score, so it can be displayed in the end screen
-        GameResultsManager.Instance.SaveResult(total);
 
         OnWin?.Invoke(total, timer, gameDuration);
     }
