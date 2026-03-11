@@ -20,6 +20,7 @@
  *  -player save profiles to keep progression
  *  -different models = different game presets
  *  -laser beams and animation for smashing objects ;3
+ *  -refactoring, cleaning and polishing code
  * TOMOROW:
  * idk for now, I think I'm gonna start with first position. Have a sweet dreams dear journal ;*
  */
