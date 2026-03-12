@@ -13,6 +13,9 @@
  *  to catch all objects perfectly if you try hard enough. I made it using out word transmitting the x position of the object
  *  to the next one.
  *  I feel so dump but at the same time, I'm proud of myself, cuz I did it by myself. If you gonna be dump, you gotta be tough...
+ *  
+ *  TOMORROW:
+ *  I need to make it work for valuable objects(15-111).
 
  *    11.03.2026
  * I finished the feature of saving game results and showing them in the UI. I also added a "best score" display. 
