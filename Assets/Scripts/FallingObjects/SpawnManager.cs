@@ -18,7 +18,8 @@ public class SpawnManager : MonoBehaviour
 
     [Header("Spawn position")]
     [SerializeField] private Transform spawnPoint;
-    [SerializeField] private float minX, maxX;
+  [SerializeField] private int minX, maxX;
+
 
   // must be in range of (maxX-minX)/2 to avoid objects spawning outside of the limits
   [SerializeField] private int spawnShiftX = 1;
@@ -70,56 +71,34 @@ public class SpawnManager : MonoBehaviour
 
     private IEnumerator SpawnRuleLoop(SpawnRule rule)
     {
-      int x = (int)Random.Range(minX, maxX);
 
       while (true)
-        {
-            float delay = Random.Range(rule.delayMin, rule.delayMax);
-            yield return new WaitForSeconds(delay);
+      {
+        float delay = Random.Range(rule.delayMin, rule.delayMax);
+        yield return new WaitForSeconds(delay);
 
-            if (Time.time < nextAllowedSpawnTime)
-                continue;
+        if (Time.time < nextAllowedSpawnTime)
+            continue;
 
-            Spawn(rule.prefab, ref x);
-
-            nextAllowedSpawnTime = Time.time + minGlobalSpawnInterval;
-        }
+        Spawn(rule.prefab, out int inheritedX);
+        nextAllowedSpawnTime = Time.time + minGlobalSpawnInterval;
+      }
     }
-    private void Spawn(FallingObject prefab, ref int x)
+    private void Spawn(FallingObject prefab, out int inheritedX )
     {
-        FallingObject falling = Instantiate(
+      FallingObject falling = Instantiate(
             prefab, spawnPoint.position, Quaternion.identity);
 
-      ref int randomX = ref x;
+    // this makes each new object spawn around the X position of the previous one
+      inheritedX = Random.Range(minX, maxX);
+      
+      int randomX = Random.Range(inheritedX-spawnShiftX, inheritedX+spawnShiftX);
 
-      Debug.Log($"Initial X={randomX}");
-
-      int random = Random.Range(1488, 1490);
-        Debug.Log($"random={random}");
-      if (random == 1488)
-      {
-        randomX += spawnShiftX;
-        Debug.Log($"X after increase={randomX}");
-      }
-      else 
-      { 
-        randomX -= spawnShiftX;
-        Debug.Log($"X after decrease={randomX}"); 
-      }
-
-      if (randomX < minX)
-      {
-        randomX += (spawnShiftX * 3);
-        Debug.Log($"X after minX correction={randomX}");
-      }
-      if (randomX > maxX)
-      {
-        randomX -= (spawnShiftX * 3);
-        Debug.Log($"X after maxX correction={randomX}");
-      }
+      if (randomX < minX) randomX += spawnShiftX*3;
+      if (randomX > maxX) randomX -= spawnShiftX*3;
+    //===============================================
 
       falling.transform.position = new Vector3(randomX, spawnPoint.position.y, 0f);
-      Debug.Log($"Spawned {falling.name} at x={randomX}");
 
 
 
@@ -136,6 +115,6 @@ public class SpawnManager : MonoBehaviour
             falling.OnSmashed +=    SmashManager.Instance.HandleSmashed;
             falling.OnSmashed +=    TiltManager.Instance.HandleSmashed;
       }
-      x = randomX;
+      inheritedX = randomX;
     }
 }
