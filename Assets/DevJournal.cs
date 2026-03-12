@@ -7,6 +7,12 @@
  *  
  *  I spent half of the day trying to change algorithm of spawning objects.
  *  I got a bug that I'm still trying to fix. And I will.
+ *  
+ *  Fuck это просто пиздачес лютый, я того всё ебал. I spent whole day making a new logick of Spawn in SpawnManager.
+ *  It finally works properly, each new object spawns around the previous one. It turns off "bad luck", and makes it possible
+ *  to catch all objects perfectly if you try hard enough. I made it using out word transmitting the x position of the object
+ *  to the next one.
+ *  I feel so dump but at the same time, I'm proud of myself, cuz I did it by myself. If you gonna be dump, you gotta be tough...
 
  *    11.03.2026
  * I finished the feature of saving game results and showing them in the UI. I also added a "best score" display. 
