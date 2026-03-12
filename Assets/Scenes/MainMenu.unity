@@ -4966,6 +4966,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 649325908}
   minX: -10
   maxX: 10
+  spawnShiftX: 2
   minGlobalSpawnInterval: 0.02
   badSprites:
   - {fileID: 5228080354895136756, guid: 5bf37e808067a904b8e98413e198b694, type: 3}

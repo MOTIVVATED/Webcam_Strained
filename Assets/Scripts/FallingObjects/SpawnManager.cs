@@ -20,10 +20,18 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float minX, maxX;
 
+  // must be in range of (maxX-minX)/2 to avoid objects spawning outside of the limits
+  [SerializeField] private int spawnShiftX = 1;
+
     [Header("Spawn limits")]
     [SerializeField] private float minGlobalSpawnInterval = 0.5f;
+  
 
-    [SerializeField] private Sprite[] badSprites;
+
+
+
+
+  [SerializeField] private Sprite[] badSprites;
 
     [SerializeField] private bool subscribeOnEvents;
 
@@ -62,7 +70,9 @@ public class SpawnManager : MonoBehaviour
 
     private IEnumerator SpawnRuleLoop(SpawnRule rule)
     {
-        while (true)
+      int x = (int)Random.Range(minX, maxX);
+
+      while (true)
         {
             float delay = Random.Range(rule.delayMin, rule.delayMax);
             yield return new WaitForSeconds(delay);
@@ -70,32 +80,62 @@ public class SpawnManager : MonoBehaviour
             if (Time.time < nextAllowedSpawnTime)
                 continue;
 
-            Spawn(rule.prefab);
+            Spawn(rule.prefab, ref x);
 
             nextAllowedSpawnTime = Time.time + minGlobalSpawnInterval;
         }
     }
-    private void Spawn(FallingObject prefab)
+    private void Spawn(FallingObject prefab, ref int x)
     {
         FallingObject falling = Instantiate(
             prefab, spawnPoint.position, Quaternion.identity);
 
-        float randomX = Random.Range(minX, maxX);
+      ref int randomX = ref x;
 
-        falling.transform.position = new Vector3(randomX, spawnPoint.position.y, 0f);
+      Debug.Log($"Initial X={randomX}");
 
-        if (falling.ObjectType == FallingObjectType.Bad
+      int random = Random.Range(1488, 1490);
+        Debug.Log($"random={random}");
+      if (random == 1488)
+      {
+        randomX += spawnShiftX;
+        Debug.Log($"X after increase={randomX}");
+      }
+      else 
+      { 
+        randomX -= spawnShiftX;
+        Debug.Log($"X after decrease={randomX}"); 
+      }
+
+      if (randomX < minX)
+      {
+        randomX += (spawnShiftX * 3);
+        Debug.Log($"X after minX correction={randomX}");
+      }
+      if (randomX > maxX)
+      {
+        randomX -= (spawnShiftX * 3);
+        Debug.Log($"X after maxX correction={randomX}");
+      }
+
+      falling.transform.position = new Vector3(randomX, spawnPoint.position.y, 0f);
+      Debug.Log($"Spawned {falling.name} at x={randomX}");
+
+
+
+      if (falling.ObjectType == FallingObjectType.Bad
             && badSprites != null && badSprites.Length > 0)
-        {
+      {
             falling.SetSprite(badSprites[Random.Range(0, badSprites.Length)]);
-        }
-        if (subscribeOnEvents)
-        {
+      }
+      if (subscribeOnEvents)
+      {
             falling.OnCollected +=  ScoreManager.Instance.HandleCollected;
             falling.OnCollected +=  TiltManager.Instance.HandleCollected;
             falling.OnMissed +=     TiltManager.Instance.HandleMissed;
             falling.OnSmashed +=    SmashManager.Instance.HandleSmashed;
             falling.OnSmashed +=    TiltManager.Instance.HandleSmashed;
-        }
+      }
+      x = randomX;
     }
 }

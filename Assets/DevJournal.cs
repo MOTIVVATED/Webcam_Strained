@@ -1,5 +1,13 @@
 /*
  * == DEV JOURNAL ==
+ *    12.03.2026
+ *  Today I want to optimize my FallingObjectTypes. Make this enum byte instead of int
+ *  add some new types of objects, like powerups and so on. 
+ *  now I think it's better to make two different enums: for tokens and for the rest of the objects.
+ *  
+ *  I spent half of the day trying to change algorithm of spawning objects.
+ *  I got a bug that I'm still trying to fix. And I will.
+
  *    11.03.2026
  * I finished the feature of saving game results and showing them in the UI. I also added a "best score" display. 
  * The results are saved in a JSON file in the persistent data path, and they are loaded when the game starts.
