@@ -12,6 +12,7 @@ public class FallingObject : MonoBehaviour
     public FallingObjectType ObjectType => objectType;
 
     public event Action<FallingObjectType> OnCollected;
+    
     public event Action<FallingObjectType> OnMissed;
 
     public event Action<FallingObjectType> OnSmashed;

@@ -9,13 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4098018789883683512}
-  - component: {fileID: 8535640334851005995}
-  - component: {fileID: -6076102013680566676}
-  - component: {fileID: 1078270848121141137}
+  - component: {fileID: 6843519116483934889}
+  - component: {fileID: 6469173313298929208}
   - component: {fileID: 5304136060711314168}
-  m_Layer: 0
-  m_Name: coin1FallingObject
-  m_TagString: Untagged
+  - component: {fileID: 1078270848121141137}
+  - component: {fileID: -5759064002449892485}
+  m_Layer: 7
+  m_Name: Webcam
+  m_TagString: bad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,7 +36,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &8535640334851005995
+--- !u!50 &6843519116483934889
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -62,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &-6076102013680566676
-CircleCollider2D:
+--- !u!61 &6469173313298929208
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -97,7 +98,33 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.33
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.21, y: 0.21}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.6, y: 0.6}
+  m_EdgeRadius: 0
+--- !u!114 &5304136060711314168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821583600321371621}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a6a055073c8504684d5c3ef85d7fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  objectType: 15
+  spriteRenderer: {fileID: 0}
+  fallSpeed: 2
+  destroY: -6
 --- !u!212 &1078270848121141137
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -144,8 +171,8 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -235746251
   m_SortingLayer: 2
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 4994948417755550580, guid: 8daf0adb4311b684986e68dfe9c886da, type: 3}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 6328621755626483952, guid: e4b967524752c394596695e165d3384e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -156,7 +183,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5304136060711314168
+--- !u!114 &-5759064002449892485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,10 +192,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5821583600321371621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a6a055073c8504684d5c3ef85d7fe1, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c48e6d8a51f99c4b994a3015eb70858, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  objectType: 2
-  spriteRenderer: {fileID: 0}
-  fallSpeed: 7
+  m_EditorClassIdentifier: Assembly-CSharp::DistractionObject
+  objectType: 15
+  spriteRenderer: {fileID: 1078270848121141137}
+  fallSpeed: 3
   destroY: -6
+  distractionImage: {fileID: 7806313799611546919, guid: 96f4777673dfb13468fca950c5bd0d50, type: 3}
