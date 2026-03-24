@@ -1,5 +1,12 @@
 /*
  * == DEV JOURNAL ==
+ * 
+ *		24.03.2026
+ *	It scares me, when I see how often I get back to work =( I was sick...
+ *	I've already made some new sprites this morning for new objects: 222, 555, 666, 1111.
+ *	I hope it's not gonna be too hard to implement them. This is what I'm gonna do today.
+ *	Then I'll continue with powerups. I'm still not finished with the distraction mechanic.
+ * 
  *    12.03.2026
  *  Today I want to optimize my FallingObjectTypes. Make this enum byte instead of int
  *  add some new types of objects, like powerups and so on. 
