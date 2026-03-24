@@ -2338,7 +2338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71ee944630c34e47aa786632409ed8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 12
+  speed: 8
   minX: -4
   maxX: 4
 --- !u!114 &437493379
@@ -3583,10 +3583,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bb62cfc20df5d4689f62a73f890ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameDuration: 140
-  initialTimeScale: 0.8
-  timeScaleIncrement: 0.1
-  maxTimeScale: 2
+  gameDuration: 210
+  initialTimeScale: 0.7
+  timeScaleIncrement: 0.02
+  maxTimeScale: 2.4
 --- !u!4 &770664211
 Transform:
   m_ObjectHideFlags: 0
@@ -5276,11 +5276,27 @@ MonoBehaviour:
     delayMin: 5
     delayMax: 10
     enabled: 1
+  - prefab: {fileID: 3247108239030646150, guid: 571b84797a10e744e9c398b323209e66, type: 3}
+    delayMin: 8
+    delayMax: 16
+    enabled: 1
+  - prefab: {fileID: 3247108239030646150, guid: 0bda84e6eb200dc4f9f749e502d51015, type: 3}
+    delayMin: 10
+    delayMax: 20
+    enabled: 1
+  - prefab: {fileID: 3247108239030646150, guid: bf71477936f0fdd47b86cc5bb6cde0e4, type: 3}
+    delayMin: 13
+    delayMax: 26
+    enabled: 1
+  - prefab: {fileID: 3247108239030646150, guid: 66f5fb3862f4a8947895caa542aba599, type: 3}
+    delayMin: 22
+    delayMax: 44
+    enabled: 1
   spawnPoint: {fileID: 311284371}
   minX: -4
   maxX: 4
   spawnShiftX: 2
-  minGlobalSpawnInterval: 0.01
+  minGlobalSpawnInterval: 0.3
   badSprites:
   - {fileID: 5228080354895136756, guid: 5bf37e808067a904b8e98413e198b694, type: 3}
   - {fileID: -6738593726584075344, guid: 6c821be0f9671ab488bebbae23c74f54, type: 3}
@@ -6054,10 +6070,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763530969184b244c913c546340e2396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
-  tk1: 1
   tk15: 15
   tk25: 25
   tk111: 111
+  tk222: 222
+  tk555: 555
+  tk666: 666
+  tk999: 1111
   player: {fileID: 437493377}
   floatingTextSpawner: {fileID: 770664212}
 --- !u!4 &1437506033
@@ -6620,6 +6639,7 @@ MonoBehaviour:
   ding: {fileID: 8300000, guid: 41c967802af2a6743a053c2ab6856fd4, type: 3}
   tip: {fileID: 8300000, guid: e062935e90cafad46a509c6ece48e844, type: 3}
   medium: {fileID: 8300000, guid: 6124b999dbb05f14ab759173d81b0b29, type: 3}
+  large: {fileID: 8300000, guid: a97fcba1e12212b4bab046fb11222a3d, type: 3}
   badSound: {fileID: 8300000, guid: 94dc25281b34ac64da0bb783846e0b30, type: 3}
 --- !u!4 &1905031931
 Transform:

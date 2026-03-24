@@ -6,6 +6,14 @@
  *	I've already made some new sprites this morning for new objects: 222, 555, 666, 1111.
  *	I hope it's not gonna be too hard to implement them. This is what I'm gonna do today.
  *	Then I'll continue with powerups. I'm still not finished with the distraction mechanic.
+ *	
+ *	I made new sprites for the new objects, and prefabs for them: 222 , 555, 666, 1111.
+ *	I made changes in code so it works properly now.
+ *	I also find a better balance of fallspeed and spawn rate.
+ *	I changed the distribution of sounds for sound feedback, and added a new one for the biggest object.
+ *	I got an idea to of a new powerup, which will slow down the time.
+ *	It's going to roll back the timescale to give a player a chance to handle till the end.
+ *	
  * 
  *    12.03.2026
  *  Today I want to optimize my FallingObjectTypes. Make this enum byte instead of int

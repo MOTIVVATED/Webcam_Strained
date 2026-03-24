@@ -8,7 +8,7 @@ public class TimerView : MonoBehaviour
     public static TimerView Instance { get; private set; }
 
     [SerializeField] private TMP_Text timerText;
-    [SerializeField] private int secondsInHour = 20;
+    [SerializeField] private int secondsInHour = 30;
     
     public float SecondsInHour => secondsInHour;
 
@@ -28,7 +28,7 @@ public class TimerView : MonoBehaviour
 
         if (secondsInHour == 0)
         {
-            Debug.LogWarning("Seconds in hour is set to 0. Defaulting to 20.");
+            Debug.LogWarning("Seconds in hour is set to 0. Defaulting to 30.");
             secondsInHour = 20;
         }
     }
