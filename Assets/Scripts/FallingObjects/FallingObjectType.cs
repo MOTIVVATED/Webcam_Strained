@@ -11,14 +11,15 @@ public enum FallingObjectType
 
 
     type_222tk,
-    type_333tk,
-    type_444tk,
     type_555tk,
     type_666tk,
+    type_1111tk,
+
+    type_333tk,
+    type_444tk,
     type_777tk,
     type_888tk,
     type_999tk,
-    type_1111tk,
 
     webcam,
     like,
