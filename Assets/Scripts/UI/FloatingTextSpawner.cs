@@ -39,7 +39,8 @@ public class FloatingTextSpawner : MonoBehaviour
 
 		switch (type)
 		{
-			case FallingObjectType.Good:
+			case FallingObjectType.reduser:
+				instance.Setup(FallingObjectType.reduser);
 				break;
 			case FallingObjectType.Bad:
 				instance.Setup(amount, FallingObjectType.Bad);

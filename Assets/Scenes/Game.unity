@@ -526,6 +526,53 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &68666908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 68666909}
+  - component: {fileID: 68666910}
+  m_Layer: 0
+  m_Name: Reducer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &68666909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68666908}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 342.44208, y: 51.967087, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1727806646}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &68666910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68666908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1671a441ce57b734b841c12a61ee4db8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReducerManager
+  player: {fileID: 437493377}
+  timeScaleReduction: 0.8
+  floatingTextSpawner: {fileID: 770664212}
 --- !u!1 &98618102
 GameObject:
   m_ObjectHideFlags: 0
@@ -3586,7 +3633,7 @@ MonoBehaviour:
   gameDuration: 420
   initialTimeScale: 0.7
   timeScaleIncrement: 0.02
-  maxTimeScale: 2.4
+  maxTimeScale: 2.2
 --- !u!4 &770664211
 Transform:
   m_ObjectHideFlags: 0
@@ -5253,9 +5300,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectSpawner
   rules:
   - prefab: {fileID: 5304136060711314168, guid: 32513998c28c795438935908415d1c74, type: 3}
-    delayMin: 0.1
-    delayMax: 2
-    enabled: 0
+    delayMin: 45
+    delayMax: 75
+    enabled: 1
   - prefab: {fileID: 6750221046696986500, guid: 34b9c453299c6be4fb34751487155854, type: 3}
     delayMin: 0.1
     delayMax: 3
@@ -6375,6 +6422,7 @@ Transform:
   - {fileID: 257669060}
   - {fileID: 1033286188}
   - {fileID: 407717255}
+  - {fileID: 68666909}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1818048197

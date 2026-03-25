@@ -22,9 +22,13 @@ public class FloatingScoreText : MonoBehaviour
 		switch (type)
 		{
 			case FallingObjectType.Bad:
-			text.text = "BAN";
-			text.color = Color.green;
-			break;
+				text.text = "BAN";
+				text.color = Color.green;
+				break;
+			case FallingObjectType.reduser:
+				text.text = "SLOW";
+				text.color = Color.green;
+				break;
 		}
 	}
 	public void Setup(int amount, FallingObjectType type)

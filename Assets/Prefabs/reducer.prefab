@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1078270848121141137}
   - component: {fileID: 5304136060711314168}
   m_Layer: 0
-  m_Name: coin1FallingObject
+  m_Name: reducer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 4994948417755550580, guid: 8daf0adb4311b684986e68dfe9c886da, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5849056, g: 0.037809603, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a6a055073c8504684d5c3ef85d7fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectType: 2
+  objectType: 18
   spriteRenderer: {fileID: 0}
-  fallSpeed: 7
+  fallSpeed: 1
   destroY: -6

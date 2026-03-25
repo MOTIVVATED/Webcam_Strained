@@ -1,5 +1,14 @@
 /*
  * == DEV JOURNAL ==
+ *		
+ *		25.03.2026
+ *	I made a new type of object that reduces time scale when collected.
+ *	I made a script for it complitely on my own =)
+ *	I fixed some bugs with missing new objects, that I added yesterday.
+ *	Now it works properly.
+ *	I added one new soundtrack for a game scene.
+ *	I made an animated model sprite in Aseprite.
+ *	Some day I need do implement it in the game.
  * 
  *		24.03.2026
  *	It scares me, when I see how often I get back to work =( I was sick...

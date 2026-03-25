@@ -24,4 +24,6 @@ public enum FallingObjectType
     webcam,
     like,
     dislike,
+
+    reduser,
 }

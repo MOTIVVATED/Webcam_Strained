@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   objectType: 1
   spriteRenderer: {fileID: 0}
-  fallSpeed: 2
+  fallSpeed: 1
   destroY: -6
 --- !u!212 &1078270848121141137
 SpriteRenderer:
