@@ -52,12 +52,6 @@ public class ScoreManager : MonoBehaviour
   {
     switch (type)
     {
-      //case FallingObjectType.type_1tk:
-      //AddScore(tk1);
-      //OnTK_1_15_Collected?.Invoke();
-      //floatingTextSpawner.Spawn(tk1, player.transform.position, type);
-      //break;
-
       case FallingObjectType.type_15tk:
         AddScore(tk15);
         OnTK_1_15_Collected?.Invoke();

@@ -3583,7 +3583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bb62cfc20df5d4689f62a73f890ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameDuration: 210
+  gameDuration: 420
   initialTimeScale: 0.7
   timeScaleIncrement: 0.02
   maxTimeScale: 2.4
@@ -3957,7 +3957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimerView
   timerText: {fileID: 178911459}
-  secondsInHour: 20
+  secondsInHour: 60
 --- !u!114 &840205953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5296,7 +5296,7 @@ MonoBehaviour:
   minX: -4
   maxX: 4
   spawnShiftX: 2
-  minGlobalSpawnInterval: 0.3
+  minGlobalSpawnInterval: 0.35
   badSprites:
   - {fileID: 5228080354895136756, guid: 5bf37e808067a904b8e98413e198b694, type: 3}
   - {fileID: -6738593726584075344, guid: 6c821be0f9671ab488bebbae23c74f54, type: 3}
@@ -7692,6 +7692,7 @@ MonoBehaviour:
   parts:
   - {fileID: 8300000, guid: 8509c285f3e3936488060339c315b8a3, type: 3}
   - {fileID: 8300000, guid: 6a74b3d0871dc8445ba914faa65e671a, type: 3}
+  - {fileID: 8300000, guid: 6d1a95913d8946b45bcdfd313c35e541, type: 3}
   source: {fileID: 2051319536}
   dontRepeatSameTwice: 1
 --- !u!82 &2051319536
