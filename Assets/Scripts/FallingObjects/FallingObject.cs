@@ -3,63 +3,63 @@ using UnityEngine;
 
 public class FallingObject : MonoBehaviour
 {
-    [SerializeField] private FallingObjectType objectType;
-    [SerializeField] private SpriteRenderer spriteRenderer;
+  [SerializeField] private FallingObjectType objectType;
+  [SerializeField] private SpriteRenderer spriteRenderer;
 
-    [SerializeField] private float fallSpeed = 3f;
-    [SerializeField] private float destroY = -6f;
+  [SerializeField] private float fallSpeed = 3f;
+  [SerializeField] private float destroY = -6f;
 
-    public FallingObjectType ObjectType => objectType;
+  public FallingObjectType ObjectType => objectType;
 
-    public event Action<FallingObjectType> OnCollected;
+  public event Action<FallingObjectType> OnCollected;
     
-    public event Action<FallingObjectType> OnMissed;
+  public event Action<FallingObjectType> OnMissed;
 
-    public event Action<FallingObjectType> OnSmashed;
+  public event Action<FallingObjectType> OnSmashed;
 
-    private void Awake()
-    {
-        if (spriteRenderer == null)
-            spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+  private void Awake()
+  {
+    if (spriteRenderer == null)
+    spriteRenderer = GetComponent<SpriteRenderer>();
+  }
 
-    private void Reset()
-    {
-         spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-    public void SetSprite(Sprite sprite)
-    {
-        if (spriteRenderer != null && sprite != null)
-            spriteRenderer.sprite = sprite;
-    }
+  private void Reset()
+  {
+    spriteRenderer = GetComponent<SpriteRenderer>();
+  }
+  public void SetSprite(Sprite sprite)
+  {
+    if (spriteRenderer != null && sprite != null)
+    spriteRenderer.sprite = sprite;
+  }
 
-    void Update()
-    {
-        Fall();
-        CheckDestroy();
-    }
+  void Update()
+  {
+    Fall();
+    CheckDestroy();
+  }
 
-    private void Fall()
-    { 
-        transform.position += Vector3.down * fallSpeed * Time.deltaTime;
-    }
+  private void Fall()
+  { 
+    transform.position += Vector3.down * fallSpeed * Time.deltaTime;
+  }
 
-    private void CheckDestroy()
+  private void CheckDestroy()
+  {
+    if (transform.position.y <= destroY)
     {
-        if (transform.position.y <= destroY)
-        {
-            OnMissed?.Invoke(objectType);
-            Destroy(gameObject);
-        }
+      OnMissed?.Invoke(objectType);
+      Destroy(gameObject);
     }
-    public void Collect()
-    {
-        OnCollected?.Invoke(objectType);
-        Destroy(gameObject);
-    }
-    public void Smash()
-    {
-        OnSmashed?.Invoke(objectType);
-        Destroy(gameObject);
-    }
+  }
+  public void Collect()
+  {
+    OnCollected?.Invoke(objectType);
+    Destroy(gameObject);
+  }
+  public void Smash()
+  {
+    OnSmashed?.Invoke(objectType);
+    Destroy(gameObject);
+  }
 }

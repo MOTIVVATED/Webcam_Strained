@@ -13,11 +13,16 @@ public class DistractionOverlay : MonoBehaviour
 		overlayPanel.SetActive(false);
 	}
 
-	public void Show(Sprite image)
+	public void Show()
 	{
-		overlayImage.sprite = image;
 		overlayPanel.SetActive(true);
 	}
+
+	//public void Show(Sprite image)
+	//{
+	//	overlayImage.sprite = image;
+	//	overlayPanel.SetActive(true);
+	//}
 	public void OnPlayerTap()
 	{
 		overlayPanel.SetActive(false);

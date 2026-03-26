@@ -9,7 +9,11 @@ public class ReducerManager : MonoBehaviour
 
 	[SerializeField] private float timeScaleReduction = 0.4f;
 
+	[SerializeField] private float minTimeScale = 1f;
+
 	[SerializeField] private FloatingTextSpawner floatingTextSpawner;
+
+	[SerializeField] private DistractionOverlay distractionOverlay;
 
 	private void Awake()
 	{
@@ -29,19 +33,22 @@ public class ReducerManager : MonoBehaviour
 				floatingTextSpawner.Spawn(0, player.transform.position, type);
 				Debug.Log("Time scale reduced by " + timeScaleReduction);
 				break;
+			case FallingObjectType.webcam:
+				DistractionOverlay.Instance.Show();;
+				break;
+
 		}
 	}
 	public void ReduceTimeScale(float value)
 	{ 
-		if (Time.timeScale - value >= 1f)
+		if (Time.timeScale - value >= minTimeScale)
 		{
 			Time.timeScale -= timeScaleReduction;
 			return;
 		}
 		else
 		{
-			Time.timeScale = 1f;
-			Debug.Log("Time scale cannot be reduced further. Minimum reached.");
+			Time.timeScale = minTimeScale;
 		}
 	}
 }
