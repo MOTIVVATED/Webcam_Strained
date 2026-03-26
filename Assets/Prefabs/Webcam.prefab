@@ -107,7 +107,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6, y: 0.6}
+  m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
 --- !u!212 &1078270848121141137
 SpriteRenderer:
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   objectType: 15
   spriteRenderer: {fileID: 0}
-  fallSpeed: 1
+  fallSpeed: 3
   destroY: -6
 --- !u!114 &-5759064002449892485
 MonoBehaviour:

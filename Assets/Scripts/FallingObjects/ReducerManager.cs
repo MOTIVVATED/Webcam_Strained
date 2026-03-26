@@ -34,7 +34,7 @@ public class ReducerManager : MonoBehaviour
 				Debug.Log("Time scale reduced by " + timeScaleReduction);
 				break;
 			case FallingObjectType.webcam:
-				DistractionOverlay.Instance.Show();;
+				DistractionOverlay.Instance.Show();
 				break;
 
 		}

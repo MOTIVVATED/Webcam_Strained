@@ -2,7 +2,10 @@
  * == DEV JOURNAL ==
  *		
  *		26.03.2026
- *		
+ *	I finally made a new object Webcam and a new mechanic of a popup distractive object for it.
+ *	It works but not stable for now, so I have to polish it tomorrow.
+ *	I made some some UI sprites: frame and X button.
+ *	So All I gonna do tomorrow is polishing this feature.
  *		
  *		25.03.2026
  *	I made a new type of object that reduces time scale when collected.
