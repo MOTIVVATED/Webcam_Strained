@@ -1,6 +1,9 @@
 /*
  * == DEV JOURNAL ==
  *		
+ *		26.03.2026
+ *		
+ *		
  *		25.03.2026
  *	I made a new type of object that reduces time scale when collected.
  *	I made a script for it complitely on my own =)

@@ -8,8 +8,6 @@ public enum FallingObjectType
     type_15tk,
     type_25tk,
     type_111tk,
-
-
     type_222tk,
     type_555tk,
     type_666tk,
