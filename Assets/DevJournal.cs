@@ -1,6 +1,9 @@
 /*
  * == DEV JOURNAL ==
- *		
+ *		28.03.2026
+ *	I've tried to make that shit work, but I didn't make it.
+ *	I feel so tired, but now I see the way I'm gonna make it tomorrow and that's a lot!  =)
+ *	
  *		26.03.2026
  *	I finally made a new object Webcam and a new mechanic of a popup distractive object for it.
  *	It works but not stable for now, so I have to polish it tomorrow.
