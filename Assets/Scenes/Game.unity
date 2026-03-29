@@ -7870,13 +7870,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca6b389a6d1db4844910c2b96312788e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DistractionOverlay
-  overlayPanel: {fileID: 0}
-  overlayImage: {fileID: 0}
+  popupPrefab: {fileID: 8061932430549793257, guid: 087a3da5c624a204c8d529b69d1dbb27, type: 3}
   parentCanvas: {fileID: 2005199089185424573}
-  minX: -150
-  maxX: 150
-  minY: -150
-  maxY: 150
 --- !u!224 &2005199089185424573
 RectTransform:
   m_ObjectHideFlags: 0
