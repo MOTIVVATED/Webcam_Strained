@@ -1,5 +1,8 @@
 /*
  * == DEV JOURNAL ==
+ *		29.03.2026
+ *	I'm here to make it work properly.
+ * 
  *		28.03.2026
  *	I've tried to make that shit work, but I didn't make it.
  *	I feel so tired, but now I see the way I'm gonna make it tomorrow and that's a lot!  =)
