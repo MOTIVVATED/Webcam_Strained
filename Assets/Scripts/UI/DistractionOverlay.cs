@@ -18,17 +18,6 @@ public class DistractionOverlay : MonoBehaviour
 		Instance = this;
 		overlayPanel.SetActive(false);
 	}
-
-	//public void SpawnPopUp()
-	//{
-	//	GameObject pupup = Instantiate(overlayPanel, parentCanvas);
-
-	//	float randomX = Random.Range(minX, maxX);
-	//	float randomY = Random.Range(minY, maxY);
-		
-	//	pupup.GetComponent<RectTransform>().anchoredPosition = new Vector2(randomX, randomY);
-	//}
-
 	public void Show()
 	{
 		float randomX = Random.Range(minX, maxX);
@@ -36,14 +25,6 @@ public class DistractionOverlay : MonoBehaviour
 		overlayImage.rectTransform.anchoredPosition = new Vector2(randomX, randomY);
 		overlayPanel.SetActive(true);
 	}
-
-
-
-	//public void Show(Sprite image)
-	//{
-	//	overlayImage.sprite = image;
-	//	overlayPanel.SetActive(true);
-	//}
 	public void OnPlayerTap()
 	{
 		overlayPanel.SetActive(false);
