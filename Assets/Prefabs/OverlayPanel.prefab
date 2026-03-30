@@ -536,8 +536,8 @@ RectTransform:
   - {fileID: 3268471516602429135}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -597,14 +597,6 @@ MonoBehaviour:
   possibleSprites:
   - {fileID: -4250635384730540133, guid: a44dc1d1b071bd046b4b1ad369530486, type: 3}
   - {fileID: -3273866243944548722, guid: 8bd9064e1716532408a7cd0522fbd676, type: 3}
-  possibleTexts:
-  - feetLover228
-  - VitalOK
-  - ft_fst
-  - ASSSUCKER3000
-  - kiberbuivol
-  - EzzyNik
-  - Kenshi
   minX: -200
   maxX: 200
   minY: -200

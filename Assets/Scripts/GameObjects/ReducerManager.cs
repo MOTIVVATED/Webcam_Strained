@@ -29,7 +29,7 @@ public class ReducerManager : MonoBehaviour
 		switch (type)
 		{
 			case FallingObjectType.reduser:
-				ReducerManager.Instance.ReduceTimeScale(timeScaleReduction);
+				Instance.ReduceTimeScale(timeScaleReduction);
 				floatingTextSpawner.Spawn(0, player.transform.position, type);
 				Debug.Log("Time scale reduced by " + timeScaleReduction);
 				break;

@@ -12,6 +12,14 @@
  *	That's why I got a NullReferenceException xD with sound and changing sound volume in sttings.
  *	It took just 15-20 minutes to find out where the problem is and fix it.
  *	
+ *	Besides, I made a new sprite for slow object and set it up.
+ *	I made it 32x32 but other objects are 64x64 =(
+ *	
+ *	I changed minX and maxX values in SpawnManager from -4 and 4 to -3 and 3.
+ *	It makes possible to increase the speed of a game and I think it's more fun and drive.
+ *	I deleted all old and useless prefabs.
+ *	
+ *	
  *		29.03.2026
  *	I'm here to make it work properly.
  * 
