@@ -1,5 +1,12 @@
 /*
  * == DEV JOURNAL ==
+ *		30.03.2026
+ *	New feature with distracting popup windws works and it plays fun.
+ *	Now I need:
+ *		-make it work with floating text of BAN
+ *		-implemen it in tilt manager
+ *		-for now I will disable BAD objects, I don't like the way they look like
+ * 
  *		29.03.2026
  *	I'm here to make it work properly.
  * 
