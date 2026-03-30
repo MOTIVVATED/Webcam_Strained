@@ -29,6 +29,10 @@ public class FloatingScoreText : MonoBehaviour
 				text.text = "SLOW";
 				text.color = Color.green;
 				break;
+			case FallingObjectType.webcam:
+				text.text = "BAN";
+				text.color = Color.green;
+				break;
 		}
 	}
 	public void Setup(int amount, FallingObjectType type)
@@ -36,11 +40,6 @@ public class FloatingScoreText : MonoBehaviour
 
 		switch (type)
 		{
-			//case FallingObjectType.type_1tk:
-			//    text.text = "+" + amount.ToString() + "tk";
-			//    text.color = grey;
-			//    break;
-
 			case FallingObjectType.type_15tk:
 				text.text = "+" + amount.ToString() + "tk";
 				text.color = grey;
@@ -70,6 +69,10 @@ public class FloatingScoreText : MonoBehaviour
 				text.color = darkPurple;
 				break;
 			case FallingObjectType.Bad:
+				text.text = "+" + amount.ToString() + "tilt";
+				text.color = Color.red;
+				break;
+			case FallingObjectType.webcam:
 				text.text = "+" + amount.ToString() + "tilt";
 				text.color = Color.red;
 				break;

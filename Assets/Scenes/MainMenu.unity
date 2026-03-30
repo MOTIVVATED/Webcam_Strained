@@ -2000,7 +2000,8 @@ GameObject:
   - component: {fileID: 949503322}
   - component: {fileID: 949503321}
   - component: {fileID: 949503320}
-  - component: {fileID: 949503323}
+  - component: {fileID: 949503324}
+  - component: {fileID: 949503325}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -2142,7 +2143,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &949503323
+--- !u!114 &949503324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2151,9 +2152,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 949503319}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daead88f44c0c9d4cab58c195dee6e6c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a4d5bf379b070946b50b84d773f8115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicVolumeApplier
+--- !u!114 &949503325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949503319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f2f0dafe6aea342a0f790fd996be0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::sfxVolumeApplier
 --- !u!1 &991245822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,7 +3235,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7275673, y: 0.9765625, z: 1}
+  m_LocalScale: {x: 2.0323637, y: 0.9765625, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

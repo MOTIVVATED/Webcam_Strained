@@ -7,6 +7,11 @@
  *		-implemen it in tilt manager
  *		-for now I will disable BAD objects, I don't like the way they look like
  * 
+ *	I did things above easily.
+ *	Moreover, I reordered folders and delited some useless scripts.
+ *	That's why I got a NullReferenceException xD with sound and changing sound volume in sttings.
+ *	It took just 15-20 minutes to find out where the problem is and fix it.
+ *	
  *		29.03.2026
  *	I'm here to make it work properly.
  * 

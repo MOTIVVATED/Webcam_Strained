@@ -42,6 +42,9 @@ public class FloatingTextSpawner : MonoBehaviour
 			case FallingObjectType.reduser:
 				instance.Setup(FallingObjectType.reduser);
 				break;
+			case FallingObjectType.webcam:
+				instance.Setup(amount, FallingObjectType.webcam);
+				break;
 			case FallingObjectType.Bad:
 				instance.Setup(amount, FallingObjectType.Bad);
 				break;

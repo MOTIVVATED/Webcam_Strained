@@ -42,10 +42,14 @@ public class TiltManager : MonoBehaviour
     switch (type)
     {
     case FallingObjectType.Bad:
-    AddTilt(badCaughtTilt);
-    floatingTextSpawner.Spawn(badCaughtTilt, player.transform.position, type);
-    break;        
-    }
+      AddTilt(badCaughtTilt);
+      floatingTextSpawner.Spawn(badCaughtTilt, player.transform.position, type);
+      break;
+    case FallingObjectType.webcam:
+        AddTilt(badCaughtTilt);
+      floatingTextSpawner.Spawn(badCaughtTilt, player.transform.position, type);
+      break;
+		}
   }
   public void HandleSmashed(FallingObjectType type)
   {

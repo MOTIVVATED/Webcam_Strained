@@ -590,7 +590,6 @@ GameObject:
   - component: {fileID: 119632688}
   - component: {fileID: 119632687}
   - component: {fileID: 119632689}
-  - component: {fileID: 119632690}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -717,21 +716,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119632686}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daead88f44c0c9d4cab58c195dee6e6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MusicVolumeApplier
---- !u!114 &119632690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119632686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8705a07c6d162694ab8429d3f07e425b, type: 3}
+  m_Script: {fileID: 11500000, guid: 74f2f0dafe6aea342a0f790fd996be0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::sfxVolumeApplier
 --- !u!1 &178911457
@@ -5070,7 +5057,7 @@ MonoBehaviour:
   - prefab: {fileID: 5304136060711314168, guid: 3b1585ddc05687f4b938dd25a1fbb084, type: 3}
     delayMin: 1
     delayMax: 3
-    enabled: 1
+    enabled: 0
   - prefab: {fileID: 5304136060711314168, guid: d48752722b5397d488f351087c1c654c, type: 3}
     delayMin: 1
     delayMax: 3
@@ -6279,7 +6266,6 @@ GameObject:
   - component: {fileID: 1905031931}
   - component: {fileID: 1905031933}
   - component: {fileID: 1905031930}
-  - component: {fileID: 1905031934}
   m_Layer: 0
   m_Name: AudioFeedback
   m_TagString: Untagged
@@ -6418,18 +6404,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1905031934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905031929}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8705a07c6d162694ab8429d3f07e425b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::sfxVolumeApplier
 --- !u!1 &1905261059
 GameObject:
   m_ObjectHideFlags: 0
@@ -7404,7 +7378,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2051319534}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daead88f44c0c9d4cab58c195dee6e6c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a4d5bf379b070946b50b84d773f8115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicVolumeApplier
 --- !u!1 &2061410071
