@@ -1,5 +1,28 @@
 /*
  * == DEV JOURNAL ==
+ 
+ *		01.04.2026
+ *	Now I want to make a fake chat to make the game look more realistic, atmospheric and natural.
+ *	
+ *	Today I started to vork on a game visual style.
+ *	I'm convinced that graphic doesn't matter, but visual style means a lot.
+ *	I made a colour palette of CB in Aseprite and in Unity.
+ *	I changed some elements of UI in game and it looks better now.
+ *	But still there is a lot of work to do.
+ *	
+ *	Now I see more clearly what I need to do untill my game is ready to be released:
+ *		-players account to keep progression and stats
+ *		-six models with different presets and difficulties
+ *			(model name and the sign of a model on a 'player game object')
+ *		-fake chat with messages about the game
+ *			(model name in the top of the chat)
+ *		-new object of PVT mode
+ *		-pvt mode itself
+ *		-min and max spawn X values depending on viewersnumber
+ *			it's important to figure out how to make the range of spawn visible for a player
+ *			
+ *	Will see tomorrow, what with we're going to start...
+  
  *		30.03.2026
  *	New feature with distracting popup windws works and it plays fun.
  *	Now I need:
@@ -18,8 +41,7 @@
  *	I changed minX and maxX values in SpawnManager from -4 and 4 to -3 and 3.
  *	It makes possible to increase the speed of a game and I think it's more fun and drive.
  *	I deleted all old and useless prefabs.
- *	
- *	
+ 	
  *		29.03.2026
  *	I'm here to make it work properly.
  * 
