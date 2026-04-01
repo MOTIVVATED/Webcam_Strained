@@ -20,6 +20,11 @@
  *		-pvt mode itself
  *		-min and max spawn X values depending on viewersnumber
  *			it's important to figure out how to make the range of spawn visible for a player
+ *		-Sounds
+ *		  that's a big thing to do
+ *		  1) I need soundtracks, I think I'll do something with AI
+ *		  2) Sounds of model
+ *		  3) Sounds of members
  *			
  *	Will see tomorrow, what with we're going to start...
   
