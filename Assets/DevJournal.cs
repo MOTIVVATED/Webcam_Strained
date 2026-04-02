@@ -17,7 +17,11 @@
 *       
 *     Today I did:
 * I reordered objects in the hierarchy in Menu and Game scenes.
-* I added a new canvas for the model selection screen. 
+* I added a new canvas for the model selection screen.
+* I walk through whole the path of export animated sprites from Aseprite and import them to Unity.
+* I added two buttons with animated sprites of models on a new canvas.
+* I faced some problems with animation and color profiles. It took a few hours but I fixed them clearly.
+* The battle was cruel, but I slayed them all. As always.
 
 *		01.04.2026
 *	Now I want to make a fake chat to make the game look more realistic, atmospheric and natural.
