@@ -2,18 +2,22 @@
 * == DEV JOURNAL ==
 
 *   02.04.2026
-*   I can see now the way I'm going to make different models.
+* I can see now the way I'm going to make different models.
 *     Now I got animated sprites for two of them.
 *     After a start bottom we are going to get to a model selection screen.
 *     Each model is a button wich switches the scene of the game.
 *     The scene based on my existing scene Game, with some changes in inspectorhas 
 *     The scene has the same name as a model.
 *   
-*   So what exactly I need to do:
+* So what exactly I need to do:
 *     -another canvas with model selection screen in the main menu scene
 *     -two bottoms with sprites of models (for now only two)
 *       models has to be animated, and It's a big deal cuz I need to find the way
 *       to add .aseprite animations in unity and make them work properly
+*       
+*     Today I did:
+* I reordered objects in the hierarchy in Menu and Game scenes.
+* I added a new canvas for the model selection screen. 
 
 *		01.04.2026
 *	Now I want to make a fake chat to make the game look more realistic, atmospheric and natural.
