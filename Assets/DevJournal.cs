@@ -7,6 +7,10 @@
 *     -scripts fo buttons
 *     -make it look normal in Unity
 *     -make a copy of Game scene for each model, and change some settings in inspector for them
+*     
+*  I added Underwear and Dressed objects for models and animations for them. It looks good.
+*  Now I'm able to "undress" them easily if it's needed.
+*  
 
 *   02.04.2026
 * I can see now the way I'm going to make different models.
