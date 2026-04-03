@@ -150,6 +150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   text: {fileID: 895011984086562689}
-  floatUpSpeed: 100
+  floatUpSpeed: 120
   lifetime: 2
-  fadeDuration: 1
+  fadeDuration: 0

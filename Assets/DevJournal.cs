@@ -10,7 +10,12 @@
 *     
 *  I added Underwear and Dressed objects for models and animations for them. It looks good.
 *  Now I'm able to "undress" them easily if it's needed.
-*  
+*
+*     Today I did:
+* I made ModelSelectionPanelUI script that contains methods for buttons on the model selection screen.
+* I made two copies of Game scene for each model, and changed some settings in inspector for them.
+* For now, the soundtrack is the only thing that differs between models.
+* I worked on the visual style of the UI in menu and game scenes.
 
 *   02.04.2026
 * I can see now the way I'm going to make different models.
