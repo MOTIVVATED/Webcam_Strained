@@ -1,5 +1,12 @@
 /*
 * == DEV JOURNAL ==
+* 
+*   03.04.2026
+* I made a canvas for model selection yesterday.
+* Today I'm going to make it work properly.
+*     -scripts fo buttons
+*     -make it look normal in Unity
+*     -make a copy of Game scene for each model, and change some settings in inspector for them
 
 *   02.04.2026
 * I can see now the way I'm going to make different models.

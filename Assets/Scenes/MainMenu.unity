@@ -5360,8 +5360,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   gameDuration: 600
   initialTimeScale: 1
-  timeScaleIncrement: 0.05
-  maxTimeScale: 1.2
+  timeScaleIncrement: 0
+  maxTimeScale: 1
 --- !u!4 &1918025094
 Transform:
   m_ObjectHideFlags: 0
