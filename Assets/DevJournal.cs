@@ -1,6 +1,9 @@
 /*
 * == DEV JOURNAL ==
 * 
+*   05.04.2025
+* First thing I'm going to do today is to dicide, what I'm gonna do today. Let's get busy.
+* 
 *   03.04.2026
 * I made a canvas for model selection yesterday.
 * Today I'm going to make it work properly.
