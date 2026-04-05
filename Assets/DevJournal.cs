@@ -3,7 +3,39 @@
 * 
 *   05.04.2025
 * First thing I'm going to do today is to dicide, what I'm gonna do today. Let's get busy.
+*...
+* Aaand here we go!
+* From very beginning I had an ideo of pvt mode, but I didn't know how to implement it.
+* Now I see the way to do it.
 * 
+* Here are the conditions:
+* 
+*   The golden rule is: Never accept bad PVT. Accept good.
+*   to enter the pvt mode player need to reaach maximum timeScale (for the player it's a number of viewers)
+*   then objects of pvt start to spawn randomly, and player needs to smash bad ones untill he catches good one.
+*     
+*     grey ones we don't need, cuz we will just slow down, lose viewers and get out of pvt mode soon
+*     
+*     purple ones are good
+*       here is the juice!!!
+*       -player sees BIG letters like: "hi bb", or "lets funny", and he needs to input them in tow seconds
+*         letters fill up if the player inputs them correctly
+*         the progress bar shows how much time is left to input the word, so it has to be fast
+*         
+*       -all points are going to be collected automatically, so we don't need to catch tehm
+*       -we only need to catch "Request" objects (like members requests: doggy, flash or smth)
+*       -instead of Viewers number, we will see "PVT".
+*       -pvt continues as long as we catch "Request" objects.
+*         (but it's not gonna be too long, cuz we don't have timeScale maximum in pvt)
+*   That's it about pvt.
+*   
+*   While I was writing this, I invented another new thing!
+*   Request objects. We will no longer use increasing timeScale with time. We will increase this by 
+*   catching Requests
+*   So we need a pool of requests and animations for them.
+*   They go slowly so we can see the note and catch them only if this speed up is acceptable for us.
+*   Cuz if we catch some request that speed us up too much, we get tilted fast and loose the game.
+*   
 *   03.04.2026
 * I made a canvas for model selection yesterday.
 * Today I'm going to make it work properly.
