@@ -1,11 +1,14 @@
 /*
 * == DEV JOURNAL ==
+*   06.04.2026
+* I'm not sure, if I'm going too deep, but now I feel like I should implement the feature that I thought about before.
+* Now we got one spawn point.
 * 
 *   05.04.2025
 * First thing I'm going to do today is to dicide, what I'm gonna do today. Let's get busy.
 *...
 * Aaand here we go!
-* From very beginning I had an ideo of pvt mode, but I didn't know how to implement it.
+* From very beginning I had an idea of pvt mode, but I didn't know how to implement it.
 * Now I see the way to do it.
 * 
 * Here are the conditions:
@@ -18,7 +21,7 @@
 *     
 *     purple ones are good
 *       here is the juice!!!
-*       -player sees BIG letters like: "hi bb", or "lets funny", and he needs to input them in tow seconds
+*       -player sees BIG letters like: "hi bb", or "lets funny", and he needs to input them in two seconds
 *         letters fill up if the player inputs them correctly
 *         the progress bar shows how much time is left to input the word, so it has to be fast
 *         
@@ -35,7 +38,9 @@
 *   So we need a pool of requests and animations for them.
 *   They go slowly so we can see the note and catch them only if this speed up is acceptable for us.
 *   Cuz if we catch some request that speed us up too much, we get tilted fast and loose the game.
-*   
+* 
+* Now I'm going to start working on a new "Request" object.
+* 
 *   03.04.2026
 * I made a canvas for model selection yesterday.
 * Today I'm going to make it work properly.

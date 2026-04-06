@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class CoinSpawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
   [System.Serializable]
   public class SpawnRule
@@ -96,7 +96,7 @@ public class CoinSpawner : MonoBehaviour
 		falling.transform.position = new Vector3(randomX, spawnPoint.position.y, 0f);
 		lastSpawnX = randomX; // remember for next spawn
 
-		if (falling.ObjectType == FallingObjectType.Bad
+		if (falling.ObjectType == FallingObjectType.bad
 				&& badSprites != null && badSprites.Length > 0)
 		{
 			falling.SetSprite(badSprites[Random.Range(0, badSprites.Length)]);

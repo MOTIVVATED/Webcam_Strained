@@ -26,7 +26,7 @@ public class FloatingTextSpawner : MonoBehaviour
 		var instance = Instantiate(prefab, canvas.transform);
 		instance.transform.position = screenPos;
 
-		instance.Setup(FallingObjectType.Bad);
+		instance.Setup(FallingObjectType.bad);
 	}
 	public void Spawn(int amount, Vector3 worldPos, FallingObjectType type)
 	{
@@ -45,32 +45,32 @@ public class FloatingTextSpawner : MonoBehaviour
 			case FallingObjectType.webcam:
 				instance.Setup(amount, FallingObjectType.webcam);
 				break;
-			case FallingObjectType.Bad:
-				instance.Setup(amount, FallingObjectType.Bad);
+			case FallingObjectType.bad:
+				instance.Setup(amount, FallingObjectType.bad);
 				break;
-			case FallingObjectType.type_1tk:
-				instance.Setup(amount, FallingObjectType.type_1tk);
+			case FallingObjectType.tk1:
+				instance.Setup(amount, FallingObjectType.tk1);
 				break;
-			case FallingObjectType.type_15tk:
-				instance.Setup(amount, FallingObjectType.type_15tk);
+			case FallingObjectType.tk15:
+				instance.Setup(amount, FallingObjectType.tk15);
 				break;
-			case FallingObjectType.type_25tk:
-				instance.Setup(amount, FallingObjectType.type_25tk);
+			case FallingObjectType.tk25:
+				instance.Setup(amount, FallingObjectType.tk25);
 				break;
-			case FallingObjectType.type_111tk:
-				instance.Setup(amount, FallingObjectType.type_111tk);
+			case FallingObjectType.tk111:
+				instance.Setup(amount, FallingObjectType.tk111);
 				break;
-			case FallingObjectType.type_222tk:
-				instance.Setup(amount, FallingObjectType.type_222tk);
+			case FallingObjectType.tk222:
+				instance.Setup(amount, FallingObjectType.tk222);
 				break;
-			case FallingObjectType.type_555tk:
-				instance.Setup(amount, FallingObjectType.type_555tk);
+			case FallingObjectType.tk555:
+				instance.Setup(amount, FallingObjectType.tk555);
 				break;
-			case FallingObjectType.type_666tk:
-				instance.Setup(amount, FallingObjectType.type_666tk);
+			case FallingObjectType.tk666:
+				instance.Setup(amount, FallingObjectType.tk666);
 				break;
-			case FallingObjectType.type_1111tk:
-				instance.Setup(amount, FallingObjectType.type_1111tk);
+			case FallingObjectType.tk1111:
+				instance.Setup(amount, FallingObjectType.tk1111);
 				break;
 		}
 	}

@@ -21,7 +21,7 @@ public class FloatingScoreText : MonoBehaviour
 	{
 		switch (type)
 		{
-			case FallingObjectType.Bad:
+			case FallingObjectType.bad:
 				text.text = "BAN";
 				text.color = Color.green;
 				break;
@@ -40,35 +40,35 @@ public class FloatingScoreText : MonoBehaviour
 
 		switch (type)
 		{
-			case FallingObjectType.type_15tk:
+			case FallingObjectType.tk15:
 				text.text = "+" + amount.ToString() + "tk";
 				text.color = grey;
 				break;
-			case FallingObjectType.type_25tk:
+			case FallingObjectType.tk25:
 				text.text = "+" + amount.ToString() + "tk";
 				text.color = paleBlue;
 				break;
-			case FallingObjectType.type_111tk:;
+			case FallingObjectType.tk111:;
 				text.text = "+" + amount.ToString() + "tk";
 				text.color = blue;
 				break;
-			case FallingObjectType.type_222tk:
+			case FallingObjectType.tk222:
 				text.text = "+" + amount.ToString() + "tk";
 				text.color = blue;
 				break;
-			case FallingObjectType.type_555tk:
+			case FallingObjectType.tk555:
 				text.text = "+" + amount.ToString() + "tk";
 				text.color = purple;
 				break;
-			case FallingObjectType.type_666tk:
+			case FallingObjectType.tk666:
 				text.text = "+" + amount.ToString() + "tk";
 				text.color = purple;
 				break;
-			case FallingObjectType.type_1111tk:
+			case FallingObjectType.tk1111:
 				text.text = "+" + amount.ToString() + "tk";
 				text.color = darkPurple;
 				break;
-			case FallingObjectType.Bad:
+			case FallingObjectType.bad:
 				text.text = "+" + amount.ToString() + "tilt";
 				text.color = Color.red;
 				break;

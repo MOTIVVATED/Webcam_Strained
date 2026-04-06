@@ -52,37 +52,37 @@ public class ScoreManager : MonoBehaviour
   {
     switch (type)
     {
-      case FallingObjectType.type_15tk:
+      case FallingObjectType.tk15:
         AddScore(tk15);
         OnTK_1_15_Collected?.Invoke();
         floatingTextSpawner.Spawn(tk15, player.transform.position, type);
         break;
-      case FallingObjectType.type_25tk:
+      case FallingObjectType.tk25:
         AddScore(tk25);
         OnTK_25_Collected?.Invoke();
         floatingTextSpawner.Spawn(tk25, player.transform.position, type);
         break;
-      case FallingObjectType.type_111tk:
+      case FallingObjectType.tk111:
         AddScore(tk111);
         OnTK_111_Collected?.Invoke();
         floatingTextSpawner.Spawn(tk111, player.transform.position, type);
         break;
-      case FallingObjectType.type_222tk:
+      case FallingObjectType.tk222:
         AddScore(tk222);
         OnTK_222_Collected?.Invoke();
         floatingTextSpawner.Spawn(tk222, player.transform.position, type);
 				break;
-      case FallingObjectType.type_555tk:
+      case FallingObjectType.tk555:
         AddScore(tk555);
         OnTK_555_Collected?.Invoke();
         floatingTextSpawner.Spawn(tk555, player.transform.position, type);
         break;
-      case FallingObjectType.type_666tk:
+      case FallingObjectType.tk666:
         AddScore(tk666);
         OnTK_666_Collected?.Invoke();
         floatingTextSpawner.Spawn(tk666, player.transform.position, type);
         break;
-      case FallingObjectType.type_1111tk:
+      case FallingObjectType.tk1111:
         AddScore(tk999);
         OnTK_1111_Collected?.Invoke();
         floatingTextSpawner.Spawn(tk999, player.transform.position, type);

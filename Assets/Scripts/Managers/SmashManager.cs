@@ -25,7 +25,7 @@ public class SmashManager : MonoBehaviour
   {
     switch (type)
     {
-      case FallingObjectType.Bad:
+      case FallingObjectType.bad:
         OnSmashed?.Invoke();
         bad = GameObject.FindGameObjectWithTag("bad");
         floatingTextSpawner.Spawn(bad.transform.position);

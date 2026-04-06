@@ -41,7 +41,7 @@ public class TiltManager : MonoBehaviour
   {
     switch (type)
     {
-    case FallingObjectType.Bad:
+    case FallingObjectType.bad:
       AddTilt(badCaughtTilt);
       floatingTextSpawner.Spawn(badCaughtTilt, player.transform.position, type);
       break;
@@ -60,33 +60,33 @@ public class TiltManager : MonoBehaviour
   {
     switch (type)
     {
-      case FallingObjectType.type_15tk:
+      case FallingObjectType.tk15:
         AddTilt(goodMissedTilt);
-        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.Bad);
+        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.bad);
         break;
-      case FallingObjectType.type_25tk:
+      case FallingObjectType.tk25:
         AddTilt(goodMissedTilt);
-        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.Bad);
+        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.bad);
         break;
-      case FallingObjectType.type_111tk:
+      case FallingObjectType.tk111:
         AddTilt(goodMissedTilt);
-        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.Bad);
+        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.bad);
         break;
-      case FallingObjectType.type_222tk:
+      case FallingObjectType.tk222:
         AddTilt(goodMissedTilt);
-        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.Bad);
+        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.bad);
         break;
-      case FallingObjectType.type_555tk:
+      case FallingObjectType.tk555:
         AddTilt(goodMissedTilt);
-        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.Bad);
+        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.bad);
         break;
-      case FallingObjectType.type_666tk:
+      case FallingObjectType.tk666:
         AddTilt(goodMissedTilt);
-        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.Bad);
+        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.bad);
         break;
-      case FallingObjectType.type_1111tk:
+      case FallingObjectType.tk1111:
         AddTilt(goodMissedTilt);
-        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.Bad);
+        floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.bad);
         break;
 		}
   }

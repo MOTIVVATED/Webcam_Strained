@@ -2,26 +2,20 @@ using UnityEngine;
 
 public enum FallingObjectType
 {
-    Good,
-    Bad,
-    type_1tk,
-    type_15tk,
-    type_25tk,
-    type_111tk,
-    type_222tk,
-    type_555tk,
-    type_666tk,
-    type_1111tk,
+    good,
+    bad,
 
-    type_333tk,
-    type_444tk,
-    type_777tk,
-    type_888tk,
-    type_999tk,
+    tk1,
+    tk15,
+    tk25,
+    tk111,
+
+    tk222,
+    tk555,
+    tk666,
+    tk1111,
 
     webcam,
-    like,
-    dislike,
-
     reduser,
+    request
 }
