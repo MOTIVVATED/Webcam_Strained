@@ -40,7 +40,7 @@ public class GameResultView : MonoBehaviour
     restartLabels.SetActive(true);
   }
   private void ShowLose(int total, float timer, float duration)
-  {   
+  {
     int t = (int)(timer/ TimerView.Instance.SecondsInHour);
     int d = (int)(duration/ TimerView.Instance.SecondsInHour);
 

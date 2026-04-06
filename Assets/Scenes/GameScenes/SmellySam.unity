@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &30009220
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2196,8 +2196,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 8
-  minX: -3
-  maxX: 3
+  minX: -2
+  maxX: 2
 --- !u!114 &437493379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5299,7 +5299,7 @@ GameObject:
   - component: {fileID: 1236289400}
   - component: {fileID: 1236289402}
   m_Layer: 0
-  m_Name: ObjectSpawner
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5433,6 +5433,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewSpawner
   rules:
+  - prefab: {fileID: 5304136060711314168, guid: d48752722b5397d488f351087c1c654c, type: 3}
+    delayMin: 1
+    delayMax: 3
+    enabled: 1
   - prefab: {fileID: 5304136060711314168, guid: 32513998c28c795438935908415d1c74, type: 3}
     delayMin: 45
     delayMax: 75
@@ -5444,6 +5448,26 @@ MonoBehaviour:
   - prefab: {fileID: 4172547871608088945, guid: 855b9233cd615ea4d9948cada9583c55, type: 3}
     delayMin: 0.1
     delayMax: 4
+    enabled: 1
+  - prefab: {fileID: 3247108239030646150, guid: 1ad84122176cc414497e8fa217153ea9, type: 3}
+    delayMin: 2
+    delayMax: 6
+    enabled: 1
+  - prefab: {fileID: 3247108239030646150, guid: 571b84797a10e744e9c398b323209e66, type: 3}
+    delayMin: 6
+    delayMax: 12
+    enabled: 1
+  - prefab: {fileID: 3247108239030646150, guid: 0bda84e6eb200dc4f9f749e502d51015, type: 3}
+    delayMin: 8
+    delayMax: 16
+    enabled: 1
+  - prefab: {fileID: 3247108239030646150, guid: bf71477936f0fdd47b86cc5bb6cde0e4, type: 3}
+    delayMin: 13
+    delayMax: 26
+    enabled: 1
+  - prefab: {fileID: 3247108239030646150, guid: 66f5fb3862f4a8947895caa542aba599, type: 3}
+    delayMin: 24
+    delayMax: 44
     enabled: 1
   spawnPoints:
   - {fileID: 1315494676}
@@ -6220,7 +6244,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.019607844}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.039215688}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9406,11 +9430,11 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 35683588}
   - {fileID: 1430529984}
+  - {fileID: 1236289401}
   - {fileID: 770664211}
   - {fileID: 1727806646}
   - {fileID: 2051319537}
   - {fileID: 1905031931}
-  - {fileID: 1236289401}
   - {fileID: 437493382}
   - {fileID: 576108821}
   - {fileID: 840205950}

@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a6a055073c8504684d5c3ef85d7fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectType: 18
+  objectType: 11
   spriteRenderer: {fileID: 0}
   fallSpeed: 1
   destroY: -6

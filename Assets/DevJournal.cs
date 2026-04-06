@@ -8,6 +8,10 @@
 * and his message. Then I want to make a list of spawnPoints instead of one. I won't use a range of minX-maxX,
 * I want to try to make each spawnPoint stable.
 * 
+*     Today I did:
+* I made 7 spawnpoints with attached almost transparent rows, which makes trajectory of falling objects visible for players
+* Now I can attach "members" there.
+* 
 *   05.04.2025
 * First thing I'm going to do today is to dicide, what I'm gonna do today. Let's get busy.
 *...
