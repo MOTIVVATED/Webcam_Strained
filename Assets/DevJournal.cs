@@ -1,8 +1,12 @@
 /*
 * == DEV JOURNAL ==
+*   
 *   06.04.2026
 * I'm not sure, if I'm going too deep, but now I feel like I should implement the feature that I thought about before.
 * Now we got one spawn point.
+* I want to try to make rows. In the beggining of each row on the top of the screen I want to see a name of member
+* and his message. Then I want to make a list of spawnPoints instead of one. I won't use a range of minX-maxX,
+* I want to try to make each spawnPoint stable.
 * 
 *   05.04.2025
 * First thing I'm going to do today is to dicide, what I'm gonna do today. Let's get busy.
