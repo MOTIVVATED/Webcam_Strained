@@ -12,7 +12,10 @@
 *     Today I did:
 * I solved the problem with timeScale and game duration.
 * Now I can change the timeScale without changing the game duration.
-* I made music pause when the game is paused.
+* I made music pause when the game is paused. But it doesn't work properly.
+* I got stuck and the reason is I don't really understand the way IEnumerators and Coroutines work.
+* It's a bit clearer now, but I think I'll feel confident only after I make it work properly.
+* SO I START FROM HERE after tomorrow. Tomorrow I'm going to have a rest.
 
 * 
 *   06.04.2026

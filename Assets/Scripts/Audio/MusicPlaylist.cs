@@ -3,20 +3,25 @@ using UnityEngine;
 
 public class MusicPlaylist : MonoBehaviour
 {
-  [Header("Clips (mp3 parts")]
+  [Header("Clips (mp3 parts)")]
   [SerializeField] private AudioClip[] parts;
 
-  [Header("Audio Source")]
-  [SerializeField] private AudioSource source;
+  [Header("Pause music when paused")]
+  [SerializeField] private AudioClip[] pauseParts;
 
-  [Header("Options")]
+	[Header("Audio Source")]
+  [SerializeField] private AudioSource unPauseSource;
+  [SerializeField] private AudioSource pauseSource;
+
+	[Header("Options")]
   [SerializeField] private bool dontRepeatSameTwice = false;
 
-  private int lastIndex = -1;
+	private int lastIndex = -1;
   private Coroutine routine;
   private void Reset()
   {
-    source = GetComponent<AudioSource>();
+    unPauseSource = GetComponent<AudioSource>();
+    pauseSource = GetComponent<AudioSource>();
   }
   private void OnEnable()
   {
@@ -35,46 +40,93 @@ public class MusicPlaylist : MonoBehaviour
   }
   public void Update()
   {
-    if (PauseManager.Instance != null && PauseManager.Instance.IsPaused)
-    {
-      if (source.isPlaying)
-      source.Pause();
-    }
+    //if (PauseManager.Instance != null && PauseManager.Instance.IsPaused)
+    //{
+    //  unPauseSource.Pause();
+    //  pauseSource.UnPause();
+    //}
+    if (PauseManager.Instance == null)
+    { 
+      if (!pauseSource.isPlaying)
+      {
+        unPauseSource.UnPause();
+        pauseSource.Pause();
+			}
+      }
     else
     {
-      if (!source.isPlaying)
-      source.UnPause();
-    }
+      if (PauseManager.Instance.IsPaused)
+      {
+        unPauseSource.Pause();
+        pauseSource.UnPause();
+      }
+      else
+      {
+        unPauseSource.UnPause();
+        pauseSource.Pause();
+			}
+		}
   }
   private IEnumerator PlayLoop()
   {
-    if (source == null)
+    //if (source == null)
+    //{
+    //  Debug.LogError("MusicPlaylist : AudioSource not assigned.");
+    //  yield break;
+    //}
+    //if (parts == null || parts.Length == 0)
+    //{
+    //  Debug.LogWarning("MysicPlaylist: No clip assigned.");
+    //  yield break;
+    //}
+    if (PauseManager.Instance == null)
     {
-      Debug.LogError("MusicPlaylist : AudioSource not assigned.");
-      yield break;
+      while (true)
+      {
+        int idx = GetRandomIndex();
+        lastIndex = idx;
+
+        pauseSource.clip = pauseParts[idx];
+        pauseSource.Play();
+
+        while (pauseSource.isPlaying)
+          yield return null;
+        yield return null;
+      }
     }
-    if (parts == null || parts.Length == 0)
+    else
     {
-      Debug.LogWarning("MysicPlaylist: No clip assigned.");
-      yield break;
+      if (PauseManager.Instance.IsPaused)
+      {
+        while (true)
+        {
+          int idx = GetRandomIndex();
+          lastIndex = idx;
+
+          pauseSource.clip = pauseParts[idx];
+          pauseSource.Play();
+
+          while (pauseSource.isPlaying)
+            yield return null;
+          yield return null;
+        }
+      }
+      else
+      {
+        while (true)
+        {
+          int idx = GetRandomIndex();
+          lastIndex = idx;
+
+          unPauseSource.clip = parts[idx];
+          unPauseSource.Play();
+
+          while (unPauseSource.isPlaying)
+            yield return null;
+          yield return null;
+        }
+      }
     }
-
-    while (PauseManager.Instance != null && !PauseManager.Instance.IsPaused)
-    {
-      int idx = GetRandomIndex();
-      lastIndex = idx;
-
-      source.clip = parts[idx];
-      source.Play();
-
-      // ждЄм пока реально доиграет (на случай если Time.timeScale = 0)
-      while (source.isPlaying)
-      yield return null;
-
-      // на вс€кий Ч один кадр, чтобы следующий стартовал УчистоФ
-      yield return null;
-    }
-
   }
   private int GetRandomIndex()
   {
