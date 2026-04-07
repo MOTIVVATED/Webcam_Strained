@@ -1,5 +1,11 @@
 /*
 * == DEV JOURNAL ==
+*   07.04.2026
+* I want to highlite the row that triggered by player.
+* I want to add a new button. For now we have only left, right and down arrows.
+* I want to add up arrow to "accept" "Requests" on a highlited row.
+* Besides I want to start playing without timescaling with time.
+* I need to find the way to increase and decrease the game speed but leave the game duration instantly the same.
 *   
 *   06.04.2026
 * I'm not sure, if I'm going too deep, but now I feel like I should implement the feature that I thought about before.
