@@ -3,70 +3,70 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    public static PauseManager Instance { get; private set; }
+	public static PauseManager Instance { get; private set; }
 
-    [Header("UI")]
-    [SerializeField] private GameObject pauseMenuPanel;
+	[Header("UI")]
+	[SerializeField] private GameObject pauseMenuPanel;
 
-    public bool IsPaused { get; private set; }
+	public bool IsPaused { get; private set; }
 
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
+	private void Awake()
+	{
+		if (Instance != null && Instance != this)
+		{
+			Destroy(gameObject);
+			return;
+		}
+		Instance = this;
 
-        SetPaused(false);
-    }
+		SetPaused(false);
+	}
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (GameManager.Instance != null && !GameManager.Instance.IsPlaying)
-                return;
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			if (GameManager.Instance != null && !GameManager.Instance.IsPlaying)
+			return;
 
-            TogglePause();
-        }
-    }
+			TogglePause();
+		}
+	}
 
-    public void TogglePause()
-    {
-        if (GameManager.Instance != null && !GameManager.Instance.IsPlaying)
-            return;
+	public void TogglePause()
+	{
+		if (GameManager.Instance != null && !GameManager.Instance.IsPlaying)
+		return;
 
-        SetPaused(!IsPaused);
-    }
+		SetPaused(!IsPaused);
+	}
 
-    public void SetPaused(bool paused)
-    {
-        IsPaused = paused;
+	public void SetPaused(bool paused)
+	{
+		IsPaused = paused;
 
-        if (pauseMenuPanel != null)
-            pauseMenuPanel.SetActive(paused);
+		if (pauseMenuPanel != null)
+		pauseMenuPanel.SetActive(paused);
 
-        Time.timeScale = paused ? 0f : 1f;
-    }
+		Time.timeScale = paused ? 0f : 1f;
+	}
 
-    public void Resume()
-    {
-        SetPaused(false);
-    }
+	public void Resume()
+	{
+		SetPaused(false);
+	}
 
-    public void Restart()
-    {
-        Time.timeScale = 1f;
+	public void Restart()
+	{
+		Time.timeScale = 1f;
 
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.RestartGame();
-            return;
-        }
+		if (GameManager.Instance != null)
+		{
+			GameManager.Instance.RestartGame();
+			return;
+		}
 
-        //var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        //UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
-    }
+		//var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+		//UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
+	}
 }

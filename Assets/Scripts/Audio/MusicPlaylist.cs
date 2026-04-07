@@ -14,8 +14,7 @@ public class MusicPlaylist : MonoBehaviour
 
     private int lastIndex = -1;
     private Coroutine routine;
-
-    private void Reset()
+	private void Reset()
     {
         source = GetComponent<AudioSource>();
     }
@@ -34,7 +33,20 @@ public class MusicPlaylist : MonoBehaviour
             routine = null;
         }
     }
-    private IEnumerator PlayLoop()
+  public void Update()
+  {
+    if (PauseManager.Instance != null && PauseManager.Instance.IsPaused)
+    {
+      if (source.isPlaying)
+        source.Pause();
+    }
+    else
+    {
+      if (!source.isPlaying)
+        source.UnPause();
+    }
+  }
+  private IEnumerator PlayLoop()
     {
         if (source == null)
         {
@@ -47,7 +59,7 @@ public class MusicPlaylist : MonoBehaviour
             yield break;
         }
 
-        while (true)
+        while (PauseManager.Instance != null && !PauseManager.Instance.IsPaused)
         {
             int idx = GetRandomIndex();
             lastIndex = idx;

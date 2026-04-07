@@ -65,7 +65,9 @@ public class GameManager : MonoBehaviour
   {
     if (state != GameState.playing) return;
 
-    timer += Time.deltaTime;
+    if (PauseManager.Instance != null && PauseManager.Instance.IsPaused) return;
+
+		timer += Time.unscaledDeltaTime;
 
     // this is to make sure the time and viewers are updated only when the seconds change
     // not every frame

@@ -5,8 +5,16 @@
 * I want to add a new button. For now we have only left, right and down arrows.
 * I want to add up arrow to "accept" "Requests" on a highlited row.
 * Besides I want to start playing without timescaling with time.
-* I need to find the way to increase and decrease the game speed but leave the game duration instantly the same.
-*   
+* I need to find the way to increase and decrease the game speed but leave the game duration instantly the same. (done)
+* 
+* I need to remake MusicPlaylist make separate tracks for paused and unpaused states.
+* 
+*     Today I did:
+* I solved the problem with timeScale and game duration.
+* Now I can change the timeScale without changing the game duration.
+* I made music pause when the game is paused.
+
+* 
 *   06.04.2026
 * I'm not sure, if I'm going too deep, but now I feel like I should implement the feature that I thought about before.
 * Now we got one spawn point.
