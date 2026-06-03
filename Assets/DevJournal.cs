@@ -22,7 +22,7 @@
 * I want to add a new button. For now we have only left, right and down arrows.
 * I want to add up arrow to "accept" "Requests" on a highlited row.
 * Besides I want to start playing without timescaling with time.
-* I need to find the way to increase and decrease the game speed but leave the game duration instantly the same. (done)
+* I need to find the way to increase and decrease the game speed but leave the game duration constantly the same. (done)
 * 
 * I need to remake MusicPlaylist make separate tracks for paused and unpaused states.
 * 
@@ -83,7 +83,7 @@
 *   03.04.2026
 * I made a canvas for model selection yesterday.
 * Today I'm going to make it work properly.
-*     -scripts fo buttons
+*     -scripts for buttons
 *     -make it look normal in Unity
 *     -make a copy of Game scene for each model, and change some settings in inspector for them
 *     
@@ -92,7 +92,7 @@
 *
 *     Today I did:
 * I made ModelSelectionPanelUI script that contains methods for buttons on the model selection screen.
-* I made two copies of Game scene for each model, and changed some settings in inspector for them.
+* I made two copies of a Game scene for each model, and changed some settings in inspector for them.
 * For now, the soundtrack is the only thing that differs between models.
 * I worked on the visual style of the UI in menu and game scenes.
 
@@ -101,7 +101,7 @@
 *     Now I got animated sprites for two of them.
 *     After a start bottom we are going to get to a model selection screen.
 *     Each model is a button wich switches the scene of the game.
-*     The scene based on my existing scene Game, with some changes in inspectorhas 
+*     The scene based on my existing scene Game, with some changes in inspector has 
 *     The scene has the same name as a model.
 *   
 * So what exactly I need to do:
