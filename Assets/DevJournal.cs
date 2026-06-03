@@ -1,5 +1,22 @@
 /*
 * == DEV JOURNAL ==
+* 
+*   03.06.2026
+* It took almost twoo month to get back to work. I feel a bit sorry about that cuz it seems too long...
+* At the same time, I had so many things to do with my life. I moved from Belgrade to Almaty, Kazakhstan and started
+* a new chapter of my life. Also I had a wacation of my dream in Thailand. I settled in a new place,
+* organized a work place and now I'm going to work harder then ever. I feel a bit frustrated, cuz it's so many things
+* to do, and I feel so strong at the same time, cuz I feel that I'm living the life  that I dreamed to live.
+* Thanks god! I'm so happy. I'm almost crying now and I feel thankful to every thing in this world. I'd like to say
+* thank to everyone who supported me, but I don't really have such people hahah... I have many good people in my life,
+* who helped me somehow, I'm convinced no one of them knows a thing about my struggle.
+* I care a lot if I'm going to succeed or not... if I'm doing things right or not... And so often I think that 
+* I'm going to die anyway, so nothing matters. I'm just going to keep trying and enjoy each moment of my life.
+* I moved to anomther country, now I'm in relationships with a woman, that I dreamed about for so long, and sometimes,
+* I feel I took on too much. It scares me a bit. But I know I'm not a coward, and I act even if I'm scared. I do a lot of 
+* mistakes may be... but I learn from them... I loose time and money (like a hollow loses time and soulsin Dark Souls),
+* but I'm going to reach my goal soon or later. I hope sooner than I die =).
+* 
 *   07.04.2026
 * I want to highlite the row that triggered by player.
 * I want to add a new button. For now we have only left, right and down arrows.
