@@ -1,6 +1,10 @@
 /*
 * == DEV JOURNAL ==
 * 
+*   04.06.2026
+*   First for today:
+* Before I continue building my game, I need to finish my final exercise for IEnumerators and Coroutines.
+* 
 *   03.06.2026
 * It took almost twoo month to get back to work. I feel a bit sorry about that cuz it seems too long...
 * At the same time, I had so many things to do with my life. I moved from Belgrade to Almaty, Kazakhstan and started
