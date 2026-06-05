@@ -17,6 +17,14 @@
 *   - renamed TogglePause to TryTogglePause to make it clear it is condidional, not guaranteed
 *   - Restart now calls SetPaused(false) first to guarantee clean state, and falls back to scene reload
 *   if GameManager is absent
+* I rebuilt MusicPlaylist:
+*   - playLoop now runs while (true) and yields inside a pause-wait loop instead of exiting when paused,
+*   so the coroutine stays alive through pause/resume cycles.
+*   - the playback wait loop also accounts for paused state, so a clip that is paused mid-way is not skipped.
+*   - update is simplified to a single paused bool, removing the duplicate null check.
+*   - OnDisable now calls source.Stop() so the clip does not linger if the object is disabled.
+*   - fixed the GetRandomIndex condition from >= 1 to <= 1.
+*   - removed all debug logs from normal execution paths.
 * 
 *   04.06.2026
 *   First for today:

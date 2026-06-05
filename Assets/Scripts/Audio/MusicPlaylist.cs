@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MusicPlaylist : MonoBehaviour
 {
-  [Header("Clips (mp3 parts")]
+  [Header("Clips")]
   [SerializeField] private AudioClip[] parts;
 
   [Header("Audio Source")]
@@ -14,40 +14,40 @@ public class MusicPlaylist : MonoBehaviour
 
   private int lastIndex = -1;
   private Coroutine routine;
+
   private void Reset()
   {
     source = GetComponent<AudioSource>();
   }
   private void OnEnable()
   {
-    Debug.Log("MusicPlaylist enabled");
-		if (routine == null)
-    {
+    if (routine == null)
       routine = StartCoroutine(PlayLoop());
-      Debug.Log("MusicPlaylist started PlayLoop coroutine");
-		}
   }
+
   private void OnDisable()
   {
     if (routine != null)
     {
       StopCoroutine(routine);
       routine = null;
-    }
-  }
+		}
+
+    if (source != null)
+      source.Stop();
+	}
   public void Update()
   {
-  //  if (PauseManager.Instance != null && PauseManager.Instance.IsPaused)
-  //  {
-  //    if (source.isPlaying)
-  //    source.Pause();
-  //  }
-  //  else if (PauseManager.Instance != null && !PauseManager.Instance.IsPaused)
-		//{
-  //    if (!source.isPlaying)
-  //    source.UnPause();
-  //  }
-  }
+    if (source == null) return;
+
+    bool paused = PauseManager.Instance != null && PauseManager.Instance.IsPaused;
+
+    if (paused && source.isPlaying)
+      source.Pause();
+    else if (!paused && !source.isPlaying)
+      source.UnPause();
+	}
+
   private IEnumerator PlayLoop()
   {
     if (source == null)
@@ -55,16 +55,17 @@ public class MusicPlaylist : MonoBehaviour
       Debug.LogError("MusicPlaylist : AudioSource not assigned.");
       yield break;
     }
+
     if (parts == null || parts.Length == 0)
     {
-      Debug.LogWarning("MysicPlaylist: No clip assigned.");
+      Debug.LogWarning("MyusicPlaylist: No clip assigned.");
       yield break;
     }
 
-    while (PauseManager.Instance != null && !PauseManager.Instance.IsPaused)
+    while (true)
     {
-
-      Debug.Log("MusicPlaylist: Playing next clip...");
+      while (PauseManager.Instance != null && PauseManager.Instance.IsPaused)
+        yield return null;
 
 			int idx = GetRandomIndex();
       lastIndex = idx;
@@ -72,25 +73,28 @@ public class MusicPlaylist : MonoBehaviour
       source.clip = parts[idx];
       source.Play();
 
-      // ждЄм пока реально доиграет (на случай если Time.timeScale = 0)
-      while (source.isPlaying)
+
+      while (source.clip != null && (source.isPlaying || 
+        (PauseManager.Instance != null && PauseManager.Instance.IsPaused)))
       yield return null;
 
-      // на вс€кий Ч один кадр, чтобы следующий стартовал УчистоФ
+
       yield return null;
     }
 
   }
   private int GetRandomIndex()
   {
-    if (!dontRepeatSameTwice || parts.Length >= 1) 
-    return Random.Range(0, parts.Length);
+    if (!dontRepeatSameTwice || parts.Length <= 1) 
+      return Random.Range(0, parts.Length);
 
     int idx;
     do
-    { idx = Random.Range(0, parts.Length); } 
-        
+    { 
+      idx = Random.Range(0, parts.Length);
+    }   
     while (idx == lastIndex);
+
     return idx;
   }
 }
