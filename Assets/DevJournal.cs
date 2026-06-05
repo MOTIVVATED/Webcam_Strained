@@ -40,6 +40,7 @@
 *   - fixed the GetRandomIndex condition from >= 1 to <= 1.
 *   - removed all debug logs from normal execution paths.
 * I decided to finish my game in 10 days at any coast.
+* I started making a new model in Aseprite. It's almost ready and animated.
 * 
 *   04.06.2026
 *   First for today:
