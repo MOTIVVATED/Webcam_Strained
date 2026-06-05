@@ -20,10 +20,12 @@ public class MusicPlaylist : MonoBehaviour
   }
   private void OnEnable()
   {
-    if (routine == null)
+    Debug.Log("MusicPlaylist enabled");
+		if (routine == null)
     {
       routine = StartCoroutine(PlayLoop());
-    }
+      Debug.Log("MusicPlaylist started PlayLoop coroutine");
+		}
   }
   private void OnDisable()
   {
@@ -35,16 +37,16 @@ public class MusicPlaylist : MonoBehaviour
   }
   public void Update()
   {
-    if (PauseManager.Instance != null && PauseManager.Instance.IsPaused)
-    {
-      if (source.isPlaying)
-      source.Pause();
-    }
-    else
-    {
-      if (!source.isPlaying)
-      source.UnPause();
-    }
+  //  if (PauseManager.Instance != null && PauseManager.Instance.IsPaused)
+  //  {
+  //    if (source.isPlaying)
+  //    source.Pause();
+  //  }
+  //  else if (PauseManager.Instance != null && !PauseManager.Instance.IsPaused)
+		//{
+  //    if (!source.isPlaying)
+  //    source.UnPause();
+  //  }
   }
   private IEnumerator PlayLoop()
   {
@@ -61,7 +63,10 @@ public class MusicPlaylist : MonoBehaviour
 
     while (PauseManager.Instance != null && !PauseManager.Instance.IsPaused)
     {
-      int idx = GetRandomIndex();
+
+      Debug.Log("MusicPlaylist: Playing next clip...");
+
+			int idx = GetRandomIndex();
       lastIndex = idx;
 
       source.clip = parts[idx];

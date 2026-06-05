@@ -7,6 +7,17 @@
 * IEnumerator and Coroutines. That's why I stopped working and got to learn about them.
 * I'm going to find the problem and fix it now.
 * 
+*     Today I did:
+* I rebuilt PauseManager:
+*   - added DontDestroyOnLoad so the singleton survives scene transitions
+*   - removed SetPaused(false) from Awake and reset state directly, so Time.timeScale is not touched unless needed
+*   - added OnDestroy to clean up timeScale and null the instance
+*   - extracted CanPause() to a single guard used only where needed, removing the duplication
+*   between Update and TogglePause
+*   - renamed TogglePause to TryTogglePause to make it clear it is condidional, not guaranteed
+*   - Restart now calls SetPaused(false) first to guarantee clean state, and falls back to scene reload
+*   if GameManager is absent
+* 
 *   04.06.2026
 *   First for today:
 * Before I continue building my game, I need to finish my final exercise for IEnumerators and Coroutines.

@@ -17,56 +17,61 @@ public class PauseManager : MonoBehaviour
 			Destroy(gameObject);
 			return;
 		}
+		
 		Instance = this;
+		DontDestroyOnLoad(gameObject);
 
-		SetPaused(false);
+		IsPaused = false;
+		if (pauseMenuPanel != null)
+			pauseMenuPanel.SetActive(false);
+	}
+
+	private void OnDestroy()
+	{
+		if (IsPaused)
+			Time.timeScale = 1f;
+
+		if (Instance == this)
+			Instance = null;
 	}
 
 	private void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			if (GameManager.Instance != null && !GameManager.Instance.IsPlaying)
-			return;
-
-			TogglePause();
-		}
+			TryTogglePause();
 	}
 
-	public void TogglePause()
+	private bool CanPause()
 	{
-		if (GameManager.Instance != null && !GameManager.Instance.IsPlaying)
-		return;
+		return GameManager.Instance != null && GameManager.Instance.IsPlaying;
+	}
 
+	public void TryTogglePause()
+	{
+		if (!CanPause()) return;
 		SetPaused(!IsPaused);
 	}
-
 	public void SetPaused(bool paused)
 	{
 		IsPaused = paused;
-
-		if (pauseMenuPanel != null)
-		pauseMenuPanel.SetActive(paused);
-
 		Time.timeScale = paused ? 0f : 1f;
-	}
 
+		
+		if (pauseMenuPanel != null)
+			pauseMenuPanel.SetActive(paused);
+	}
 	public void Resume()
 	{
 		SetPaused(false);
 	}
-
+	
 	public void Restart()
 	{
-		Time.timeScale = 1f;
+		SetPaused(false);
 
 		if (GameManager.Instance != null)
-		{
 			GameManager.Instance.RestartGame();
-			return;
-		}
-
-		//var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-		//UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
+		else
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 }
