@@ -1,9 +1,20 @@
 /*
 * == DEV JOURNAL ==
 * 
+*   05.06.2026
+*   Two month ago I was about to change something in scripts resposible for music. Now I'm trying to reconstruct
+* the chain of events. I got some bug trying to stop music on pause. I realized that I miss the understanding of
+* IEnumerator and Coroutines. That's why I stopped working and got to learn about them.
+* I'm going to find the problem and fix it now.
+* 
 *   04.06.2026
 *   First for today:
 * Before I continue building my game, I need to finish my final exercise for IEnumerators and Coroutines.
+* 
+*     Today I did:
+* I did it and I'm proud of myself cuz I build genuinely good code. I went beyound the excercise by introducing
+* a Wave class to encapsulate the data, which is exactly the right instinct for a real project.
+* Clean, readable, extensible. 
 * 
 *   03.06.2026
 * It took almost twoo month to get back to work. I feel a bit sorry about that cuz it seems too long...
