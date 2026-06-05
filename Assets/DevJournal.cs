@@ -7,6 +7,20 @@
 * IEnumerator and Coroutines. That's why I stopped working and got to learn about them.
 * I'm going to find the problem and fix it now.
 * 
+* It isn't a surprise that development of my game takes much more time that I expected.
+* I can't make any plans or predictions now becaouse of lack of experience.
+* 
+* So the most importat thing I must do as soon as possible is to decide:
+* 
+*   should I finish my game by any coast by some deadline?
+*           or
+*   should I leave it and focuse on something else?
+*   
+*   I got the answer to this question. I will finish it by any coast in 10 days.
+*   In 10 days I switch to another project.
+*   
+*   I'm going to make a new model in aseprite now.
+* 
 *     Today I did:
 * I rebuilt PauseManager:
 *   - added DontDestroyOnLoad so the singleton survives scene transitions
@@ -25,6 +39,7 @@
 *   - OnDisable now calls source.Stop() so the clip does not linger if the object is disabled.
 *   - fixed the GetRandomIndex condition from >= 1 to <= 1.
 *   - removed all debug logs from normal execution paths.
+* I decided to finish my game in 10 days at any coast.
 * 
 *   04.06.2026
 *   First for today:
