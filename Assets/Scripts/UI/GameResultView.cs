@@ -6,6 +6,12 @@ using UnityEngine.UI;
 public class GameResultView : MonoBehaviour
 {
   [SerializeField] private TMP_Text resultText;
+  
+  [SerializeField] private TMP_Text nameText;
+  [SerializeField] private TMP_Text rankText;
+  [SerializeField] private TMP_Text moneyText;
+  [SerializeField] private TMP_Text avgScoreText;
+
   [SerializeField] private GameObject restartLabels;
 
   void Start()
@@ -29,13 +35,28 @@ public class GameResultView : MonoBehaviour
   {
     GameResultsManager.Instance.SaveResult(score: total);
 
+		if (PlayerProfileManager.Instance == null)
+		{
+			Debug.LogError("PlayerProfileManager not found in scene.");
+			return;
+		}
+
+		PlayerProfileManager.Instance.RecordGame(score: total);
+
+    var profile = PlayerProfileManager.Instance.GetProfile();
+
     int t = (int)(timer / TimerView.Instance.SecondsInHour);
     int d = (int)(duration / TimerView.Instance.SecondsInHour);
 
     resultText.text = 
     $"W W! \ntotal: {total}tk | stream time: {t}/{d}h";
 
-    resultText.gameObject.SetActive(true);
+		nameText.text = profile.playerName;
+		rankText.text = profile.GetRank();
+		moneyText.text = $"${profile.money}";
+		avgScoreText.text = profile.GetAverageScore().ToString();
+
+		resultText.gameObject.SetActive(true);
 
     restartLabels.SetActive(true);
   }
