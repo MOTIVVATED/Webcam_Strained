@@ -1,40 +1,32 @@
-using System.Collections;
 using TMPro;
 using UnityEngine;
+using System.Collections;
 
 public class ViewersView : MonoBehaviour
 {
-    [SerializeField] private TMP_Text viewersText;
-    private void Start()
-    {
-        StartCoroutine(Init());
-    }
-    private IEnumerator Init()
-    {
-        while (GameManager.Instance == null)
-        {
-            yield return null;
-        }
+	[SerializeField] private TMP_Text viewersText;
 
-        GameManager.Instance.OnViewersChanged += UpdateViewers;
-        UpdateViewers(Time.timeScale);
-    }
-    private void OnEnable()
-    {
-        if (GameManager.Instance != null)
-            GameManager.Instance.OnViewersChanged += UpdateViewers;
-    }
+	private void Start()
+	{
+		StartCoroutine(WaitForInstance.Get(
+				() => GameManager.Instance,
+				gm =>
+				{
+					gm.OnViewersChanged += UpdateViewers;
+					UpdateViewers(Time.timeScale);
+				}
+		));
+	}
 
-    private void OnDisable()
-    {
-        if (GameManager.Instance != null)
-            GameManager.Instance.OnViewersChanged -= UpdateViewers;
-    }
+	private void OnDestroy()
+	{
+		if (GameManager.Instance != null)
+			GameManager.Instance.OnViewersChanged -= UpdateViewers;
+	}
 
-    private void UpdateViewers(float timeScale)
-    {
-        int viewers = (Mathf.FloorToInt(300 * timeScale) + Random.Range (-5,5));
-        
-        viewersText.text = $"{viewers}";
-    }
+	private void UpdateViewers(float timeScale)
+	{
+		int viewers = Mathf.FloorToInt(300 * timeScale) + Random.Range(-5, 5);
+		viewersText.text = viewers.ToString();
+	}
 }

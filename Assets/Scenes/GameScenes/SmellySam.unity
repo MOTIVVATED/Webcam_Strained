@@ -3792,7 +3792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e7ba7aa5f63f946b802849c610081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreView
-  _scoreText: {fileID: 404573138}
+  scoreText: {fileID: 404573138}
 --- !u!4 &840205950
 Transform:
   m_ObjectHideFlags: 0
@@ -3820,7 +3820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7c23d82b4cd7d49a5d64fee8c1cda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TiltView
-  _tiltText: {fileID: 1393278925}
+  tiltText: {fileID: 1393278925}
 --- !u!114 &840205952
 MonoBehaviour:
   m_ObjectHideFlags: 0
