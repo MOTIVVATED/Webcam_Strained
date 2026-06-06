@@ -12,6 +12,16 @@ public class ReducerManager : MonoBehaviour
 
 	private float currentPenalty = 1f;
 
+	private void OnEnable()
+	{
+		GameEvents.OnObjectCollected += HandleCollected;
+	}
+
+	private void OnDisable()
+	{
+		GameEvents.OnObjectCollected -= HandleCollected;
+	}
+
 	private void Awake()
 	{
 		if (Instance != null && Instance != this) { Destroy(gameObject); return; }

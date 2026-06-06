@@ -80,7 +80,12 @@ public class GameManager : MonoBehaviour
     }
   }
 
-  private void WinGame(float t)
+	private void FixedUpdate()
+	{
+		Debug.Log("Time.timeScale: " + Time.timeScale);
+	}
+
+	private void WinGame(float t)
   {
 		if (state != GameState.Playing) return;
 		state = GameState.Won;

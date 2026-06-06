@@ -7,8 +7,18 @@ public class SmashManager : MonoBehaviour
   [SerializeField] private FloatingTextSpawner floatingTextSpawner;
 
 	public event Action OnSmashed;
-    
-  private void Awake()
+
+	private void OnEnable()
+	{
+		GameEvents.OnObjectSmashed += HandleSmashed;
+	}
+
+	private void OnDisable()
+	{
+		GameEvents.OnObjectSmashed -= HandleSmashed;
+	}
+
+	private void Awake()
   {
     if (Instance != null && Instance != this)
     {

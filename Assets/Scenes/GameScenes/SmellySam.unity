@@ -574,8 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ReducerManager
   player: {fileID: 437493377}
-  timeScaleReduction: 0.8
-  minTimeScale: 1
+  penaltyReduction: 0.1
   floatingTextSpawner: {fileID: 770664212}
   distractionOverlay: {fileID: 0}
 --- !u!1 &98618102
@@ -1220,7 +1219,7 @@ MonoBehaviour:
   badCaughtTilt: 5
   goodMissedTilt: 10
   badSmashedTilt: -1
-  timeScalePenalty: 0.95
+  tiltPenaltyPerPoint: 0.05
   maxTilt: 100
   player: {fileID: 437493377}
   floatingTextSpawner: {fileID: 770664212}

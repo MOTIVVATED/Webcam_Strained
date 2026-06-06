@@ -48,7 +48,18 @@ public class ScoreManager : MonoBehaviour
     }
     Instance = this;
   }
-  public void HandleCollected(FallingObjectType type)
+
+	private void OnEnable()
+	{
+		GameEvents.OnObjectCollected += HandleCollected;
+	}
+
+	private void OnDisable()
+	{
+		GameEvents.OnObjectCollected -= HandleCollected;
+	}
+
+	public void HandleCollected(FallingObjectType type)
   {
     switch (type)
     {

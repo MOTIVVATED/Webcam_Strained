@@ -11,7 +11,7 @@ public class TiltManager : MonoBehaviour
   [SerializeField] private int badCaughtTilt = 5;
   [SerializeField] private int goodMissedTilt = 10;
   [SerializeField] private int badSmashedTilt = -1;
-  [SerializeField] private float tiltPenaltyPerPoint = 0.8f;
+  [SerializeField] private float tiltPenaltyPerPoint = 0.05f;
   [SerializeField] private int maxTilt = 100;
   [SerializeField] private GameObject player;
   [SerializeField] FloatingTextSpawner floatingTextSpawner;
@@ -24,6 +24,20 @@ public class TiltManager : MonoBehaviour
 	{
 		if (Instance != null && Instance != this) { Destroy(gameObject); return; }
 		Instance = this;
+	}
+
+	private void OnEnable()
+	{
+		GameEvents.OnObjectCollected += HandleCollected;
+		GameEvents.OnObjectSmashed += HandleSmashed;
+		GameEvents.OnObjectMissed += HandleMissed;
+	}
+
+	private void OnDisable()
+	{
+		GameEvents.OnObjectCollected -= HandleCollected;
+		GameEvents.OnObjectSmashed -= HandleSmashed;
+		GameEvents.OnObjectMissed -= HandleMissed;
 	}
 
 	public void HandleCollected(FallingObjectType type)
@@ -79,8 +93,9 @@ public class TiltManager : MonoBehaviour
 	
 	private void ApplyPenalty()
 	{
-		float penalty = 1f - (tiltPenaltyPerPoint * Tilt);
-		penalty = Mathf.Clamp(penalty, 0.1f, 1f);
+		//float penalty = 1f - (tiltPenaltyPerPoint * Tilt);
+		//penalty = Mathf.Clamp(penalty, 0.1f, 1f);
+		float penalty = 0.8f;
 		TimeScaleController.Instance.SetPenalty(penalty);
 	}
 }
