@@ -5,6 +5,10 @@
 *   First I'm gonna finish with things I couldn't finish yesterday.
 *   - new model in Aseprite
 *   - new data on gameresult screen
+*   
+*   Then I'm going to refactor all my 40 scripts.
+*   
+*   Today
 * 
 *   05.06.2026
 *   Two month ago I was about to change something in scripts resposible for music. Now I'm trying to reconstruct
@@ -38,7 +42,8 @@
 *   if GameManager is absent
 * I rebuilt MusicPlaylist:
 *   - playLoop now runs while (true) and yields inside a pause-wait loop instead of exiting when paused,
-*   so the coroutine stays alive through pause/resume cycles.
+*   so the coroutine stays alive through pause/resume cycles. That's where I stuck befor I learned
+*   IEnumerators and Coroutines
 *   - the playback wait loop also accounts for paused state, so a clip that is paused mid-way is not skipped.
 *   - update is simplified to a single paused bool, removing the duplicate null check.
 *   - OnDisable now calls source.Stop() so the clip does not linger if the object is disabled.
@@ -52,7 +57,7 @@
 * Before I continue building my game, I need to finish my final exercise for IEnumerators and Coroutines.
 * 
 *     Today I did:
-* I did it and I'm proud of myself cuz I build genuinely good code. I went beyound the excercise by introducing
+* I did it and I'm proud of myself cuz I built genuinely good code. I went beyound the excercise by introducing
 * a Wave class to encapsulate the data, which is exactly the right instinct for a real project.
 * Clean, readable, extensible. 
 * 
@@ -69,7 +74,7 @@
 * I'm going to die anyway, so nothing matters. I'm just going to keep trying and enjoy each moment of my life.
 * I moved to anomther country, now I'm in relationships with a woman, that I dreamed about for so long, and sometimes,
 * I feel I took on too much. It scares me a bit. But I know I'm not a coward, and I act even if I'm scared. I do a lot of 
-* mistakes may be... but I learn from them... I loose time and money (like a hollow loses time and soulsin Dark Souls),
+* mistakes may be... but I learn from them... I loose time and money (like a hollow loses time and souls in Dark Souls),
 * but I'm going to reach my goal soon or later. I hope sooner than I die =).
 * 
 *   07.04.2026
