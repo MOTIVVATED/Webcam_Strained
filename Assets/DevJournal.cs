@@ -1,6 +1,11 @@
 /*
 * == DEV JOURNAL ==
 * 
+*   06.06.2026
+*   First I'm gonna finish with things I couldn't finish yesterday.
+*   - new model in Aseprite
+*   - new data on gameresult screen
+* 
 *   05.06.2026
 *   Two month ago I was about to change something in scripts resposible for music. Now I'm trying to reconstruct
 * the chain of events. I got some bug trying to stop music on pause. I realized that I miss the understanding of
