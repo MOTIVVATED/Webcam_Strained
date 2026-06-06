@@ -12,12 +12,7 @@ public class PauseManager : MonoBehaviour
 
 	private void Awake()
 	{
-		if (Instance != null && Instance != this)
-		{
-			Destroy(gameObject);
-			return;
-		}
-		
+		if (Instance != null && Instance != this) { Destroy(gameObject); return; }
 		Instance = this;
 		DontDestroyOnLoad(gameObject);
 
@@ -28,11 +23,7 @@ public class PauseManager : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		if (IsPaused)
-			Time.timeScale = 1f;
-
-		if (Instance == this)
-			Instance = null;
+		if (Instance == this) Instance = null;
 	}
 
 	private void Update()
@@ -41,34 +32,30 @@ public class PauseManager : MonoBehaviour
 			TryTogglePause();
 	}
 
-	private bool CanPause()
-	{
-		return GameManager.Instance != null && GameManager.Instance.IsPlaying;
-	}
+	private bool CanPause() =>
+		GameManager.Instance != null && GameManager.Instance.IsPlaying;
+
 
 	public void TryTogglePause()
 	{
 		if (!CanPause()) return;
 		SetPaused(!IsPaused);
 	}
+
 	public void SetPaused(bool paused)
 	{
 		IsPaused = paused;
-		Time.timeScale = paused ? 0f : 1f;
+		TimeScaleController.Instance.SetPaused(paused);
 
-		
 		if (pauseMenuPanel != null)
 			pauseMenuPanel.SetActive(paused);
 	}
-	public void Resume()
-	{
-		SetPaused(false);
-	}
-	
+
+	public void Resume() => SetPaused(false);
+
 	public void Restart()
 	{
 		SetPaused(false);
-
 		if (GameManager.Instance != null)
 			GameManager.Instance.RestartGame();
 		else
