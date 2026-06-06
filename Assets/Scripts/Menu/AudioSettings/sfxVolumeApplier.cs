@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
-public class sfxVolumeApplier : MonoBehaviour
+public class SfxVolumeApplier : MonoBehaviour
 {
 	private AudioSource audioSource;
 	private bool subscribed;

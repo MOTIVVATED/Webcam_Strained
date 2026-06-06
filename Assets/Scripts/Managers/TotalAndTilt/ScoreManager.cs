@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour
 
   [SerializeField] private int tk666 = 666;
 
-  [SerializeField] private int tk999 = 1111;
+  [SerializeField] private int tk1111 = 1111;
 
 	[SerializeField] private GameObject player;
 
@@ -94,9 +94,9 @@ public class ScoreManager : MonoBehaviour
         floatingTextSpawner.Spawn(tk666, player.transform.position, type);
         break;
       case FallingObjectType.tk1111:
-        AddScore(tk999);
+        AddScore(tk1111);
         OnTK_1111_Collected?.Invoke();
-        floatingTextSpawner.Spawn(tk999, player.transform.position, type);
+        floatingTextSpawner.Spawn(tk1111, player.transform.position, type);
         break;
 		}
   }   

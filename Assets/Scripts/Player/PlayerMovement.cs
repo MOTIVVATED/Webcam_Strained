@@ -35,14 +35,4 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = position;
     }
-    // Optional: Wrap around screen edges instead of clamping
-    private void Wrap(float minX, float maxX)
-    {
-        float width = maxX - minX;
-        float x = transform.position.x;
-
-        x = Mathf.Repeat(x - minX, width) + minX;
-
-        transform.position = new Vector3(x, transform.position.y, transform.position.z);
-    }
 }

@@ -58,7 +58,7 @@ public class MusicPlaylist : MonoBehaviour
 
     if (parts == null || parts.Length == 0)
     {
-      Debug.LogWarning("MyusicPlaylist: No clip assigned.");
+      Debug.LogWarning("MusicPlaylist: No clip assigned.");
       yield break;
     }
 

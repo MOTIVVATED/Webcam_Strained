@@ -5722,8 +5722,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1292343351}
-        m_TargetAssemblyTypeName: RestartButton, Assembly-CSharp
+      - m_Target: {fileID: 770664210}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -6522,7 +6522,7 @@ MonoBehaviour:
   tk222: 222
   tk555: 555
   tk666: 666
-  tk999: 1111
+  tk1111: 1111
   player: {fileID: 437493377}
   floatingTextSpawner: {fileID: 770664212}
 --- !u!4 &1437506033

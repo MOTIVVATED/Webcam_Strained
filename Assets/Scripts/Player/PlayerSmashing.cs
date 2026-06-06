@@ -30,25 +30,6 @@ public class PlayerSmashing : MonoBehaviour
         OnSmash?.Invoke();
     }
 
-    private void Smash()
-    // smashing all objects in the area by layer
-    {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(
-            transform.position, 
-            smashRadius, 
-            badLayer
-        );
-        foreach (var hit in hits)
-        {
-            FallingObject bad = hit.GetComponent<FallingObject>();
-
-            if (bad != null)
-            {
-                bad.Smash();
-            }
-        }
-        OnSmash?.Invoke();
-    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

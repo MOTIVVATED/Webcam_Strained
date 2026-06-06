@@ -7,7 +7,7 @@ public class FallingObject : MonoBehaviour
   [SerializeField] private SpriteRenderer spriteRenderer;
 
   [SerializeField] private float fallSpeed = 3f;
-  [SerializeField] private float destroY = -6f;
+  [SerializeField] private float destroyY = -6f;
 
   public FallingObjectType ObjectType => objectType;
 
@@ -46,7 +46,7 @@ public class FallingObject : MonoBehaviour
 
   private void CheckDestroy()
   {
-    if (transform.position.y <= destroY)
+    if (transform.position.y <= destroyY)
     {
       OnMissed?.Invoke(objectType);
       Destroy(gameObject);
