@@ -15,7 +15,7 @@ public class FallingObject : MonoBehaviour
     
   public event Action<FallingObjectType> OnMissed;
 
-  public event Action<FallingObjectType> OnSmashed;
+  public event Action<FallingObjectType, Vector3> OnSmashed;
 
   private void Awake()
   {
@@ -57,9 +57,10 @@ public class FallingObject : MonoBehaviour
     OnCollected?.Invoke(objectType);
     Destroy(gameObject);
   }
-  public void Smash()
-  {
-    OnSmashed?.Invoke(objectType);
-    Destroy(gameObject);
-  }
+	public void Smash()
+	{
+		Vector3 pos = transform.position;
+		OnSmashed?.Invoke(objectType, pos);
+		Destroy(gameObject);
+	}
 }

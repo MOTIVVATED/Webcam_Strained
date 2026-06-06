@@ -3461,7 +3461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bb62cfc20df5d4689f62a73f890ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameDuration: 10
+  gameDuration: 210
   initialTimeScale: 0.7
   timeScaleIncrement: 0.02
   maxTimeScale: 2.2
@@ -4977,7 +4977,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   floatingTextSpawner: {fileID: 770664212}
-  tiltManager: {fileID: 257669059}
 --- !u!1 &1118846086
 GameObject:
   m_ObjectHideFlags: 0
@@ -5457,7 +5456,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1236289401}
-  - component: {fileID: 1236289400}
   - component: {fileID: 1236289402}
   m_Layer: 0
   m_Name: Spawner
@@ -5466,106 +5464,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1236289400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236289399}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de85aeaeaa30734ca9e80018066943a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectSpawner
-  rules:
-  - prefab: {fileID: 5304136060711314168, guid: 32513998c28c795438935908415d1c74, type: 3}
-    delayMin: 45
-    delayMax: 75
-    enabled: 1
-  - prefab: {fileID: 6750221046696986500, guid: 34b9c453299c6be4fb34751487155854, type: 3}
-    delayMin: 0.1
-    delayMax: 3
-    enabled: 1
-  - prefab: {fileID: 4172547871608088945, guid: 855b9233cd615ea4d9948cada9583c55, type: 3}
-    delayMin: 0.1
-    delayMax: 4
-    enabled: 1
-  - prefab: {fileID: 3247108239030646150, guid: 1ad84122176cc414497e8fa217153ea9, type: 3}
-    delayMin: 2
-    delayMax: 6
-    enabled: 1
-  - prefab: {fileID: 5304136060711314168, guid: 3b1585ddc05687f4b938dd25a1fbb084, type: 3}
-    delayMin: 1
-    delayMax: 3
-    enabled: 0
-  - prefab: {fileID: 5304136060711314168, guid: d48752722b5397d488f351087c1c654c, type: 3}
-    delayMin: 1
-    delayMax: 3
-    enabled: 1
-  - prefab: {fileID: 3247108239030646150, guid: 571b84797a10e744e9c398b323209e66, type: 3}
-    delayMin: 6
-    delayMax: 12
-    enabled: 1
-  - prefab: {fileID: 3247108239030646150, guid: 0bda84e6eb200dc4f9f749e502d51015, type: 3}
-    delayMin: 8
-    delayMax: 16
-    enabled: 1
-  - prefab: {fileID: 3247108239030646150, guid: bf71477936f0fdd47b86cc5bb6cde0e4, type: 3}
-    delayMin: 13
-    delayMax: 26
-    enabled: 1
-  - prefab: {fileID: 3247108239030646150, guid: 66f5fb3862f4a8947895caa542aba599, type: 3}
-    delayMin: 22
-    delayMax: 44
-    enabled: 1
-  spawnPoint: {fileID: 311284371}
-  minX: -3
-  maxX: 3
-  spawnShiftX: 2
-  minGlobalSpawnInterval: 0.3
-  badSprites:
-  - {fileID: 5228080354895136756, guid: 5bf37e808067a904b8e98413e198b694, type: 3}
-  - {fileID: -6738593726584075344, guid: 6c821be0f9671ab488bebbae23c74f54, type: 3}
-  - {fileID: -1833813359117777285, guid: a2d4fbad62e842c42a11c9d3f45665f8, type: 3}
-  - {fileID: -5938644285773631372, guid: e87e5a8fec46ba94abd232dc68c0f2d7, type: 3}
-  - {fileID: 6626041533382997925, guid: a7201f4b2f960ef45947bcc717740492, type: 3}
-  - {fileID: -792284763658192019, guid: 7f83455f40408de4b82bbda72785ae2f, type: 3}
-  - {fileID: 1550225282675890858, guid: 6eaf49b783b3bbc47aba86bc4b0b6b08, type: 3}
-  - {fileID: 3435236109102183446, guid: bda77d536fab94143bbab29538cf35c3, type: 3}
-  - {fileID: 5576483872856549817, guid: 2cb15ad01f7dd0046a9aec06f53a6de8, type: 3}
-  - {fileID: 6801477005184533737, guid: 483258faf2e75904188746163288945e, type: 3}
-  - {fileID: 606687518308557712, guid: 1659ed67fffcead45bc9a5ce660b75f9, type: 3}
-  - {fileID: 2005774453994385066, guid: a278293cb541d734e8ea2c5136da30af, type: 3}
-  - {fileID: 1943428606289038048, guid: b9e33733304822f4589078ed6f613102, type: 3}
-  - {fileID: -6120337945295559805, guid: 6c369ab921b8635428b978183a1644cd, type: 3}
-  - {fileID: -6906046492141677305, guid: 7736ae6492b4d704584d48f22b834dab, type: 3}
-  - {fileID: -4298609293736674013, guid: 289601e14e164ae469eb7de1f661ce20, type: 3}
-  - {fileID: 4467246784940006162, guid: 839b238b7831d39438eb8dde2485da47, type: 3}
-  - {fileID: -7419193825677504720, guid: bab81fd6c0c55b34c94ffb6f9b5a1570, type: 3}
-  - {fileID: -9210003827448557974, guid: 770fd342663fed44198948e55e70fa60, type: 3}
-  - {fileID: 2821643415976233255, guid: a1cc3c928d1e8224ba368e617281e8ba, type: 3}
-  - {fileID: -2459996017498859145, guid: fc52e1c01825c654f9a9fec3d9a197ad, type: 3}
-  - {fileID: -1698872046444497502, guid: 8d896cdf840f7e1469c032273c343d12, type: 3}
-  - {fileID: -5285506516210030504, guid: b49842ff213ad134c93f71d2c659f76b, type: 3}
-  - {fileID: -8765739936942367478, guid: d333ca01c071bad458ae9b9fe74ba6e4, type: 3}
-  - {fileID: 341774064659618290, guid: 552c2d0f92fb693479b39a61c239cfc9, type: 3}
-  - {fileID: -551360847466037166, guid: 1d064a11a91da2c4cad4ac0f5374e9ac, type: 3}
-  - {fileID: -6333700732004341290, guid: 40439452ea7beff4cb4b5fb4a1f7166f, type: 3}
-  - {fileID: -4942432883011298534, guid: 355d9771dc1b8c84cabcb2d67456d779, type: 3}
-  - {fileID: -8295780793425677454, guid: 02134721e930aa540ba418e62d0a7870, type: 3}
-  - {fileID: -5208301551414470971, guid: 5a5aaa0c69480bc40abddfd1da3297df, type: 3}
-  - {fileID: 5069202426593431496, guid: 969c82ac0df36d84db761464bd2ed80b, type: 3}
-  - {fileID: 8343037796958661786, guid: 54c2bcfcfb9ad66479188746cef51338, type: 3}
-  - {fileID: 9174656909839004992, guid: 97e41b8c43b7b3f45b8ee4f3c425b57e, type: 3}
-  - {fileID: -4710145574275051217, guid: 03a6257c56fbdfb4b815baf21e4ff783, type: 3}
-  - {fileID: -4458911513140235255, guid: b0f9cd2d8ff7bb8428933f9199c190df, type: 3}
-  - {fileID: 526424130645038134, guid: 32f21da18ef1aa7459a4a3744d83362e, type: 3}
-  - {fileID: -1309378094835810698, guid: 21ee4d25f41a345498ab0ab382a3d6ab, type: 3}
-  - {fileID: 3379493704815149311, guid: 0f1d1c99f52a0d341b8a0081b42c8130, type: 3}
-  - {fileID: 3233093461170913212, guid: 5eb8ff25a2cc70a4e961b0ec3bea6b6d, type: 3}
-  - {fileID: 5596704955287644909, guid: 0223e2efb07221741bdb0b9fcc6ce549, type: 3}
-  subscribeOnEvents: 1
 --- !u!4 &1236289401
 Transform:
   m_ObjectHideFlags: 0

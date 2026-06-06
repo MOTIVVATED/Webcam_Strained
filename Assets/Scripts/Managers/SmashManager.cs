@@ -4,11 +4,7 @@ public class SmashManager : MonoBehaviour
 {
   public static SmashManager Instance { get; private set; }
 
-  [SerializeField] FloatingTextSpawner floatingTextSpawner;
-  [SerializeField] TiltManager tiltManager;
-
-  private GameObject bad;
-  private GameObject webcam;
+  [SerializeField] private FloatingTextSpawner floatingTextSpawner;
 
 	public event Action OnSmashed;
     
@@ -21,19 +17,14 @@ public class SmashManager : MonoBehaviour
     }
     Instance = this;
   }
-  public void HandleSmashed(FallingObjectType type)
+  public void HandleSmashed(FallingObjectType type, Vector3 position)
   {
     switch (type)
     {
       case FallingObjectType.bad:
-        OnSmashed?.Invoke();
-        bad = GameObject.FindGameObjectWithTag("bad");
-        floatingTextSpawner.Spawn(bad.transform.position);
-        break;
       case FallingObjectType.webcam:
         OnSmashed?.Invoke();
-        webcam = GameObject.FindGameObjectWithTag("bad");
-        floatingTextSpawner.Spawn(webcam.transform.position);
+        floatingTextSpawner.Spawn(position);
 				break;
 		}
   }

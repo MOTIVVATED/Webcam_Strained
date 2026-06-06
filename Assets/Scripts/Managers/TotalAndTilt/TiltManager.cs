@@ -51,7 +51,7 @@ public class TiltManager : MonoBehaviour
       break;
 		}
   }
-  public void HandleSmashed(FallingObjectType type)
+  public void HandleSmashed(FallingObjectType type, Vector3 position)
   {
     DecreaseTilt(badSmashedTilt);
   }
