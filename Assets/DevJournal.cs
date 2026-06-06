@@ -8,7 +8,13 @@
 *   
 *   Then I'm going to refactor all my 40 scripts.
 *   
-*   Today
+*     Today I did:
+* I made full refactoring. I removed some scripts and added some new scripts. Fixed some bugs.
+* I still need to fix some bugs, the most difficult is bug with timescale. It's hard to understand where 
+* the problem is, but I'll do my best, cuz I belive in my new system. I'm convinced this system prevents
+* more potential bugs in future.
+* I made one new model sprite, need to animate it tomorrow.
+* Tomorrow I want to make all I have now work smoothly, the way it has to work. Nothing new, just polishing.
 * 
 *   05.06.2026
 *   Two month ago I was about to change something in scripts resposible for music. Now I'm trying to reconstruct
