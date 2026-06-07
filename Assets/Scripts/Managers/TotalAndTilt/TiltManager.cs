@@ -93,9 +93,9 @@ public class TiltManager : MonoBehaviour
 	
 	private void ApplyPenalty()
 	{
-		//float penalty = 1f - (tiltPenaltyPerPoint * Tilt);
-		//penalty = Mathf.Clamp(penalty, 0.1f, 1f);
-		float penalty = 0.8f;
+		float penalty = 1f - (tiltPenaltyPerPoint * Tilt);
+		penalty = Mathf.Clamp(penalty, 0.1f, 1f);
+		//float penalty = 0.8f;
 		TimeScaleController.Instance.SetPenalty(penalty);
 	}
 }
