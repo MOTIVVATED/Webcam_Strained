@@ -3460,7 +3460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bb62cfc20df5d4689f62a73f890ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameDuration: 210
+  gameDuration: 10
   initialTimeScale: 0.7
   timeScaleIncrement: 0.02
   maxTimeScale: 2.2

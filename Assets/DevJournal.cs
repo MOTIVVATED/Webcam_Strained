@@ -4,7 +4,7 @@
 *   07.06.2026
 * I have some bugs in my game, so I need to fix as much as I can.
 *   1) MissingReferenceException. I'm trying to access destoyed canvas.
-*   
+*   2) Make EndGameScreen SetActive false
 * 
 *   06.06.2026
 *   First I'm gonna finish with things I couldn't finish yesterday.

@@ -12,29 +12,53 @@ public class FloatingTextSpawner : MonoBehaviour
 	{
 		if (Instance != null && Instance != this)
 		{
-		Destroy(this.gameObject);
-		return;
+			Destroy(this.gameObject);
+			return;
 		}
 		Instance = this;
+		DontDestroyOnLoad(this.gameObject); // if this spawner should survive scene loads
 	}
+
+	private bool TryGetCanvas(out Canvas result)
+	{
+		if (canvas != null)
+		{
+			result = canvas;
+			return true;
+		}
+
+		// Canvas was destroyed — try to find a new one in the current scene
+		canvas = FindAnyObjectByType<Canvas>();
+
+		if (canvas == null)
+		{
+			Debug.LogWarning("FloatingTextSpawner: no Canvas found in scene, skipping spawn.");
+			result = null;
+			return false;
+		}
+
+		result = canvas;
+		return true;
+	}
+
 	public void Spawn(Vector3 worldPos)
 	{
+		if (!TryGetCanvas(out Canvas c)) return;
 		if (mainCamera == null) mainCamera = Camera.main;
 
 		Vector3 screenPos = mainCamera.WorldToScreenPoint(worldPos);
-
-		var instance = Instantiate(prefab, canvas.transform);
+		var instance = Instantiate(prefab, c.transform);
 		instance.transform.position = screenPos;
-
 		instance.Setup(FallingObjectType.bad);
 	}
+
 	public void Spawn(int amount, Vector3 worldPos, FallingObjectType type)
 	{
+		if (!TryGetCanvas(out Canvas c)) return;
 		if (mainCamera == null) mainCamera = Camera.main;
 
 		Vector3 screenPos = mainCamera.WorldToScreenPoint(worldPos);
-
-		var instance = Instantiate(prefab, canvas.transform);
+		var instance = Instantiate(prefab, c.transform);
 		instance.transform.position = screenPos;
 
 		switch (type)
