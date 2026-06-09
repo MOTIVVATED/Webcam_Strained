@@ -7,6 +7,9 @@
 *     Today I did:
 * 1) I fixed the bug with surviving scene transitions Pause Menu Panel. That was elementary, but still, I faced 
 * such a problem for the first time. I just removed DontDestroyOnLoad. Now I know exactli the way it works -_-
+* 2) I had this warning in Console: The referenced script (Unknown) on this Behaviour is missing!
+* I made a FindMissingScript.cs to find it and I found it.
+
 * 
 *   07.06.2026
 * I have some bugs in my game, so I need to fix as much as I can.
