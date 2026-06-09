@@ -65,6 +65,9 @@ public class GameManager : MonoBehaviour
       OnTimeChanged?.Invoke(timer, gameDuration);
       OnViewersChanged?.Invoke(currentProgression);
 
+			Debug.Log("Time.timeScale: " + Time.timeScale);
+
+
 			if (currentProgression < maxTimeScale)
 			{
 				currentProgression = Mathf.Min(currentProgression + timeScaleIncrement, maxTimeScale);
@@ -80,15 +83,11 @@ public class GameManager : MonoBehaviour
     }
   }
 
-	private void FixedUpdate()
-	{
-		Debug.Log("Time.timeScale: " + Time.timeScale);
-	}
-
 	private void WinGame(float t)
   {
 		if (state != GameState.Playing) return;
 		state = GameState.Won;
+    Debug.Log("WinGame");
 		TimeScaleController.Instance.SetFrozen();
 		OnGameEnded?.Invoke();
 		int total = ScoreManager.Instance != null ? ScoreManager.Instance.Total : 0;

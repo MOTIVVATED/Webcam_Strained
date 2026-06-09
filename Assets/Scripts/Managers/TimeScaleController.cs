@@ -8,6 +8,9 @@ public class TimeScaleController : MonoBehaviour
 	private float _penalty			= 1f;
 	private bool _paused				= false;
 
+	//private float _timeScaleMin = 0.7f;
+	//private float _timeScaleMax = 2f;
+
 	private void Awake()
 	{
 		if (Instance != null && Instance != this) { Destroy(gameObject); }
@@ -22,8 +25,14 @@ public class TimeScaleController : MonoBehaviour
 
 	public void SetPenalty(float value)
 	{
-		_penalty = Mathf.Clamp01(value);
-		Apply();
+		//_penalty = Mathf.Clamp01(value);
+				
+		Debug.Log(Time.timeScale + " * " + _penalty + " = ...");
+
+		//Apply();
+		Time.timeScale *= value;
+
+		Debug.Log("... = " + Time.timeScale);
 	}
 
 	public void SetPaused(bool paused)
@@ -35,6 +44,7 @@ public class TimeScaleController : MonoBehaviour
 	public void SetFrozen()
 	{
 		Time.timeScale = 0f;
+		Debug.Log("SetFrozen! Time.timeScale: " +  Time.timeScale);
 	}
 	public void Unfreeze()
 	{
@@ -48,6 +58,7 @@ public class TimeScaleController : MonoBehaviour
 			Time.timeScale = 0f;
 			return;
 		}
-		Time.timeScale = _progression * _penalty;
+		// Time.timeScale = Mathf.Clamp( _progression * _penalty, _timeScaleMin, _timeScaleMax);
+
 	}
 }

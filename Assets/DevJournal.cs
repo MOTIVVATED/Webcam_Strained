@@ -8,7 +8,11 @@
 * 1) I fixed the bug with surviving scene transitions Pause Menu Panel. That was elementary, but still, I faced 
 * such a problem for the first time. I just removed DontDestroyOnLoad. Now I know exactli the way it works -_-
 * 2) I had this warning in Console: The referenced script (Unknown) on this Behaviour is missing!
-* I made a FindMissingScript.cs to find it and I found it.
+* I made a FindMissingScript.cs to find it and I found it and removed.
+* 3) I have a bug tha game continues even when result panel appears.
+* upd I fixed that =)
+* 
+* I realized that my TimeScaleController logic is totally wrong. I need to rework it complitely.
 
 * 
 *   07.06.2026
