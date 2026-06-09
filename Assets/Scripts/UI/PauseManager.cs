@@ -1,3 +1,4 @@
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,7 +15,6 @@ public class PauseManager : MonoBehaviour
 	{
 		if (Instance != null && Instance != this) { Destroy(gameObject); return; }
 		Instance = this;
-		DontDestroyOnLoad(gameObject);
 
 		IsPaused = false;
 		if (pauseMenuPanel != null)
@@ -60,5 +60,8 @@ public class PauseManager : MonoBehaviour
 			GameManager.Instance.RestartGame();
 		else
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		
+		if (pauseMenuPanel != null)
+			pauseMenuPanel.SetActive(false);
 	}
 }

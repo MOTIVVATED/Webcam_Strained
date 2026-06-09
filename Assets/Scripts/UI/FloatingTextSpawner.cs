@@ -16,7 +16,6 @@ public class FloatingTextSpawner : MonoBehaviour
 			return;
 		}
 		Instance = this;
-		DontDestroyOnLoad(this.gameObject); // if this spawner should survive scene loads
 	}
 
 	private bool TryGetCanvas(out Canvas result)

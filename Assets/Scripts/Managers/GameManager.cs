@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
 	}
   public void RestartGame()
   {
-    Time.timeScale = 1f;
+    TimeScaleController.Instance.Unfreeze();
     var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
     UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
   }

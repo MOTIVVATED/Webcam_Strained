@@ -36,6 +36,10 @@ public class TimeScaleController : MonoBehaviour
 	{
 		Time.timeScale = 0f;
 	}
+	public void Unfreeze()
+	{
+		Time.timeScale = 1f;
+	}
 
 	private void Apply()
 	{

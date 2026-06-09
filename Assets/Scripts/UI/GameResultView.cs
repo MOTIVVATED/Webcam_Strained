@@ -82,4 +82,13 @@ public class GameResultView : MonoBehaviour
     Application.Quit();
     Debug.Log("Quit");
   }
+
+  public void Restart()
+  {
+		restartLabels.SetActive(false);
+
+		TimeScaleController.Instance.Unfreeze();
+    var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+    UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
+  }
 }
