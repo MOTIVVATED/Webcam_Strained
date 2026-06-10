@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
 	private void Start()
 	{
-		TimeScaleController.Instance.SetProgression(currentProgression);
+		TimeScaleController.Instance.SetTimeScale(currentProgression);
 		OnGameStarted?.Invoke();
 	}
 
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 			if (currentProgression < maxTimeScale)
 			{
 				currentProgression = Mathf.Min(currentProgression + timeScaleIncrement, maxTimeScale);
-				TimeScaleController.Instance.SetProgression(currentProgression);
+				TimeScaleController.Instance.SetTimeScale(currentProgression);
 			}
 		}
 

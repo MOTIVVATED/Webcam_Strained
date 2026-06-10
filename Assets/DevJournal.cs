@@ -1,6 +1,14 @@
 /*
 * == DEV JOURNAL ==
 * 
+*   10.06.2026
+* Today I'm going to work on my TimeScaleController system.
+*   Here is my analysis:
+*   -timeScale 0 on pause and after I release pause it stays 0
+*   -viewers number grows independently
+* I reworked the formula and naming, now it works properly. Still need to fix viewers number rendering.    
+*
+* 
 *   09.06.2026
 * Today I'm going to work on polishing and fixing bugs.
 * 
