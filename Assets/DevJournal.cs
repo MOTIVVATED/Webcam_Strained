@@ -4,6 +4,10 @@
 *   11.07.2026
 * timeScale gets stuck on 0.7
 * 
+* Finally I reworked TimeScaleController and it works well. I made it much simplier and now it works properly.
+* It's extensible now and It's going to be much easier to add new features based on timeScale changes.
+* I'm going to continue modify it.
+* 
 *   10.06.2026
 * Today I'm going to work on my TimeScaleController system.
 *   Here is my analysis:

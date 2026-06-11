@@ -1,4 +1,6 @@
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TimeScaleController : MonoBehaviour
 {
@@ -8,10 +10,12 @@ public class TimeScaleController : MonoBehaviour
 	private bool _paused	= false;
 
 	private float _timeScaleFactor	= 0.88f;
-	private float _timeScaleIncrement = 0.1f;
+	private float _timeScaleIncrement = 0.088f;
 
 	private float _timeScaleMin = 0.7f;
 	private float _timeScaleMax = 2f;
+
+	private string _sceneName;
 
 	private void Awake()
 	{
@@ -21,6 +25,15 @@ public class TimeScaleController : MonoBehaviour
 
 	public void SetTimeScale()
 	{
+		_sceneName = SceneManager.GetActiveScene().name;
+
+		switch (_sceneName)
+		{
+			case "SmellySam": _timeScaleIncrement = 0.088f; break;
+
+			default: _timeScaleIncrement = 0; break;
+		}
+
 		if ( !_paused && _actualTimeScale < _timeScaleMax)
 		{
 			_actualTimeScale += _timeScaleIncrement;

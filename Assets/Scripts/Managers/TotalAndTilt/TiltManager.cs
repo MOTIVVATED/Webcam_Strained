@@ -13,7 +13,7 @@ public class TiltManager : MonoBehaviour
   [SerializeField] private int badSmashedTilt = -1;
 	//[SerializeField] private float tiltPenaltyPerPoint = 0.05f;
 
-	[SerializeField] private float timeScaleFactor = 0.88f;
+	//[SerializeField] private float timeScaleFactor = 0.88f;
 	
   [SerializeField] private int maxTilt = 100;
   [SerializeField] private GameObject player;

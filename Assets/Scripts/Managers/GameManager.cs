@@ -17,12 +17,12 @@ public class GameManager : MonoBehaviour
   public float GameDuration => gameDuration;
 
   [SerializeField] private float gameDuration = 60f;
-  [SerializeField] private float initialTimeScale = 0.6f;
-  [SerializeField] private float timeScaleIncrement = 0.2f;
-  [SerializeField] private float maxTimeScale = 1f;
+  //[SerializeField] private float initialTimeScale = 0.6f;
+  //[SerializeField] private float timeScaleIncrement = 0.2f;
+  //[SerializeField] private float maxTimeScale = 1f;
 
   private float timer;
-  private float currentTimeScale;
+  //private float currentTimeScale;
 
   private enum GameState { Playing, Paused, Won, Lost }
   private GameState state = GameState.Playing;
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 		if (Instance != null && Instance != this) { Destroy(gameObject); return; }
 		Instance = this;
 
-		currentTimeScale = initialTimeScale;
+		//currentTimeScale = initialTimeScale;
 	}
 
 	private void Start()
