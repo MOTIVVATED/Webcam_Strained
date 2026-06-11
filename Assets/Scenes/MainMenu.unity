@@ -5413,7 +5413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.04705883, g: 0.4156863, b: 0.5764706, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6425,9 +6425,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   gameDuration: 600
-  initialTimeScale: 1
-  timeScaleIncrement: 0
-  maxTimeScale: 1
 --- !u!4 &1918025094
 Transform:
   m_ObjectHideFlags: 0
