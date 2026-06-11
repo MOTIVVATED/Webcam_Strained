@@ -5,8 +5,10 @@ public class TimeScaleController : MonoBehaviour
 	public static TimeScaleController Instance { get; private set; }
 
 	private float _actualTimeScale	= 1f;
-	private float _timeScaleFactor	= 1f;
 	private bool _paused	= false;
+
+	private float _timeScaleFactor	= 0.88f;
+	private float _timeScaleIncrement = 0.1f;
 
 	private float _timeScaleMin = 0.7f;
 	private float _timeScaleMax = 2f;
@@ -17,23 +19,24 @@ public class TimeScaleController : MonoBehaviour
 		Instance = this;
 	}
 
-	public void SetTimeScale( float value)
+	public void SetTimeScale()
 	{
-		_actualTimeScale = Mathf.Max(0f, value);
+		if ( !_paused && _actualTimeScale < _timeScaleMax)
+		{
+			_actualTimeScale += _timeScaleIncrement;
+		}
 		Apply();
 	}
 
-	public void SetPenalty(float value)
+	public void ReduceTimeScale()
 	{
-		//_penalty = Mathf.Clamp01(value);
-		_timeScaleFactor = Mathf.Max(0f, value);
-
-		_actualTimeScale = Mathf.Max(_timeScaleMin, Time.timeScale);
+		if (!_paused && _actualTimeScale > _timeScaleMin)
+		{
+			_actualTimeScale *= _timeScaleFactor;
+		}
 
 		Debug.Log(_actualTimeScale + " * " + _timeScaleFactor + " = ...");
-
 		Apply();
-
 		Debug.Log("... = " + Time.timeScale);
 	}
 
@@ -55,16 +58,11 @@ public class TimeScaleController : MonoBehaviour
 
 	private void Apply()
 	{
-
-		Debug.Log("Apply called");
-
 		if(_paused)
 		{
 			Time.timeScale = 0f;
 			return;
 		}
-		Time.timeScale = Mathf.Max( 
-			_timeScaleMin, _actualTimeScale * _timeScaleFactor );
-
+		Time.timeScale = _actualTimeScale;
 	}
 }

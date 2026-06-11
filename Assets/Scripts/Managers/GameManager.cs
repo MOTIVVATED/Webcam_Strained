@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
 	private void Start()
 	{
-		TimeScaleController.Instance.SetTimeScale(currentTimeScale);
+		TimeScaleController.Instance.SetTimeScale();
 		OnGameStarted?.Invoke();
 	}
 
@@ -67,15 +67,17 @@ public class GameManager : MonoBehaviour
 
 			Debug.Log("Time.timeScale: " + Time.timeScale);
 
+      TimeScaleController.Instance.SetTimeScale();
 
-			if (currentTimeScale < maxTimeScale)
-			{
-				currentTimeScale = Mathf.Min(Time.timeScale + timeScaleIncrement, maxTimeScale);
-				TimeScaleController.Instance.SetTimeScale(currentTimeScale);
-			}
-		}
 
-    if (timer >= gameDuration)
+      //if (currentTimeScale < maxTimeScale)
+      //{
+      //	currentTimeScale = Mathf.Min(Time.timeScale + timeScaleIncrement, maxTimeScale);
+      //	TimeScaleController.Instance.SetTimeScale(currentTimeScale);
+      //}
+    }
+
+		if (timer >= gameDuration)
     {
       timer = gameDuration;
       OnTimeChanged?.Invoke(timer, gameDuration);

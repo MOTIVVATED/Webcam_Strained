@@ -34,7 +34,7 @@ public class ReducerManager : MonoBehaviour
 		{
 			case FallingObjectType.reduser:
 				currentPenalty = Mathf.Max(currentPenalty - penaltyReduction, 0.1f);
-				TimeScaleController.Instance.SetPenalty(currentPenalty);
+				TimeScaleController.Instance.ReduceTimeScale();
 				floatingTextSpawner.Spawn(0, player.transform.position, type);
 				break;
 			case FallingObjectType.webcam:

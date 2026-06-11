@@ -101,7 +101,7 @@ public class TiltManager : MonoBehaviour
 
 
 		//float penalty = 0.8f;
-		TimeScaleController.Instance.SetPenalty(timeScaleFactor);
+		TimeScaleController.Instance.ReduceTimeScale();
 		Debug.Log("Penalty Applied!");
 	}
 }
