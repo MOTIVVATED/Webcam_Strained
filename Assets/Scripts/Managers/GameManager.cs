@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
   [SerializeField] private float maxTimeScale = 1f;
 
   private float timer;
-  private float currentProgression;
+  private float currentTimeScale;
 
   private enum GameState { Playing, Paused, Won, Lost }
   private GameState state = GameState.Playing;
@@ -32,12 +32,12 @@ public class GameManager : MonoBehaviour
 		if (Instance != null && Instance != this) { Destroy(gameObject); return; }
 		Instance = this;
 
-		currentProgression = initialTimeScale;
+		currentTimeScale = initialTimeScale;
 	}
 
 	private void Start()
 	{
-		TimeScaleController.Instance.SetTimeScale(currentProgression);
+		TimeScaleController.Instance.SetTimeScale(currentTimeScale);
 		OnGameStarted?.Invoke();
 	}
 
@@ -63,15 +63,15 @@ public class GameManager : MonoBehaviour
     if(sec != Mathf.FloorToInt(timer - Time.unscaledDeltaTime))
     {
       OnTimeChanged?.Invoke(timer, gameDuration);
-      OnViewersChanged?.Invoke(currentProgression);
+        OnViewersChanged?.Invoke(Time.timeScale);
 
 			Debug.Log("Time.timeScale: " + Time.timeScale);
 
 
-			if (currentProgression < maxTimeScale)
+			if (currentTimeScale < maxTimeScale)
 			{
-				currentProgression = Mathf.Min(currentProgression + timeScaleIncrement, maxTimeScale);
-				TimeScaleController.Instance.SetTimeScale(currentProgression);
+				currentTimeScale = Mathf.Min(Time.timeScale + timeScaleIncrement, maxTimeScale);
+				TimeScaleController.Instance.SetTimeScale(currentTimeScale);
 			}
 		}
 

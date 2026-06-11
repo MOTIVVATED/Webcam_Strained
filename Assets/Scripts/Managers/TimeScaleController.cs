@@ -55,6 +55,9 @@ public class TimeScaleController : MonoBehaviour
 
 	private void Apply()
 	{
+
+		Debug.Log("Apply called");
+
 		if(_paused)
 		{
 			Time.timeScale = 0f;

@@ -28,5 +28,6 @@ public class ViewersView : MonoBehaviour
 	{
 		int viewers = Mathf.FloorToInt(300 * timeScale) + Random.Range(-5, 5);
 		viewersText.text = viewers.ToString();
+		Debug.Log("TimeScale : Viewers: " + timeScale + " : " + viewers);
 	}
 }

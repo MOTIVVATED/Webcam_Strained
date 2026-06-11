@@ -1,6 +1,9 @@
 /*
 * == DEV JOURNAL ==
 * 
+*   11.07.2026
+* timeScale gets stuck on 0.7
+* 
 *   10.06.2026
 * Today I'm going to work on my TimeScaleController system.
 *   Here is my analysis:
