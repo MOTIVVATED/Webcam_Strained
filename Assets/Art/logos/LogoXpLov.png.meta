@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0ebf5c0a9ed30da4b8a0119360aef8e5
+guid: b873dd74986af484c915f9e51eefb632
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3816970190329815216
-    second: LogoChaturbate_0
+      213: 2416136448175727011
+    second: LogoXpLov_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -74,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LogoChaturbate_0
+      name: LogoXpLov_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 15
+        y: 10
         width: 64
-        height: 34
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05fd227c5d5670bc0800000000000000
-      internalID: -3816970190329815216
+      spriteID: 3a163626c47d78120800000000000000
+      internalID: 2416136448175727011
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LogoChaturbate_0: -3816970190329815216
+      LogoXpLov_0: 2416136448175727011
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
