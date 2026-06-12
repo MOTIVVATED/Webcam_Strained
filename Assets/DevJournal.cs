@@ -2,8 +2,10 @@
 * == DEV JOURNAL ==
 * 
 * 12.06.2026
-* I added 7 sites on each spawnpoint at the top of the screen. I'm going to see if I could make some 
-* feedback. I want to make the site shake if we catch smth good on it's line.
+* I added 7 sites on each spawnpoint at the top of the screen. I made a LogosFeedback.cs to animate them.
+* Looks much better. Now my game is much closer to the state I'd like to show to somebody.
+* I need to add more models and make a progression system.
+* 
 * 
 *   11.07.2026
 * timeScale gets stuck on 0.7

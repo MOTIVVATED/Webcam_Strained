@@ -12,8 +12,8 @@ public class TimeScaleController : MonoBehaviour
 	private float _timeScaleFactor	= 0.88f;
 	private float _timeScaleIncrement = 0.088f;
 
-	private float _timeScaleMin = 0.7f;
-	private float _timeScaleMax = 2f;
+	[SerializeField] private float _timeScaleMin = 0.7f;
+	[SerializeField] private float _timeScaleMax = 2f;
 
 	private string _sceneName;
 

@@ -6452,6 +6452,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05041b179e114ef4ea3d8a98507bc395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeScaleController
+  _timeScaleMin: 0.6
+  _timeScaleMax: 0.88
 --- !u!1 &1934022154
 GameObject:
   m_ObjectHideFlags: 0
