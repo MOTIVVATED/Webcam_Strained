@@ -2,7 +2,15 @@
 * == DEV JOURNAL ==
 * 
 * 15.06.2026
+* I fixed a bug with wrong Logos punching, when an object cought. That was caused by wrong X position.
+* All the logic was based on player.x position, and player could catch the object by the edge, being on
+* the line next to the object and all a Punch of the Logo next to the logo that was needed.
+* I made LogosFeedback.cs refer to the collected object position, but not to the player position like
+* it was before. Now it Always work properly. Before I did itis, It made wrong Logos punch sometimes.
 * 
+* Also I finished one of models that I started yesterday, then I made a new model and animated it.
+* So we have 6 now. I think that's enough for the beggining. I'm going to implement them in the game
+* tomorrow.
 * 
 * 12.06.2026
 * I added 7 sites on each spawnpoint at the top of the screen. I made a LogosFeedback.cs to animate them.

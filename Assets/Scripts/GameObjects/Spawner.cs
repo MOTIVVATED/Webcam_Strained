@@ -77,7 +77,7 @@ public class Spawner : MonoBehaviour
 		falling.transform.position = 
 			new Vector3(spawnPoint.transform.position.x, spawnPoint.transform.position.y, 0f);
 
-		falling.OnCollected += (type) => GameEvents.ObjectCollected(type);
+		falling.OnCollected += (type, pos) => GameEvents.ObjectCollected(type, pos);
 		falling.OnSmashed += (type, pos) => GameEvents.ObjectSmashed(type, pos);
 		falling.OnMissed += (type) => GameEvents.ObjectMissed(type);
 	}

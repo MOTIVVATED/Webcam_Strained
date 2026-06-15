@@ -1,5 +1,6 @@
-using UnityEngine;
 using System;
+using UnityEngine;
+using static UnityEditor.PlayerSettings;
 public class SmashManager : MonoBehaviour
 {
   public static SmashManager Instance { get; private set; }
@@ -29,7 +30,9 @@ public class SmashManager : MonoBehaviour
   }
   public void HandleSmashed(FallingObjectType type, Vector3 position)
   {
-    switch (type)
+		Debug.Log("HandleSmashed Called with pos.x = " + position.x);
+
+		switch (type)
     {
       case FallingObjectType.bad:
       case FallingObjectType.webcam:

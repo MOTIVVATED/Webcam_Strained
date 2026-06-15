@@ -59,7 +59,7 @@ public class ScoreManager : MonoBehaviour
 		GameEvents.OnObjectCollected -= HandleCollected;
 	}
 
-	public void HandleCollected(FallingObjectType type)
+	public void HandleCollected(FallingObjectType type, Vector3 pos)
   {
     switch (type)
     {

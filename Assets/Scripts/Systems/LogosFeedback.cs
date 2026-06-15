@@ -1,11 +1,14 @@
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class LogosFeedback : MonoBehaviour
 {
+	public static LogosFeedback Instance { get; private set; }
+
 	[Header("SpawnPoints")]
 	[SerializeField] private GameObject[] logos;
 
-	[SerializeField] private Transform player;
+	//[SerializeField] private Transform player;
 	[SerializeField] private float punchScale = 1.1f;
 	[SerializeField] private float duration = 0.1f;
 
@@ -13,40 +16,58 @@ public class LogosFeedback : MonoBehaviour
 
 	private void Awake()
 	{
+		if (Instance != null && Instance != this)
+		{
+			Destroy(gameObject);
+			return;
+		}
+		Instance = this;
+
 		if (logos != null && logos.Length > 0)
 		{
 			originalScale = logos[0].transform.localScale;
 		}
 	}
 
-	private void Start()
+	private void OnEnable()
 	{
-		StartCoroutine(Init());
+		GameEvents.OnObjectCollected += SelectRow;
 	}
 
-	private System.Collections.IEnumerator Init()
+	private void OnDisable()
 	{
-		while (ScoreManager.Instance == null)
-			yield return null;
-
-		ScoreManager.Instance.OnScoreChanged += OnGood;
+		GameEvents.OnObjectCollected -= SelectRow;
 	}
 
-	private void OnDestroy()
-	{
-		if (ScoreManager.Instance != null)
-			ScoreManager.Instance.OnScoreChanged -= OnGood;
-	}
+	//private void Start()
+	//{
+	//	StartCoroutine(Init());
+	//}
 
-	private void OnGood(int _)
-	{
-		StopAllCoroutines();
-		SelectRow(player.position);
-	}
+	//private System.Collections.IEnumerator Init()
+	//{
+	//	while (ScoreManager.Instance == null)
+	//		yield return null;
 
-	private void SelectRow (Vector3 player)
+	//	ScoreManager.Instance.OnScoreChanged += OnGood;
+	//}
+
+	//private void OnDestroy()
+	//{
+	//	if (ScoreManager.Instance != null)
+	//		ScoreManager.Instance.OnScoreChanged -= OnGood;
+	//}
+
+	//private void OnGood(int _)
+	//{
+	//	StopAllCoroutines();
+	//	SelectRow(player.position);
+	//}
+
+	private void SelectRow (FallingObjectType type, Vector3 pos)
 	{
-		switch (player.x)
+		Debug.Log("SelectRow Called with pos.x = " + pos.x + " type = " + type);
+		switch (pos.x)
 		{
 			case >= -3.5f and < -2.5f :
 				StartCoroutine(Punch(logos[0]));

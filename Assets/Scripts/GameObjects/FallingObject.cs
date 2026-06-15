@@ -10,8 +10,10 @@ public class FallingObject : MonoBehaviour
   [SerializeField] private float destroyY = -6f;
 
   public FallingObjectType ObjectType => objectType;
+  //public Vector3 ObjectPos;
 
-  public event Action<FallingObjectType> OnCollected;
+
+  public event Action<FallingObjectType, Vector3> OnCollected;
     
   public event Action<FallingObjectType> OnMissed;
 
@@ -54,7 +56,8 @@ public class FallingObject : MonoBehaviour
   }
   public void Collect()
   {
-    OnCollected?.Invoke(objectType);
+		Vector3 pos = transform.position;
+		OnCollected?.Invoke(objectType, pos);
     Destroy(gameObject);
   }
 	public void Smash()
