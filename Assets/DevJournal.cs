@@ -1,6 +1,9 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 15.06.2026
+* 
+* 
 * 12.06.2026
 * I added 7 sites on each spawnpoint at the top of the screen. I made a LogosFeedback.cs to animate them.
 * Looks much better. Now my game is much closer to the state I'd like to show to somebody.

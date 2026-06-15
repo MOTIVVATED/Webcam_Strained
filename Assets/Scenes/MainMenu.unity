@@ -6453,7 +6453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeScaleController
   _timeScaleMin: 0.6
-  _timeScaleMax: 0.88
+  _timeScaleMax: 1
 --- !u!1 &1934022154
 GameObject:
   m_ObjectHideFlags: 0
