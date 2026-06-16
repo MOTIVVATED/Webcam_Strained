@@ -10,8 +10,6 @@ public class FallingObject : MonoBehaviour
   [SerializeField] private float destroyY = -6f;
 
   public FallingObjectType ObjectType => objectType;
-  //public Vector3 ObjectPos;
-
 
   public event Action<FallingObjectType, Vector3> OnCollected;
     

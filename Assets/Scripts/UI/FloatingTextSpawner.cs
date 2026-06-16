@@ -25,8 +25,7 @@ public class FloatingTextSpawner : MonoBehaviour
 			result = canvas;
 			return true;
 		}
-
-		// Canvas was destroyed — try to find a new one in the current scene
+		
 		canvas = FindAnyObjectByType<Canvas>();
 
 		if (canvas == null)

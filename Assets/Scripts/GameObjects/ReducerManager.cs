@@ -42,10 +42,4 @@ public class ReducerManager : MonoBehaviour
 				break;
 		}
 	}
-	//One thing to be aware of: both TiltManager and ReducerManager
-	//now call SetPenalty independently
-	//They're setting the same value, so whichever calls last wins.
-	//If we want them to stack properly — tilt penalty and reducer penalty
-	//both active at the same time —
-	//TimeScaleController needs two separate penalty slots.
 }

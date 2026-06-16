@@ -8,8 +8,6 @@ public class ScoreManager : MonoBehaviour
 
   public int Total { get; private set; }
 
-  //[SerializeField] private int tk1 = 1;
-
   [SerializeField] private int tk15 = 15;
 
   [SerializeField] private int tk25 = 25;

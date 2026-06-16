@@ -30,8 +30,6 @@ public class SmashManager : MonoBehaviour
   }
   public void HandleSmashed(FallingObjectType type, Vector3 position)
   {
-		Debug.Log("HandleSmashed Called with pos.x = " + position.x);
-
 		switch (type)
     {
       case FallingObjectType.bad:

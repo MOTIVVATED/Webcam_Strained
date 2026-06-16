@@ -40,7 +40,6 @@ public class LogosFeedback : MonoBehaviour
 
 	private void SelectRow (FallingObjectType type, Vector3 pos)
 	{
-		Debug.Log("SelectRow Called with pos.x = " + pos.x + " type = " + type);
 		switch (pos.x)
 		{
 			case -3:

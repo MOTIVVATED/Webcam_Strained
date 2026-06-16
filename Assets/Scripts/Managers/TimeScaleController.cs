@@ -47,11 +47,15 @@ public class TimeScaleController : MonoBehaviour
 		{
 			_actualTimeScale *= _timeScaleFactor;
 		}
-
-		Debug.Log(_actualTimeScale + " * " + _timeScaleFactor + " = ...");
 		Apply();
-		Debug.Log("... = " + Time.timeScale);
 	}
+
+	//One thing to be aware of: both TiltManager and ReducerManager
+	//now call SetPenalty independently
+	//They're setting the same value, so whichever calls last wins.
+	//If we want them to stack properly — tilt penalty and reducer penalty
+	//both active at the same time —
+	//TimeScaleController needs two separate penalty slots.
 
 	public void SetPaused(bool paused)
 	{
@@ -62,7 +66,6 @@ public class TimeScaleController : MonoBehaviour
 	public void SetFrozen()
 	{
 		Time.timeScale = 0f;
-		Debug.Log("SetFrozen! Time.timeScale: " +  Time.timeScale);
 	}
 	public void Unfreeze()
 	{
