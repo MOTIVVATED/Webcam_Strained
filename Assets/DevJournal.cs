@@ -2,7 +2,10 @@
 * == DEV JOURNAL ==
 * 
 * 16.06.2026
-* All I need to do today is:
+*       Today I just cleanded some scripts of garbage.
+*       
+*   Tomorrow I need to:
+*   
 * 1) export 4 models with Json files from Aseprite and prepare them for implementing in Unity
 * 2) make a button for each of them on a ModelSelection scene
 * 3) import them all in unity
