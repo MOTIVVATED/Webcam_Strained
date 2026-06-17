@@ -3,6 +3,10 @@
 * 
 * 17.06.2026
 * 
+* I want to make new movement system now! I want to try if it feel more impactful moving player
+* not by holding arrows but tapping it. By each tap of right or left arrow, player moves one 
+* row right or left. I'm going to try to make it after lunch.
+* 
 * Today I did:
 * 1) exported 4 models with Json files from Aseprite and prepared them for implementing in Unity
 * 2) made a button for each of them on a ModelSelection scene
