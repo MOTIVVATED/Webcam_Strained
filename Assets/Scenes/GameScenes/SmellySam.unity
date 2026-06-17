@@ -2272,6 +2272,7 @@ GameObject:
   - component: {fileID: 437493382}
   - component: {fileID: 437493380}
   - component: {fileID: 437493381}
+  - component: {fileID: 437493386}
   - component: {fileID: 437493379}
   - component: {fileID: 437493378}
   - component: {fileID: 437493383}
@@ -2291,7 +2292,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437493377}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a71ee944630c34e47aa786632409ed8c, type: 3}
   m_Name: 
@@ -2306,7 +2307,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437493377}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e71394e8352e13d4ea96b9c0e298712f, type: 3}
   m_Name: 
@@ -2474,6 +2475,21 @@ MonoBehaviour:
   badLayer:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &437493386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437493377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5867a9f7b6404478f4c8235955d6bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMovement
+  minX: -3
+  maxX: 3
+  looping: 1
 --- !u!1 &448621197
 GameObject:
   m_ObjectHideFlags: 0
