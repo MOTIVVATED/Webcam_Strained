@@ -1,6 +1,13 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 17.06.2026
+* 
+* Today I did:
+* 1) exported 4 models with Json files from Aseprite and prepared them for implementing in Unity
+* 2) made a button for each of them on a ModelSelection scene
+* 3) imported them all in unity and animated them
+* 
 * 16.06.2026
 *       Today I just cleanded some scripts of garbage.
 *       
