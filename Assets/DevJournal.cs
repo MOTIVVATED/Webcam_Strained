@@ -3,6 +3,10 @@
 * 
 * 17.06.2026
 * 
+*     Tomorrow:
+* I want to try to make a new scene for Mafu. I want to try less sites, objects falling slower,
+* can't ban webcams only avoid them. It's going to be fun!
+* 
 * I want to make new movement system now! I want to try if it feel more impactful moving player
 * not by holding arrows but tapping it. By each tap of right or left arrow, player moves one 
 * row right or left. I'm going to try to make it after lunch.
