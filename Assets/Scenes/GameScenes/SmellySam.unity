@@ -2489,7 +2489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewMovement
   minX: -3
   maxX: 3
-  looping: 1
+  looping: 0
 --- !u!1 &448621197
 GameObject:
   m_ObjectHideFlags: 0
