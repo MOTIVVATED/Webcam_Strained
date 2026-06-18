@@ -1,10 +1,21 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 
 * 18.06.2026
 * 
-* 17.06.2026
+* Today I did:
+* 1) Reworked all site labels:
+*   - painted 
+*   - implemented in Scene 
+*   - made them UI Canvas in World Space, so they attached to spawnpoints but they are UI
+*   at the same time
+*   - animated them
+* 2)I made some UI music with for my game. It's so fun! I'm so good in that! Here my music background
+* explodes! Now I can see clearly the way I'm going to make music for my game.
+* 3) I worked on a game visual style in Unity.
 * 
+* 17.06.2026
 *     Tomorrow:
 * I want to try to make a new scene for Mafu. I want to try less sites, objects falling slower,
 * can't ban webcams only avoid them. It's going to be fun!
@@ -18,6 +29,7 @@
 * 2) made a button for each of them on a ModelSelection scene
 * 3) imported them all in unity and animated them
 * 4) I made NewMovement.cs
+* 
 * 
 * 16.06.2026
 *       Today I just cleanded some scripts of garbage.

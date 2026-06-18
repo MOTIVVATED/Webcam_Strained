@@ -4268,13 +4268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicPlaylist
   parts:
-  - {fileID: 8300000, guid: 468a19b2616c25a46892f12f9977270c, type: 3}
-  - {fileID: 8300000, guid: d60718a8c507592408f0420a825dd17e, type: 3}
-  - {fileID: 8300000, guid: 410285fc1f3c152498a6d7087f37099b, type: 3}
-  - {fileID: 8300000, guid: 2212480add3807e47bd2a665d32f814e, type: 3}
-  - {fileID: 8300000, guid: cf27dccabd0d00e45a8f44239899bfb3, type: 3}
-  - {fileID: 8300000, guid: 474bae21b7a724d479cb78ef20edcdaa, type: 3}
-  - {fileID: 8300000, guid: 28c1a7f70bdc736429b9e1fe4d36f715, type: 3}
+  - {fileID: 8300000, guid: 827b98f1ea6c0b84e86259bff388ce5a, type: 3}
   source: {fileID: 949503321}
   dontRepeatSameTwice: 1
 --- !u!82 &949503321
@@ -7940,7 +7934,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BackGroundColor: {r: 0.83921576, g: 0.83921576, b: 0.83921576, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -9229,7 +9223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeScaleController
   _timeScaleMin: 0.6
-  _timeScaleMax: 1.488
+  _timeScaleMax: 1.7
 --- !u!1 &1934022154
 GameObject:
   m_ObjectHideFlags: 0
