@@ -14,6 +14,8 @@
 * 2)I made some UI music with for my game. It's so fun! I'm so good in that! Here my music background
 * explodes! Now I can see clearly the way I'm going to make music for my game.
 * 3) I worked on a game visual style in Unity.
+* 4) I started making a new Scene for Mafu. Need to add and animate sprite for her, then deal with 
+* sites/spawnpoints.
 * 
 * 17.06.2026
 *     Tomorrow:
