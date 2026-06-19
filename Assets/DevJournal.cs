@@ -1,7 +1,17 @@
 /*
 * == DEV JOURNAL ==
+* 19.06.2026
 * 
-* 
+* Today I did:
+* 1) 6 tracks fom my game soundtrack and they are so fun! I added them in game scenes.
+* 2) Yesterday I couldn't understand, why I can't animate model sprite in game scene when I attached
+* it on a Player. Today I woke up with idea that it's because on a model selection screen they are
+* images on a canvas, but on a game scene it's a sprite in a game world, so I need to animate 
+* sprite in Animator. Yes, I did it.
+* 3) I experemented a bit making a new game mode for MafuLegenda, it's different experience, so
+* I think I'll be able to mace special game mode for each model.
+*
+*
 * 18.06.2026
 * 
 * Today I did:

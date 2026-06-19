@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &12008730
 RectTransform:
   m_ObjectHideFlags: 0
@@ -153,8 +153,8 @@ RectTransform:
   - {fileID: 650233473}
   - {fileID: 1685392631}
   - {fileID: 1414337755}
-  - {fileID: 657479289}
   - {fileID: 2081990747}
+  - {fileID: 657479289}
   - {fileID: 1488414105}
   - {fileID: 188411207}
   m_Father: {fileID: 588128138}
@@ -2181,7 +2181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &388604419
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2677,7 +2677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &576802879
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4269,6 +4269,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MusicPlaylist
   parts:
   - {fileID: 8300000, guid: 827b98f1ea6c0b84e86259bff388ce5a, type: 3}
+  - {fileID: 8300000, guid: e58657c0489b19041be3872709ac1199, type: 3}
+  - {fileID: 8300000, guid: e67972440c2feee4eba5601d8903f792, type: 3}
+  - {fileID: 8300000, guid: 378c0d3d488f65146943a59805217273, type: 3}
+  - {fileID: 8300000, guid: 4b346e96857eebc4ea7aefd86a1ca7de, type: 3}
+  - {fileID: 8300000, guid: b20c837d4902c954da5702ea6a0d37b4, type: 3}
   source: {fileID: 949503321}
   dontRepeatSameTwice: 1
 --- !u!82 &949503321
@@ -5648,7 +5653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1308600401
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9222,8 +9227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05041b179e114ef4ea3d8a98507bc395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeScaleController
-  _timeScaleMin: 0.6
-  _timeScaleMax: 1.7
+  _timeScaleMin: 1
+  _timeScaleMax: 1.4
 --- !u!1 &1934022154
 GameObject:
   m_ObjectHideFlags: 0
@@ -10355,7 +10360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2138942788
 RectTransform:
   m_ObjectHideFlags: 0

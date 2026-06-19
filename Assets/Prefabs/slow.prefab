@@ -261,5 +261,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   objectType: 11
   spriteRenderer: {fileID: 0}
-  fallSpeed: 4
-  destroY: -6
+  fallSpeed: 7
+  destroyY: -6

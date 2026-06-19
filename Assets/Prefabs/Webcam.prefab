@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 1078270848121141137}
   - component: {fileID: 5304136060711314168}
   m_Layer: 7
-  m_Name: webcam
+  m_Name: Webcam
   m_TagString: bad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,5 +271,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   objectType: 10
   spriteRenderer: {fileID: 0}
-  fallSpeed: 3
-  destroY: -6
+  fallSpeed: 7
+  destroyY: -6
