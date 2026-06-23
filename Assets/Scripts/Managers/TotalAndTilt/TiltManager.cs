@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class TiltManager : MonoBehaviour
@@ -11,7 +12,13 @@ public class TiltManager : MonoBehaviour
   [SerializeField] private int badCaughtTilt = 5;
   [SerializeField] private int goodMissedTilt = 10;
   [SerializeField] private int badSmashedTilt = -1;
-	
+
+	[Header("Decreasing Tilt options")]
+	[SerializeField] private bool withTime = false;
+	[SerializeField] private int tiltPerSecond = 1;
+	[SerializeField] private bool withGood = false;
+	[SerializeField] private int goodCaughtTilt = -1;
+
   [SerializeField] private int maxTilt = 100;
   [SerializeField] private GameObject player;
   [SerializeField] FloatingTextSpawner floatingTextSpawner;
@@ -40,6 +47,24 @@ public class TiltManager : MonoBehaviour
 		GameEvents.OnObjectMissed -= HandleMissed;
 	}
 
+	private void Start()
+	{
+		if(withTime)
+		{
+			StartCoroutine(DecreaseWhithTime(tiltPerSecond));
+		}
+	}
+
+	IEnumerator DecreaseWhithTime(int tiltPerSecond)
+	{
+		while (true)
+		{
+			DecreaseTilt(tiltPerSecond);
+
+			yield return new WaitForSeconds(1);
+		}
+	}
+
 	public void HandleCollected(FallingObjectType type, Vector3 pos)
   {
 		switch (type)
@@ -49,7 +74,17 @@ public class TiltManager : MonoBehaviour
 				AddTilt(badCaughtTilt);
 				floatingTextSpawner.Spawn(badCaughtTilt, player.transform.position, type);
 				break;
-		}
+			case FallingObjectType.tk15:
+			case FallingObjectType.tk25:
+			case FallingObjectType.tk111:
+			case FallingObjectType.tk222:
+			case FallingObjectType.tk555:
+			case FallingObjectType.tk666:
+			case FallingObjectType.tk1111:
+				if(withGood) DecreaseTilt(goodCaughtTilt);
+				//floatingTextSpawner.Spawn(goodMissedTilt, player.transform.position, FallingObjectType.bad);
+				break;
+		}	
 	}
 
   public void HandleSmashed(FallingObjectType type, Vector3 position)
