@@ -5,6 +5,8 @@ using System.Collections;
 public class ViewersView : MonoBehaviour
 {
 	[SerializeField] private TMP_Text viewersText;
+	[SerializeField] private int viewersPerTimescale = 10;
+
 
 	private void Start()
 	{
@@ -26,7 +28,7 @@ public class ViewersView : MonoBehaviour
 
 	private void UpdateViewers(float timeScale)
 	{
-		int viewers = Mathf.FloorToInt(300 * timeScale) + Random.Range(-5, 5);
+		int viewers = Mathf.FloorToInt(viewersPerTimescale * timeScale) + Random.Range(-5, 5);
 		viewersText.text = viewers.ToString();
 		Debug.Log("TimeScale : Viewers: " + timeScale + " : " + viewers);
 	}
