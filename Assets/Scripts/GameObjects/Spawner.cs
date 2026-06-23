@@ -68,7 +68,7 @@ public class Spawner : MonoBehaviour
 
 	private void Spawn(FallingObject prefab)
 	{
-		int spawnPointNumber = Random.Range(0, spawnPoints.Length-1);
+		int spawnPointNumber = Random.Range(0, spawnPoints.Length);
 		GameObject spawnPoint = spawnPoints[spawnPointNumber];
 
 		FallingObject falling = Instantiate(

@@ -1,5 +1,17 @@
 /*
 * == DEV JOURNAL ==
+* 
+* 23.06.2026
+* 
+* I broke up with my girlfriend two days ago.
+* I'm trying to get back to work.
+* 
+* I need a mechanic of decreasing tilt without bans.
+* 
+* I found a few bugs that need to be fixed.
+* 1) My last SpawnPoint in array was never used, so I changed the formula to fix it.
+* 2)
+* 
 * 19.06.2026
 * 
 * Today I did:
