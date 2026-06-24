@@ -2,11 +2,18 @@
 * == DEV JOURNAL ==
 * 
 * 24.06.2026
-* I added a new sprite for player game object. For so long I thouht about the way it should look
+*
+* Today I did:
+* 1) I added a new sprite for player game object. For so long I thouht about the way it should look
 * like and I still don't have an idea I'd like, so I made it a trash can, eventually I like the
 * way it looks like.
+* 2) I added a mechanic of undressing in TiltAppearanceController. It works now but I'd like to
+* make it more comprehensive and advanced depending not only on tilt, but on viewers (timeScale)
+* or on TKs caught, for exampel if we catch anything abow 100 model stays in Underwear, next we get
+* anything abowe 100 model stays naked and then it continues the way it is now.
 * 
-* I need to make a mechanic of undressing and animate it somehow.
+* 
+* I need do animate Undressing.
 * I need to make a progression.
 * 
 * 
