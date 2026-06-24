@@ -1,6 +1,15 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 24.06.2026
+* I added a new sprite for player game object. For so long I thouht about the way it should look
+* like and I still don't have an idea I'd like, so I made it a trash can, eventually I like the
+* way it looks like.
+* 
+* I need to make a mechanic of undressing and animate it somehow.
+* I need to make a progression.
+* 
+* 
 * 23.06.2026
 * 
 * I broke up with my girlfriend two days ago.

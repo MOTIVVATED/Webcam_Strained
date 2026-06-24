@@ -7,7 +7,8 @@ public static class GameEvents
   public static event Action<FallingObjectType, Vector3> OnObjectSmashed;
   public static event Action<FallingObjectType> OnObjectMissed;
 
-  public static void ObjectCollected(FallingObjectType type, Vector3 pos)
+
+	public static void ObjectCollected(FallingObjectType type, Vector3 pos)
     => OnObjectCollected?.Invoke(type, pos);
 
   public static void ObjectSmashed(FallingObjectType type, Vector3 position)
