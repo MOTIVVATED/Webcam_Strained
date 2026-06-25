@@ -1,6 +1,12 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 25.062026
+* 
+* Progression is the biggest thing that left to do. So I'm going to start doing it today.
+* But first I want to improve  Undressing feature and make it work exactly as I want to.
+* 
+* 
 * 24.06.2026
 *
 * Today I did:
