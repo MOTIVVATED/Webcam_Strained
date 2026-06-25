@@ -16,6 +16,10 @@
 * timeScale increments for each Scene. Fixed a bug with undressed model. It happened if a game 
 * started after finished one. Now static ValuableObjectsCollected = 0 on Start();
 * 3) I made game duration based on audio clip length.
+* 4) I moved the buffer logic into MusicPlaylist itself, keyed per-clip by name via 
+* GetDurationBufferFromClip, and changed the event signature to Action<float, float> 
+* (clip length + buffer) so GameManager doesn't need its own durationBufferFromClip field anymore.
+* It lets me tune the "feels right" buffer per track instead of one global value.
 * 
 * 24.06.2026
 *

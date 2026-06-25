@@ -20,9 +20,6 @@ public class GameManager : MonoBehaviour
 	[Tooltip("Used only if no music clip length is available yet.")]
 	[SerializeField] private float fallbackGameDuration = 60f;
 
-	[Tooltip("How many seconds shorter than the music clip the round should be.")]
-	[SerializeField] private float durationBufferFromClip = 10f;
-
 	[Tooltip("Minimum allowed round duration, in case a clip is very short.")]
 	[SerializeField] private float minGameDuration = 10f;
 
@@ -45,8 +42,6 @@ public class GameManager : MonoBehaviour
 
 	private void Start()
 	{
-		// Don't start the round clock yet; wait for the music clip to be
-		// selected so we know how long it actually is.
 		if (musicPlaylist != null)
 			musicPlaylist.StartRound();
 		else
@@ -69,9 +64,9 @@ public class GameManager : MonoBehaviour
 		GameEvents.OnMusicClipSelected -= HandleMusicClipSelected;
 	}
 
-	private void HandleMusicClipSelected(float clipLength)
+	private void HandleMusicClipSelected(float clipLength, float buffer)
 	{
-		gameDuration = Mathf.Max(minGameDuration, clipLength - durationBufferFromClip);
+		gameDuration = Mathf.Max(minGameDuration, clipLength - buffer);
 		roundConfigured = true;
 
 		TimeScaleController.Instance.SetTimeScale();

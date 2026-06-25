@@ -22,12 +22,6 @@ public class MusicPlaylist : MonoBehaviour
 		source = GetComponent<AudioSource>();
 	}
 
-	private void OnEnable()
-	{
-		// Round no longer auto-starts on enable; GameManager (or whoever
-		// owns round flow) should call StartRound() once it's ready.
-	}
-
 	private void OnDisable()
 	{
 		if (routine != null)
@@ -52,11 +46,6 @@ public class MusicPlaylist : MonoBehaviour
 			source.UnPause();
 	}
 
-	/// <summary>
-	/// Picks one random clip for the round, plays it once, and raises
-	/// GameEvents with the clip's length so GameManager can derive the
-	/// round duration from it. Call this at round start / restart.
-	/// </summary>
 	public void StartRound()
 	{
 		if (routine != null)
@@ -86,14 +75,18 @@ public class MusicPlaylist : MonoBehaviour
 		lastIndex = idx;
 
 		AudioClip chosen = parts[idx];
+		
 		CurrentClipLength = chosen.length;
-
+		
+		string currentClipName = chosen.name;
+		
+		float buffer = GetDurationBufferFromClip(currentClipName);
+		
 		source.clip = chosen;
+		
 		source.Play();
 
-		// Let GameManager know which clip we picked and how long it is,
-		// so it can derive gameDuration from it.
-		GameEvents.MusicClipSelected(CurrentClipLength);
+		GameEvents.MusicClipSelected(CurrentClipLength, buffer);
 
 		while (source.clip != null && (source.isPlaying ||
 			(PauseManager.Instance != null && PauseManager.Instance.IsPaused)))
@@ -115,5 +108,23 @@ public class MusicPlaylist : MonoBehaviour
 		while (idx == lastIndex);
 
 		return idx;
+	}
+
+	private float GetDurationBufferFromClip(string clipName)
+	{
+		float buffer = 5f;
+
+		switch (clipName)
+		{
+			case ("stolko serih"): buffer = 7f; break;
+			case ("ikslav2"):buffer = 4.5f; break;
+			case ("ikslav"): buffer = 9f; break;
+			case ("felching"): buffer = 4f; break;
+			case ("drooling rulit"): buffer = 3.5f; break;
+			case ("drooling"): buffer = 10f; break;
+			default: Debug.Log("Audio clip name not found!");
+				break;
+		}
+		return buffer;
 	}
 }

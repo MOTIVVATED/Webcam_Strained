@@ -6,7 +6,7 @@ public static class GameEvents
 	public static event Action<FallingObjectType, Vector3> OnObjectCollected;
 	public static event Action<FallingObjectType, Vector3> OnObjectSmashed;
 	public static event Action<FallingObjectType> OnObjectMissed;
-	public static event Action<float> OnMusicClipSelected;
+	public static event Action<float, float> OnMusicClipSelected;
 
 
 	public static void ObjectCollected(FallingObjectType type, Vector3 pos)
@@ -18,6 +18,6 @@ public static class GameEvents
 	public static void ObjectMissed(FallingObjectType type)
 		=> OnObjectMissed?.Invoke(type);
 
-	public static void MusicClipSelected(float clipLength)
-		=> OnMusicClipSelected?.Invoke(clipLength);
+	public static void MusicClipSelected(float clipLength, float buffer)
+		=> OnMusicClipSelected?.Invoke(clipLength, buffer);
 }
