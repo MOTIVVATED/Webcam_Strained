@@ -47,6 +47,8 @@ public class AppearanceController : MonoBehaviour
 		underwearAnimator.enabled = true;
 		dressedAnimator.enabled = true;
 
+		ValuableObjectsCollected = 0;
+
 		UpdateAppearance(TiltManager.Instance.Tilt);
 	}
 

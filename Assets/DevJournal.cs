@@ -7,11 +7,13 @@
 * But first I want to improve  Undressing feature and make it work exactly as I want to.
 * 
 * Today I did:
-* I added variables and some logic in ApearanceController. Now it's based not only on Tilt Level,
+* 1) I added variables and some logic in ApearanceController. Now it's based not only on Tilt Level,
 * but on ScoreManager events as well. Model starts undressing when she gets enough Valuable objects.
 * So that's why from now it's name is just AppearanceController, not TiltAppearanceController, as
 * it was before.
-* 
+* 2) I added case for MafuLegend scene in TimeScaleController adn SerializeFields for variables of
+* timeScale increments for each Scene. Fixed a bug with undressed model. It happened if a game 
+* started after finished one. Now static ValuableObjectsCollected = 0 on Start(); 
 * 
 * 24.06.2026
 *

@@ -600,7 +600,7 @@ MonoBehaviour:
   minX: -200
   maxX: 200
   minY: -200
-  maxY: 200
+  maxY: 150
 --- !u!1 &8578444030444094512
 GameObject:
   m_ObjectHideFlags: 0

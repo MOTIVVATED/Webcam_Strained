@@ -6,14 +6,18 @@ public class TimeScaleController : MonoBehaviour
 {
 	public static TimeScaleController Instance { get; private set; }
 
-	private float _actualTimeScale	= 1f;
-	private bool _paused	= false;
+	private float _actualTimeScale = 1f;
+	private bool _paused = false;
 
-	private float _timeScaleFactor	= 0.88f;
-	private float _timeScaleIncrement = 0.088f;
+	private float _timeScaleFactor = 0.88f;
+	private float _timeScaleIncrement = 0;
 
 	[SerializeField] private float _timeScaleMin = 0.7f;
 	[SerializeField] private float _timeScaleMax = 2f;
+
+	[Header("timeScale Values for models")]
+	[SerializeField] private float MafuLegenda = 0.088f;
+	[SerializeField] private float SmellySam = 0.14f;
 
 	private string _sceneName;
 
@@ -29,8 +33,9 @@ public class TimeScaleController : MonoBehaviour
 
 		switch (_sceneName)
 		{
-			case "SmellySam": _timeScaleIncrement = 0.088f; break;
-
+			case "MafuLegenda": _timeScaleIncrement = MafuLegenda; break;
+			case "SmellySam": _timeScaleIncrement = SmellySam; break;
+			
 			default: _timeScaleIncrement = 0; break;
 		}
 
