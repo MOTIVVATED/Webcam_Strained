@@ -6,6 +6,12 @@
 * Progression is the biggest thing that left to do. So I'm going to start doing it today.
 * But first I want to improve  Undressing feature and make it work exactly as I want to.
 * 
+* Today I did:
+* I added variables and some logic in ApearanceController. Now it's based not only on Tilt Level,
+* but on ScoreManager events as well. Model starts undressing when she gets enough Valuable objects.
+* So that's why from now it's name is just AppearanceController, not TiltAppearanceController, as
+* it was before.
+* 
 * 
 * 24.06.2026
 *

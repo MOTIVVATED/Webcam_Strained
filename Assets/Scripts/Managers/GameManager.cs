@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
       OnTimeChanged?.Invoke(timer, gameDuration);
         OnViewersChanged?.Invoke(Time.timeScale);
 
-			Debug.Log("Time.timeScale: " + Time.timeScale);
+			// Debug.Log("Time.timeScale: " + Time.timeScale);
 
       TimeScaleController.Instance.SetTimeScale();
 
