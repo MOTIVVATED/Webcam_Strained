@@ -3,100 +3,119 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-  public static GameManager Instance { get; private set; }
+	public static GameManager Instance { get; private set; }
 
-  public event Action<int, float, float> OnWin;
-  public event Action<int, float, float> OnLose;
-  public event Action OnGameStarted;
-  public event Action OnGameEnded;
-  public event Action<float, float> OnTimeChanged;
-  public event Action<float> OnViewersChanged;
+	public event Action<int, float, float> OnWin;
+	public event Action<int, float, float> OnLose;
+	public event Action OnGameStarted;
+	public event Action OnGameEnded;
+	public event Action<float, float> OnTimeChanged;
+	public event Action<float> OnViewersChanged;
 
-  public bool IsPlaying => state == GameState.Playing;
-  public float Timer => timer;
-  public float GameDuration => gameDuration;
+	public bool IsPlaying => state == GameState.Playing;
+	public float Timer => timer;
+	public float GameDuration => gameDuration;
 
-  [SerializeField] private float gameDuration = 60f;
-  //[SerializeField] private float initialTimeScale = 0.6f;
-  //[SerializeField] private float timeScaleIncrement = 0.2f;
-  //[SerializeField] private float maxTimeScale = 1f;
+	[Header("Fallback / Tuning")]
+	[Tooltip("Used only if no music clip length is available yet.")]
+	[SerializeField] private float fallbackGameDuration = 60f;
 
-  private float timer;
-  //private float currentTimeScale;
+	[Tooltip("How many seconds shorter than the music clip the round should be.")]
+	[SerializeField] private float durationBufferFromClip = 10f;
 
-  private enum GameState { Playing, Paused, Won, Lost }
-  private GameState state = GameState.Playing;
+	[Tooltip("Minimum allowed round duration, in case a clip is very short.")]
+	[SerializeField] private float minGameDuration = 10f;
 
-  private void Awake()
-  {
+	[SerializeField] private MusicPlaylist musicPlaylist;
+
+	private float gameDuration;
+	private float timer;
+	private bool roundConfigured = false;
+
+	private enum GameState { Playing, Paused, Won, Lost }
+	private GameState state = GameState.Playing;
+
+	private void Awake()
+	{
 		if (Instance != null && Instance != this) { Destroy(gameObject); return; }
 		Instance = this;
 
-		//currentTimeScale = initialTimeScale;
+		gameDuration = fallbackGameDuration;
 	}
 
 	private void Start()
 	{
+		// Don't start the round clock yet; wait for the music clip to be
+		// selected so we know how long it actually is.
+		if (musicPlaylist != null)
+			musicPlaylist.StartRound();
+		else
+			Debug.LogWarning("GameManager: No MusicPlaylist assigned, falling back to fixed duration.");
+	}
+
+	private void OnEnable()
+	{
+		if (TiltManager.Instance != null)
+			TiltManager.Instance.OnMaxTiltReached += LoseGame;
+
+		GameEvents.OnMusicClipSelected += HandleMusicClipSelected;
+	}
+
+	private void OnDisable()
+	{
+		if (TiltManager.Instance != null)
+			TiltManager.Instance.OnMaxTiltReached -= LoseGame;
+
+		GameEvents.OnMusicClipSelected -= HandleMusicClipSelected;
+	}
+
+	private void HandleMusicClipSelected(float clipLength)
+	{
+		gameDuration = Mathf.Max(minGameDuration, clipLength - durationBufferFromClip);
+		roundConfigured = true;
+
 		TimeScaleController.Instance.SetTimeScale();
 		OnGameStarted?.Invoke();
 	}
 
-	private void OnEnable()
-  {
-    if (TiltManager.Instance != null)
-      TiltManager.Instance.OnMaxTiltReached += LoseGame;
-  }
-  private void OnDisable()
-  {
-    if (TiltManager.Instance != null)
-      TiltManager.Instance.OnMaxTiltReached -= LoseGame;
-  }
-
-  private void Update()
-  {
-    if (state != GameState.Playing) return;
-    if (PauseManager.Instance != null && PauseManager.Instance.IsPaused) return;
+	private void Update()
+	{
+		if (!roundConfigured) return;
+		if (state != GameState.Playing) return;
+		if (PauseManager.Instance != null && PauseManager.Instance.IsPaused) return;
 
 		timer += Time.unscaledDeltaTime;
-        
-    int sec = Mathf.FloorToInt(timer);
-    if(sec != Mathf.FloorToInt(timer - Time.unscaledDeltaTime))
-    {
-      OnTimeChanged?.Invoke(timer, gameDuration);
-        OnViewersChanged?.Invoke(Time.timeScale);
 
-			// Debug.Log("Time.timeScale: " + Time.timeScale);
+		int sec = Mathf.FloorToInt(timer);
+		if (sec != Mathf.FloorToInt(timer - Time.unscaledDeltaTime))
+		{
+			OnTimeChanged?.Invoke(timer, gameDuration);
+			OnViewersChanged?.Invoke(Time.timeScale);
 
-      TimeScaleController.Instance.SetTimeScale();
-
-
-      //if (currentTimeScale < maxTimeScale)
-      //{
-      //	currentTimeScale = Mathf.Min(Time.timeScale + timeScaleIncrement, maxTimeScale);
-      //	TimeScaleController.Instance.SetTimeScale(currentTimeScale);
-      //}
-    }
+			TimeScaleController.Instance.SetTimeScale();
+		}
 
 		if (timer >= gameDuration)
-    {
-      timer = gameDuration;
-      OnTimeChanged?.Invoke(timer, gameDuration);
-      WinGame(timer);
-    }
-  }
+		{
+			timer = gameDuration;
+			OnTimeChanged?.Invoke(timer, gameDuration);
+			WinGame(timer);
+		}
+	}
 
 	private void WinGame(float t)
-  {
+	{
 		if (state != GameState.Playing) return;
 		state = GameState.Won;
-    Debug.Log("WinGame");
+		Debug.Log("WinGame");
 		TimeScaleController.Instance.SetFrozen();
 		OnGameEnded?.Invoke();
 		int total = ScoreManager.Instance != null ? ScoreManager.Instance.Total : 0;
 		OnWin?.Invoke(total, t, gameDuration);
 	}
-  private void LoseGame()
-  {
+
+	private void LoseGame()
+	{
 		if (state != GameState.Playing) return;
 		state = GameState.Lost;
 		TimeScaleController.Instance.SetFrozen();
@@ -104,10 +123,11 @@ public class GameManager : MonoBehaviour
 		int total = ScoreManager.Instance != null ? ScoreManager.Instance.Total : 0;
 		OnLose?.Invoke(total, timer, gameDuration);
 	}
-  public void RestartGame()
-  {
-    TimeScaleController.Instance.Unfreeze();
-    var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-    UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
-  }
+
+	public void RestartGame()
+	{
+		TimeScaleController.Instance.Unfreeze();
+		var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+		UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
+	}
 }

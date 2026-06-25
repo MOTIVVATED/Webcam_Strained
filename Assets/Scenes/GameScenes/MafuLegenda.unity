@@ -4495,7 +4495,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bb62cfc20df5d4689f62a73f890ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameDuration: 210
+  fallbackGameDuration: 60
+  durationBufferFromClip: 10
+  minGameDuration: 10
+  musicPlaylist: {fileID: 2051319535}
 --- !u!4 &770664211
 Transform:
   m_ObjectHideFlags: 0
@@ -10599,7 +10602,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -14,7 +14,8 @@
 * it was before.
 * 2) I added case for MafuLegend scene in TimeScaleController adn SerializeFields for variables of
 * timeScale increments for each Scene. Fixed a bug with undressed model. It happened if a game 
-* started after finished one. Now static ValuableObjectsCollected = 0 on Start(); 
+* started after finished one. Now static ValuableObjectsCollected = 0 on Start();
+* 3) I made game duration based on audio clip length.
 * 
 * 24.06.2026
 *
