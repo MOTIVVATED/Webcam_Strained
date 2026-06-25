@@ -5,6 +5,7 @@
 * 
 * Progression is the biggest thing that left to do. So I'm going to start doing it today.
 * But first I want to improve  Undressing feature and make it work exactly as I want to.
+* I want to add a pvt object.
 * 
 * Today I did:
 * 1) I added variables and some logic in ApearanceController. Now it's based not only on Tilt Level,

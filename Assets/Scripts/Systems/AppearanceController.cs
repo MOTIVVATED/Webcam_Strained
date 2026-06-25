@@ -6,7 +6,7 @@ public class AppearanceController : MonoBehaviour
 	[SerializeField] private GameObject underwear;
 	[SerializeField] private GameObject dressed;
 
-	[Header("Thresholds (upper bound of each band, in percent)")]
+	[Header("Thresholds")]
 	[SerializeField] private int underwearMin = 11;
 	[SerializeField] private int dressedMin = 69;
 
@@ -27,6 +27,7 @@ public class AppearanceController : MonoBehaviour
 	{
 		TiltManager.Instance.OnTiltIncreased += HandleTiltChanged;
 		TiltManager.Instance.OnTiltDecreased += HandleTiltChanged;
+
 		GameEvents.OnObjectCollected += FirstValuableObjectCollected;
 
 		nakedRenderer = naked.GetComponent<SpriteRenderer>();
@@ -37,12 +38,10 @@ public class AppearanceController : MonoBehaviour
 		underwearAnimator = underwear.GetComponent<Animator>();
 		dressedAnimator = dressed.GetComponent<Animator>();
 
-		// All three animators run continuously and stay in sync until the game ends.
 		nakedAnimator.enabled = true;
 		underwearAnimator.enabled = true;
 		dressedAnimator.enabled = true;
 
-		// Naked is the base layer and is always visible.
 		nakedRenderer.enabled = true;
 		underwearAnimator.enabled = true;
 		dressedAnimator.enabled = true;
@@ -56,11 +55,12 @@ public class AppearanceController : MonoBehaviour
 	{
 		TiltManager.Instance.OnTiltIncreased -= HandleTiltChanged;
 		TiltManager.Instance.OnTiltDecreased -= HandleTiltChanged;
+
+		GameEvents.OnObjectCollected -= FirstValuableObjectCollected;
 	}
 
 	private void FirstValuableObjectCollected(FallingObjectType type, Vector3 pos)
 	{
-
 		switch (type)
 		{
 			case FallingObjectType.tk111:
@@ -88,8 +88,6 @@ public class AppearanceController : MonoBehaviour
 		if (ValuableObjectsCollected < ValuableObjectsForUnderwear) { return; }
 		bool showUnderwear = tilt >= underwearMin;
 		underwearRenderer.enabled = showUnderwear;
-		
 
-		// nakedRenderer stays enabled permanently — set once in Start.
 	}
 }
