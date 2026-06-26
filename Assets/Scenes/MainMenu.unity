@@ -9199,7 +9199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bb62cfc20df5d4689f62a73f890ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameDuration: 600
+  fallbackGameDuration: 60
+  minGameDuration: 10
+  musicPlaylist: {fileID: 0}
 --- !u!4 &1918025094
 Transform:
   m_ObjectHideFlags: 0
@@ -9228,7 +9230,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeScaleController
   _timeScaleMin: 1
-  _timeScaleMax: 2
+  _timeScaleMax: 1.5
+  MafuLegenda: 0.088
+  SmellySam: 0.14
 --- !u!1 &1934022154
 GameObject:
   m_ObjectHideFlags: 0

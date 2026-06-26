@@ -1,7 +1,17 @@
 /*
 * == DEV JOURNAL ==
 * 
-* 25.062026
+* 26.06.2026
+* 
+* I feel a little frustrated today. I think it's because yesterday I tried to start making
+* pvt feature, spent some time on it, and realized that I actualli don't know, what it's going to
+* be like conceptually. So I had to roll back to the stable version and lost some settings in Unity.
+* 
+* I'm going to work on progression today cuz it doesn't need to invent something new from me about
+* gameplay. Only work with all I already have.
+* 
+* 
+* 25.06.2026
 * 
 * Progression is the biggest thing that left to do. So I'm going to start doing it today.
 * But first I want to improve  Undressing feature and make it work exactly as I want to.

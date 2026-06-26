@@ -4496,7 +4496,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   fallbackGameDuration: 60
-  durationBufferFromClip: 10
   minGameDuration: 10
   musicPlaylist: {fileID: 2051319535}
 --- !u!4 &770664211
@@ -6114,7 +6113,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033286187}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcfa8ddd2b213704a8a5e9a389c80e9e, type: 3}
   m_Name: 
@@ -6668,51 +6667,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 1236289399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9bd0714b61a1564cb39c16714c17606, type: 3}
+  m_Script: {fileID: 11500000, guid: 6de85aeaeaa30734ca9e80018066943a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewSpawner
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
   rules:
-  - prefab: {fileID: 5304136060711314168, guid: d48752722b5397d488f351087c1c654c, type: 3}
-    delayMin: 0.5
-    delayMax: 2
-    enabled: 1
-  - prefab: {fileID: 5304136060711314168, guid: 32513998c28c795438935908415d1c74, type: 3}
-    delayMin: 45
-    delayMax: 75
-    enabled: 1
   - prefab: {fileID: 6750221046696986500, guid: 34b9c453299c6be4fb34751487155854, type: 3}
-    delayMin: 0.01
+    delayMin: 0.1
     delayMax: 1
     enabled: 1
   - prefab: {fileID: 4172547871608088945, guid: 855b9233cd615ea4d9948cada9583c55, type: 3}
-    delayMin: 0.01
+    delayMin: 0.1
     delayMax: 1
     enabled: 1
   - prefab: {fileID: 3247108239030646150, guid: 1ad84122176cc414497e8fa217153ea9, type: 3}
-    delayMin: 0.01
-    delayMax: 1
+    delayMin: 4
+    delayMax: 8
     enabled: 1
   - prefab: {fileID: 3247108239030646150, guid: 571b84797a10e744e9c398b323209e66, type: 3}
-    delayMin: 6
-    delayMax: 12
-    enabled: 1
-  - prefab: {fileID: 3247108239030646150, guid: 0bda84e6eb200dc4f9f749e502d51015, type: 3}
     delayMin: 8
     delayMax: 16
     enabled: 1
+  - prefab: {fileID: 3247108239030646150, guid: 0bda84e6eb200dc4f9f749e502d51015, type: 3}
+    delayMin: 10
+    delayMax: 20
+    enabled: 1
   - prefab: {fileID: 3247108239030646150, guid: bf71477936f0fdd47b86cc5bb6cde0e4, type: 3}
-    delayMin: 13
-    delayMax: 26
+    delayMin: 15
+    delayMax: 30
     enabled: 1
   - prefab: {fileID: 3247108239030646150, guid: 66f5fb3862f4a8947895caa542aba599, type: 3}
-    delayMin: 24
-    delayMax: 44
+    delayMin: 100
+    delayMax: 300
+    enabled: 1
+  - prefab: {fileID: 5304136060711314168, guid: 32513998c28c795438935908415d1c74, type: 3}
+    delayMin: 10
+    delayMax: 20
+    enabled: 1
+  - prefab: {fileID: 5304136060711314168, guid: d48752722b5397d488f351087c1c654c, type: 3}
+    delayMin: 0.1
+    delayMax: 3
     enabled: 1
   spawnPoints:
   - {fileID: 520031876}
   - {fileID: 681992740}
   - {fileID: 1132308318}
-  minGlobalSpawnInterval: 0.5
+  minGlobalSpawnInterval: 0.25
 --- !u!1 &1258184758
 GameObject:
   m_ObjectHideFlags: 0
