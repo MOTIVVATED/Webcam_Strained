@@ -17,6 +17,9 @@
 * 4) animation
 * 5) Guide
 * 6) UI sprites
+* 
+*       !!!Important!!!
+* I think it's a good idea to make all progression data visible on a model selection panel.
 *
 * Today I did:
 * 1) I made a meta data progression: scene unlocking, currency, win/lose stat tracking,
