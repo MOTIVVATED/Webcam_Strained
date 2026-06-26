@@ -9,6 +9,19 @@
 * 
 * I'm going to work on progression today cuz it doesn't need to invent something new from me about
 * gameplay. Only work with all I already have.
+*
+* I still need to make:
+* 1) developer's shortcuts
+* 2) make unlocks visible
+* 3) upgrades
+* 4) animation
+* 5) Guide
+* 6) UI sprites
+*
+* Today I did:
+* 1) I made a meta data progression: scene unlocking, currency, win/lose stat tracking,
+* and the result history are all wired up and confirmed working end to end. 
+*
 * 
 * 
 * 25.06.2026

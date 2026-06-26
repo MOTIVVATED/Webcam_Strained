@@ -76,7 +76,7 @@ public class MusicPlaylist : MonoBehaviour
 
 		AudioClip chosen = parts[idx];
 		
-		CurrentClipLength = chosen.length;
+		CurrentClipLength = Mathf.Max(15, chosen.length);
 		
 		string currentClipName = chosen.name;
 		

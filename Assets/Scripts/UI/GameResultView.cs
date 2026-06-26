@@ -5,51 +5,47 @@ using UnityEngine.UI;
 
 public class GameResultView : MonoBehaviour
 {
-  [SerializeField] private TMP_Text resultText;
-  
-  [SerializeField] private TMP_Text nameText;
-  [SerializeField] private TMP_Text rankText;
-  [SerializeField] private TMP_Text moneyText;
-  [SerializeField] private TMP_Text avgScoreText;
+	[SerializeField] private TMP_Text resultText;
 
-  [SerializeField] private GameObject restartLabels;
+	[SerializeField] private TMP_Text nameText;
+	[SerializeField] private TMP_Text rankText;
+	[SerializeField] private TMP_Text moneyText;
+	[SerializeField] private TMP_Text avgScoreText;
 
-  void Start()
-  {
-    resultText.gameObject.SetActive(false);
+	[SerializeField] private GameObject restartLabels;
 
-    GameManager.Instance.OnWin += ShowWin;
-    GameManager.Instance.OnLose += ShowLose;
+	void Start()
+	{
+		resultText.gameObject.SetActive(false);
 
-    restartLabels.SetActive(false);
-  }
-  private void OnDestroy()
-  {
-    if ( GameManager.Instance == null) return;
-        
-    GameManager.Instance.OnWin -= ShowWin;
-        
-    GameManager.Instance.OnLose -= ShowLose;
-  }
-  private void ShowWin(int total, float timer, float duration)
-  {
-    GameResultsManager.Instance.SaveResult(score: total);
+		GameManager.Instance.OnWin += ShowWin;
+		GameManager.Instance.OnLose += ShowLose;
 
+		restartLabels.SetActive(false);
+	}
+	private void OnDestroy()
+	{
+		if (GameManager.Instance == null) return;
+
+		GameManager.Instance.OnWin -= ShowWin;
+
+		GameManager.Instance.OnLose -= ShowLose;
+	}
+	private void ShowWin(int total, float timer, float duration)
+	{
 		if (PlayerProfileManager.Instance == null)
 		{
 			Debug.LogError("PlayerProfileManager not found in scene.");
 			return;
 		}
 
-		PlayerProfileManager.Instance.RecordGame(score: total);
+		var profile = PlayerProfileManager.Instance.GetProfile();
 
-    var profile = PlayerProfileManager.Instance.GetProfile();
+		int t = (int)(timer / TimerView.Instance.SecondsInHour);
+		int d = (int)(duration / TimerView.Instance.SecondsInHour);
 
-    int t = (int)(timer / TimerView.Instance.SecondsInHour);
-    int d = (int)(duration / TimerView.Instance.SecondsInHour);
-
-    resultText.text = 
-    $"W W! \ntotal: {total}tk | stream time: {t}/{d}h";
+		resultText.text =
+		$"W W! \ntotal: {total}tk | stream time: {t}/{d}h";
 
 		nameText.text = profile.playerName;
 		rankText.text = profile.GetRank();
@@ -58,37 +54,50 @@ public class GameResultView : MonoBehaviour
 
 		resultText.gameObject.SetActive(true);
 
-    restartLabels.SetActive(true);
-  }
-  private void ShowLose(int total, float timer, float duration)
-  {
-    int t = (int)(timer/ TimerView.Instance.SecondsInHour);
-    int d = (int)(duration/ TimerView.Instance.SecondsInHour);
+		restartLabels.SetActive(true);
+	}
+	private void ShowLose(int total, float timer, float duration)
+	{
+		if (PlayerProfileManager.Instance == null)
+		{
+			Debug.LogError("PlayerProfileManager not found in scene.");
+			return;
+		}
 
-    resultText.text = 
-      $"“»À‹“! \ntotal: {total}tk | stream time: {t}/{d}h";
+		var profile = PlayerProfileManager.Instance.GetProfile();
 
-      resultText.gameObject.SetActive(true);
+		int t = (int)(timer / TimerView.Instance.SecondsInHour);
+		int d = (int)(duration / TimerView.Instance.SecondsInHour);
 
-      restartLabels.SetActive(true);
-  }
-  public void GoToMenu()
-  {
-    Time.timeScale = 1f;
-    SceneManager.LoadScene("MainMenu");
-  }
-  public void Quit()
-  {
-    Application.Quit();
-    Debug.Log("Quit");
-  }
+		resultText.text =
+			$"Tilt! \ntotal: {total}tk | stream time: {t}/{d}h";
 
-  public void Restart()
-  {
+		nameText.text = profile.playerName;
+		rankText.text = profile.GetRank();
+		moneyText.text = $"${profile.money}";
+		avgScoreText.text = profile.GetAverageScore().ToString();
+
+		resultText.gameObject.SetActive(true);
+
+		restartLabels.SetActive(true);
+	}
+	public void GoToMenu()
+	{
+		Time.timeScale = 1f;
+		SceneManager.LoadScene("MainMenu");
+	}
+	public void Quit()
+	{
+		Application.Quit();
+		Debug.Log("Quit");
+	}
+
+	public void Restart()
+	{
 		restartLabels.SetActive(false);
 
 		TimeScaleController.Instance.Unfreeze();
-    var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-    UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
-  }
+		var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+		UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
+	}
 }

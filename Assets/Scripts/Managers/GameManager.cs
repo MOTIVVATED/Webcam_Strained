@@ -106,6 +106,7 @@ public class GameManager : MonoBehaviour
 		TimeScaleController.Instance.SetFrozen();
 		OnGameEnded?.Invoke();
 		int total = ScoreManager.Instance != null ? ScoreManager.Instance.Total : 0;
+		RecordRoundResult(total, GameOutcome.Win, unlockNext: true);
 		OnWin?.Invoke(total, t, gameDuration);
 	}
 
@@ -116,7 +117,23 @@ public class GameManager : MonoBehaviour
 		TimeScaleController.Instance.SetFrozen();
 		OnGameEnded?.Invoke();
 		int total = ScoreManager.Instance != null ? ScoreManager.Instance.Total : 0;
+		RecordRoundResult(total, GameOutcome.Lose, unlockNext: false);
 		OnLose?.Invoke(total, timer, gameDuration);
+	}
+
+	private void RecordRoundResult(int score, GameOutcome outcome, bool unlockNext)
+	{
+		string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
+		if (GameResultsManager.Instance != null)
+			GameResultsManager.Instance.SaveResult(score, outcome);
+		else
+			Debug.LogWarning("GameManager: No GameResultsManager instance found, result not saved.");
+
+		if (PlayerProfileManager.Instance != null)
+			PlayerProfileManager.Instance.RecordGame(score, sceneName, unlockNext);
+		else
+			Debug.LogWarning("GameManager: No PlayerProfileManager instance found, profile not updated.");
 	}
 
 	public void RestartGame()

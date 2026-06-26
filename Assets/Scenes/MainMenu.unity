@@ -152,8 +152,8 @@ RectTransform:
   m_Children:
   - {fileID: 650233473}
   - {fileID: 1685392631}
-  - {fileID: 1414337755}
   - {fileID: 2081990747}
+  - {fileID: 1414337755}
   - {fileID: 657479289}
   - {fileID: 1488414105}
   - {fileID: 188411207}
@@ -305,7 +305,6 @@ GameObject:
   m_Component:
   - component: {fileID: 49689878}
   - component: {fileID: 49689877}
-  - component: {fileID: 49689879}
   m_Layer: 0
   m_Name: GameResultManager
   m_TagString: Untagged
@@ -340,18 +339,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &49689879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 49689876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74a3479e127510a45917a6135ee6e535, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerProfileManager
 --- !u!1 &63811627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,50 +2306,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388604418}
   m_CullTransparentMesh: 1
---- !u!1 &461216770
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 461216771}
-  - component: {fileID: 461216772}
-  m_Layer: 0
-  m_Name: GameResultsManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &461216771
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461216770}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.74647, y: 5.14964, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1354638165}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &461216772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461216770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6cd82b1ecf6fb640ad2dc9f2301f8ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameResultsManager
 --- !u!1 &465445479
 GameObject:
   m_ObjectHideFlags: 0
@@ -4273,7 +4216,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e67972440c2feee4eba5601d8903f792, type: 3}
   - {fileID: 8300000, guid: 378c0d3d488f65146943a59805217273, type: 3}
   - {fileID: 8300000, guid: 4b346e96857eebc4ea7aefd86a1ca7de, type: 3}
-  - {fileID: 8300000, guid: b20c837d4902c954da5702ea6a0d37b4, type: 3}
   source: {fileID: 949503321}
   dontRepeatSameTwice: 1
 --- !u!82 &949503321
@@ -6292,7 +6234,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1918025094}
-  - {fileID: 461216771}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1369480800
@@ -9199,9 +9140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bb62cfc20df5d4689f62a73f890ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  fallbackGameDuration: 60
+  fallbackGameDuration: 30
   minGameDuration: 10
-  musicPlaylist: {fileID: 0}
+  musicPlaylist: {fileID: 949503320}
 --- !u!4 &1918025094
 Transform:
   m_ObjectHideFlags: 0
@@ -9233,6 +9174,8 @@ MonoBehaviour:
   _timeScaleMax: 1.5
   MafuLegenda: 0.088
   SmellySam: 0.14
+  ApexFunk: 0.14
+  EnterYou: 0.1
 --- !u!1 &1934022154
 GameObject:
   m_ObjectHideFlags: 0
@@ -10509,10 +10452,10 @@ SceneRoots:
   - {fileID: 1654825241}
   - {fileID: 894680777}
   - {fileID: 649325908}
-  - {fileID: 18554695}
-  - {fileID: 1781377745}
   - {fileID: 949503322}
   - {fileID: 1488918361}
+  - {fileID: 1781377745}
+  - {fileID: 18554695}
   - {fileID: 49689878}
   - {fileID: 1354638165}
   - {fileID: 588128138}

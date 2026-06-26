@@ -18,6 +18,17 @@ public class ModelSelectionPanelUI : MonoBehaviour
 	public void Play(GameObject button)
 	{
 		string sceneName = button.name;
+
+		bool unlocked = PlayerProfileManager.Instance != null
+			&& PlayerProfileManager.Instance.GetProfile().IsSceneUnlocked(sceneName);
+
+		if (!unlocked)
+		{
+			// TODO: locked-state feedback (sound, shake, popup) once that UX is designed.
+			Debug.Log($"ModelSelectionPanelUI: '{sceneName}' is locked, ignoring click.");
+			return;
+		}
+
 		SceneManager.LoadScene(sceneName);
 	}
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 [Serializable]
 public class GameResultsList
-{ 
+{
 	public List<GameResult> results = new List<GameResult>();
 }
 
@@ -28,12 +28,12 @@ public class GameResultsManager : MonoBehaviour
 		Load();
 	}
 
-	public void SaveResult(int score)
+	public void SaveResult(int score, GameOutcome outcome)
 	{
-		var result = new GameResult(score);
+		var result = new GameResult(score, outcome);
 		_data.results.Add(result);
 		Save();
-		Debug.Log($"Result saved: Score ={score}, Date={result.dateTime}");
+		Debug.Log($"Result saved: Score={score}, Outcome={outcome}, Date={result.dateTime}");
 	}
 
 	public List<GameResult> GetAllResults() => _data.results;
@@ -41,10 +41,10 @@ public class GameResultsManager : MonoBehaviour
 	public GameResult GetBestScore()
 	{
 		if (_data.results.Count == 0) return null;
-			GameResult best = _data.results[0];
+		GameResult best = _data.results[0];
 		foreach (var r in _data.results)
 			if (r.score > best.score) best = r;
-			return best;
+		return best;
 	}
 
 	public void ClearAll()

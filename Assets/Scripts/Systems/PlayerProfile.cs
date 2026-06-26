@@ -8,6 +8,7 @@ public class PlayerProfile
 	public int money = 0;
 	public int gamesPlayed = 0;
 	public int totalScore = 0;
+	public int highestSceneUnlocked = 0;
 
 	public int GetAverageScore()
 	{
@@ -23,5 +24,16 @@ public class PlayerProfile
 		if (avg >= 10000) return "Gold";
 		if (avg >= 3000) return "Silver";
 		return "Bronze";
+	}
+
+	public bool IsSceneUnlocked(string sceneName)
+	{
+		int index = GameSceneOrder.IndexOf(sceneName);
+		if (index < 0)
+		{
+			Debug.LogWarning($"PlayerProfile: '{sceneName}' is not in GameSceneOrder.Scenes. Treating as locked.");
+			return false;
+		}
+		return index <= highestSceneUnlocked;
 	}
 }
