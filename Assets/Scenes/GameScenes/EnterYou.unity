@@ -10672,7 +10672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d93a6e23a3b3e644795fc098c508623b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicPlaylist
-  parts: []
+  parts:
+  - {fileID: 8300000, guid: 9a70db85d9f110a4995b1852a24cc18b, type: 3}
   source: {fileID: 2051319536}
   dontRepeatSameTwice: 1
 --- !u!82 &2051319536

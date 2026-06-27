@@ -1,6 +1,12 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 27.06.2026
+* I have 4 days left to release my game in any state.
+* Today we are going to touch animations.
+* The goal is to make game look as cool as it sounds ;)
+* 
+* 
 * 26.06.2026
 * 
 * I feel a little frustrated today. I think it's because yesterday I tried to start making
