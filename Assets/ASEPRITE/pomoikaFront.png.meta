@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d32a86fdaf13d314c8f32f77f4f3600a
+guid: 6d8c571ea50041e43b96bf237b5a63be
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7922720019422166378
-    second: pomoika_0
+      213: -4569392020959202594
+    second: pomoikaFront_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pomoika_0
+      name: pomoikaFront_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 32
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69247736e18dc0290800000000000000
-      internalID: -7922720019422166378
+      spriteID: ed2f837aa224690c0800000000000000
+      internalID: -4569392020959202594
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pomoika_0: -7922720019422166378
+      pomoikaFront_0: -4569392020959202594
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

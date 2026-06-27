@@ -9,6 +9,7 @@
 *Today I did:
 *
 * 1) I made and added animated flames for each falling object prefab. It took about 3 hours ;/
+* 2) I made player's trash can burn as well, added flame there.
 * 
 * 
 * 26.06.2026
