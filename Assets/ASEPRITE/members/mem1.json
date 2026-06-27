@@ -1,0 +1,37 @@
+{ "frames": {
+   "member1 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 32, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 24 },
+    "sourceSize": { "w": 32, "h": 24 },
+    "duration": 100
+   },
+   "member1 1.aseprite": {
+    "frame": { "x": 32, "y": 0, "w": 32, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 24 },
+    "sourceSize": { "w": 32, "h": 24 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.17.2-x64",
+  "image": "mem1.png",
+  "format": "RGBA8888",
+  "size": { "w": 64, "h": 24 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "room", "opacity": 255, "blendMode": "normal" },
+   { "name": "Armchair", "opacity": 255, "blendMode": "normal" },
+   { "name": "Member", "opacity": 255, "blendMode": "normal" },
+   { "name": "Hand", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}
