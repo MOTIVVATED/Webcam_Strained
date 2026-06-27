@@ -5753,7 +5753,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &933427797
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10711,7 +10711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.83921576, g: 0.83921576, b: 0.83921576, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -10789,6 +10789,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e67972440c2feee4eba5601d8903f792, type: 3}
   - {fileID: 8300000, guid: 378c0d3d488f65146943a59805217273, type: 3}
   - {fileID: 8300000, guid: 4b346e96857eebc4ea7aefd86a1ca7de, type: 3}
+  - {fileID: 8300000, guid: 5866d0f6b42a9434bb1aca93841a9b9c, type: 3}
+  - {fileID: 8300000, guid: 9a70db85d9f110a4995b1852a24cc18b, type: 3}
   source: {fileID: 2051319536}
   dontRepeatSameTwice: 1
 --- !u!82 &2051319536
