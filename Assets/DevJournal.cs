@@ -2,10 +2,10 @@
 * == DEV JOURNAL ==
 * 
 * 28.06.2026
-* 
-* I added PixelImpact font in Unity. Replaced some fonts in game. Workinged on a visual style and color
-* scheme of a game. Now I'm sure it has to be dark.
-* I made some changes in UI style on a Model Selection Screen, trying to find the best option.
+*
+* Today I did:
+* 1) I added PixelImpact font in Unity. Replaced some fonts in game. Workinged on a visual style and color
+* 2) I made sprites: Frame, Button, Lock - for ModelSelectionPanel and arranged them in Unity.
 * 
 * 
 * 27.06.2026
@@ -13,7 +13,7 @@
 * Today we are going to touch animations.
 * The goal is to make game look as cool as it sounds ;)
 * 
-*Today I did:
+* Today I did:
 *
 * 1) I made and added animated flames for each falling object prefab. It took about 3 hours ;/
 * 2) I made player's trash can burn as well, added flame there.
