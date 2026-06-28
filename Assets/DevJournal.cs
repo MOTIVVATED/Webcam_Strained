@@ -3,8 +3,9 @@
 * 
 * 28.06.2026
 * 
-* I added PixelImpact font in Unity. Replaced fonts in game. Workinged on a visual style and color scheme of
-* of a game. Now I'm sure it has to be dark.
+* I added PixelImpact font in Unity. Replaced some fonts in game. Workinged on a visual style and color
+* scheme of a game. Now I'm sure it has to be dark.
+* I made some changes in UI style on a Model Selection Screen, trying to find the best option.
 * 
 * 
 * 27.06.2026
