@@ -1,6 +1,12 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 28.06.2026
+* 
+* I added PixelImpact font in Unity. Replaced fonts in game. Workinged on a visual style and color scheme of
+* of a game. Now I'm sure it has to be dark.
+* 
+* 
 * 27.06.2026
 * I have 4 days left to release my game in any state.
 * Today we are going to touch animations.
