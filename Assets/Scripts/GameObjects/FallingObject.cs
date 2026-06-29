@@ -1,63 +1,77 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FallingObject : MonoBehaviour
 {
-  [SerializeField] private FallingObjectType objectType;
-  [SerializeField] private SpriteRenderer spriteRenderer;
+	[SerializeField] private FallingObjectType objectType;
+	[SerializeField] private SpriteRenderer spriteRenderer;
 
-  [SerializeField] private float fallSpeed = 3f;
-  [SerializeField] private float destroyY = -5f;
+	[SerializeField] private float fallSpeed = 3f;
+	[SerializeField] private float destroyY = -5f;
 
-  public FallingObjectType ObjectType => objectType;
+	public FallingObjectType ObjectType => objectType;
 
-  public event Action<FallingObjectType, Vector3> OnCollected;
-    
-  public event Action<FallingObjectType> OnMissed;
+	public static readonly List<FallingObject> Active = new List<FallingObject>();
 
-  public event Action<FallingObjectType, Vector3> OnSmashed;
+	public event Action<FallingObjectType, Vector3> OnCollected;
 
-  private void Awake()
-  {
-    if (spriteRenderer == null)
-    spriteRenderer = GetComponent<SpriteRenderer>();
-  }
+	public event Action<FallingObjectType> OnMissed;
 
-  private void Reset()
-  {
-    spriteRenderer = GetComponent<SpriteRenderer>();
-  }
-  public void SetSprite(Sprite sprite)
-  {
-    if (spriteRenderer != null && sprite != null)
-    spriteRenderer.sprite = sprite;
-  }
+	public event Action<FallingObjectType, Vector3> OnSmashed;
 
-  void Update()
-  {
-    Fall();
-    CheckDestroy();
-  }
+	private void Awake()
+	{
+		if (spriteRenderer == null)
+			spriteRenderer = GetComponent<SpriteRenderer>();
+	}
 
-  private void Fall()
-  { 
-    transform.position += Vector3.down * fallSpeed * Time.deltaTime;
-  }
+	private void Reset()
+	{
+		spriteRenderer = GetComponent<SpriteRenderer>();
+	}
 
-  private void CheckDestroy()
-  {
-    if (transform.position.y <= destroyY)
-    {
-      OnMissed?.Invoke(objectType);
-      Destroy(gameObject);
-    }
-  }
-  public void Collect()
-  {
+	private void OnEnable()
+	{
+		Active.Add(this);
+	}
+
+	private void OnDisable()
+	{
+		Active.Remove(this);
+	}
+
+	public void SetSprite(Sprite sprite)
+	{
+		if (spriteRenderer != null && sprite != null)
+			spriteRenderer.sprite = sprite;
+	}
+
+	void Update()
+	{
+		Fall();
+		CheckDestroy();
+	}
+
+	private void Fall()
+	{
+		transform.position += Vector3.down * fallSpeed * Time.deltaTime;
+	}
+
+	private void CheckDestroy()
+	{
+		if (transform.position.y <= destroyY)
+		{
+			OnMissed?.Invoke(objectType);
+			Destroy(gameObject);
+		}
+	}
+	public void Collect()
+	{
 		Vector3 pos = transform.position;
 		OnCollected?.Invoke(objectType, pos);
-    Destroy(gameObject);
-  }
+		Destroy(gameObject);
+	}
 	public void Smash()
 	{
 		Vector3 pos = transform.position;

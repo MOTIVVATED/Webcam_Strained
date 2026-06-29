@@ -17,5 +17,7 @@ public enum FallingObjectType
 
 	webcam,
 	reduser,
-	multiSale
+	multiSale,
+
+	saveForLater
 }

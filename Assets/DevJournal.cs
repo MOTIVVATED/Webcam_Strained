@@ -6,6 +6,8 @@
 * 1) strained - is the name of my game.
 * 2) I added one more music clip to my soundtrack! Now there are 10 thacks.
 * 3) I made floating text spawn on FallingObject's position not on Player's position like it was before.
+* 4) I added new FallingObjectType saveForLater. Just great mechanic. Catching this object you you save
+* it for later, stack it, then you can use one by one, catching all tk* on scene automaticly.
 * 
 * 
 * 28.06.2026

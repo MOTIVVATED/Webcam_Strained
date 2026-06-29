@@ -59,7 +59,7 @@ public class Spawner : MonoBehaviour
 			yield return new WaitForSeconds(delay);
 
 			if (Time.time < nextAllowedSpawnTime)
-			continue;
+				continue;
 
 			Spawn(rule.prefab);
 			nextAllowedSpawnTime = Time.time + minGlobalSpawnInterval;
@@ -74,10 +74,16 @@ public class Spawner : MonoBehaviour
 		FallingObject falling = Instantiate(
 			prefab, spawnPoint.transform.position, Quaternion.identity);
 
-		falling.transform.position = 
+		falling.transform.position =
 			new Vector3(spawnPoint.transform.position.x, spawnPoint.transform.position.y, 0f);
 
-		falling.OnCollected += (type, pos) => GameEvents.ObjectCollected(type, pos);
+		falling.OnCollected += (type, pos) =>
+		{
+			if (type == FallingObjectType.saveForLater)
+				GameEvents.PowerUpCollected();
+			else
+				GameEvents.ObjectCollected(type, pos);
+		};
 		falling.OnSmashed += (type, pos) => GameEvents.ObjectSmashed(type, pos);
 		falling.OnMissed += (type) => GameEvents.ObjectMissed(type);
 	}
