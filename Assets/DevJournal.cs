@@ -10,6 +10,7 @@
 * it for later, stack it, then you can use one by one, catching all tk* on scene automaticly.
 * 5) I added MultiSalePopup. Big bright letters with number of points collected popup when multi sale 
 * hits. Looks great!
+* 6) I added multiSale counter: lable and text with current multiSale counter. Works properly.
 * 
 * 28.06.2026
 *
