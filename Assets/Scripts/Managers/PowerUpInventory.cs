@@ -55,8 +55,24 @@ public class PowerUpInventory : MonoBehaviour
 				toCollect.Add(obj);
 		}
 
+		int pointsCollected = 0;
+		if (ScoreManager.Instance != null)
+		{
+			foreach (var obj in toCollect)
+				pointsCollected += ScoreManager.Instance.GetPointValue(obj.ObjectType);
+		}
+		else
+		{
+			Debug.LogWarning("PowerUpInventory: No ScoreManager instance found, MultiSale total will show 0.");
+		}
+
 		foreach (var obj in toCollect)
 			obj.Collect();
+
+		if (MultiSalePopup.Instance != null)
+			MultiSalePopup.Instance.Show(pointsCollected);
+		else
+			Debug.LogWarning("PowerUpInventory: No MultiSalePopup instance found in scene.");
 
 		OnPowerUpUsed?.Invoke();
 	}
@@ -65,7 +81,6 @@ public class PowerUpInventory : MonoBehaviour
 	{
 		switch (type)
 		{
-			case FallingObjectType.good:
 			case FallingObjectType.tk1:
 			case FallingObjectType.tk15:
 			case FallingObjectType.tk25:

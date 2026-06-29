@@ -8,7 +8,8 @@
 * 3) I made floating text spawn on FallingObject's position not on Player's position like it was before.
 * 4) I added new FallingObjectType saveForLater. Just great mechanic. Catching this object you you save
 * it for later, stack it, then you can use one by one, catching all tk* on scene automaticly.
-* 
+* 5) I added MultiSalePopup. Big bright letters with number of points collected popup when multi sale 
+* hits. Looks great!
 * 
 * 28.06.2026
 *
