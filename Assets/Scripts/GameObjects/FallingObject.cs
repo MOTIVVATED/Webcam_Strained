@@ -7,7 +7,7 @@ public class FallingObject : MonoBehaviour
   [SerializeField] private SpriteRenderer spriteRenderer;
 
   [SerializeField] private float fallSpeed = 3f;
-  [SerializeField] private float destroyY = -6f;
+  [SerializeField] private float destroyY = -5f;
 
   public FallingObjectType ObjectType => objectType;
 

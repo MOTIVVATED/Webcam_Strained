@@ -5,6 +5,7 @@
 * Today I did:
 * 1) strained - is the name of my game.
 * 2) I added one more music clip to my soundtrack! Now there are 10 thacks.
+* 3) I made floating text spawn on FallingObject's position not on Player's position like it was before.
 * 
 * 
 * 28.06.2026

@@ -113,7 +113,7 @@ MonoBehaviour:
   objectType: 5
   spriteRenderer: {fileID: 0}
   fallSpeed: 7
-  destroyY: -6
+  destroyY: -5
 --- !u!1 &3394988301671808127
 GameObject:
   m_ObjectHideFlags: 0

@@ -64,37 +64,37 @@ public class ScoreManager : MonoBehaviour
       case FallingObjectType.tk15:
         AddScore(tk15);
         OnTK_1_15_Collected?.Invoke();
-        floatingTextSpawner.Spawn(tk15, player.transform.position, type);
+        floatingTextSpawner.Spawn(tk15, pos, type);
         break;
       case FallingObjectType.tk25:
         AddScore(tk25);
         OnTK_25_Collected?.Invoke();
-        floatingTextSpawner.Spawn(tk25, player.transform.position, type);
+        floatingTextSpawner.Spawn(tk25, pos, type);
         break;
       case FallingObjectType.tk111:
         AddScore(tk111);
         OnTK_111_Collected?.Invoke();
-        floatingTextSpawner.Spawn(tk111, player.transform.position, type);
+        floatingTextSpawner.Spawn(tk111, pos, type);
         break;
       case FallingObjectType.tk222:
         AddScore(tk222);
         OnTK_222_Collected?.Invoke();
-        floatingTextSpawner.Spawn(tk222, player.transform.position, type);
+        floatingTextSpawner.Spawn(tk222, pos, type);
 				break;
       case FallingObjectType.tk555:
         AddScore(tk555);
         OnTK_555_Collected?.Invoke();
-        floatingTextSpawner.Spawn(tk555, player.transform.position, type);
+        floatingTextSpawner.Spawn(tk555, pos, type);
         break;
       case FallingObjectType.tk666:
         AddScore(tk666);
         OnTK_666_Collected?.Invoke();
-        floatingTextSpawner.Spawn(tk666, player.transform.position, type);
+        floatingTextSpawner.Spawn(tk666, pos, type);
         break;
       case FallingObjectType.tk1111:
         AddScore(tk1111);
         OnTK_1111_Collected?.Invoke();
-        floatingTextSpawner.Spawn(tk1111, player.transform.position, type);
+        floatingTextSpawner.Spawn(tk1111, pos, type);
         break;
 		}
   }   

@@ -5694,7 +5694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &933427797
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10724,14 +10724,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicPlaylist
   parts:
-  - {fileID: 8300000, guid: 827b98f1ea6c0b84e86259bff388ce5a, type: 3}
+  - {fileID: 8300000, guid: 9a70db85d9f110a4995b1852a24cc18b, type: 3}
+  - {fileID: 8300000, guid: 351752e02e7484647a76f4ae6574bb1e, type: 3}
   - {fileID: 8300000, guid: b55d38174640f5c419c06b14cab7e467, type: 3}
   - {fileID: 8300000, guid: e58657c0489b19041be3872709ac1199, type: 3}
   - {fileID: 8300000, guid: e67972440c2feee4eba5601d8903f792, type: 3}
   - {fileID: 8300000, guid: 378c0d3d488f65146943a59805217273, type: 3}
-  - {fileID: 8300000, guid: 4b346e96857eebc4ea7aefd86a1ca7de, type: 3}
   - {fileID: 8300000, guid: 5866d0f6b42a9434bb1aca93841a9b9c, type: 3}
-  - {fileID: 8300000, guid: 9a70db85d9f110a4995b1852a24cc18b, type: 3}
+  - {fileID: 8300000, guid: 4b346e96857eebc4ea7aefd86a1ca7de, type: 3}
+  - {fileID: 8300000, guid: f7715b7b8b1e73143a789521a8101388, type: 3}
+  - {fileID: 8300000, guid: 61528f8b6e6cf2e4db0a52b7d7fbf2d9, type: 3}
   source: {fileID: 2051319536}
   dontRepeatSameTwice: 1
 --- !u!82 &2051319536
