@@ -2,7 +2,9 @@
 * == DEV JOURNAL ==
 * 
 * 29.06.2026
-* strained - is the name of my game.
+* Today I did:
+* 1) strained - is the name of my game.
+* 2) I added one more music clip to my soundtrack! Now there are 10 thacks.
 * 
 * 
 * 28.06.2026
