@@ -3801,10 +3801,10 @@ RectTransform:
   m_Children:
   - {fileID: 1905261060}
   - {fileID: 1578333733}
+  - {fileID: 1933802854}
   - {fileID: 2005199089185424573}
   - {fileID: 933427797}
   - {fileID: 30009220}
-  - {fileID: 1933802854}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9894,7 +9894,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &1905261062
 MonoBehaviour:
   m_ObjectHideFlags: 0
