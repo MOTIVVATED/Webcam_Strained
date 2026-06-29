@@ -1,6 +1,10 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 29.06.2026
+* strained - is the name of my game.
+* 
+* 
 * 28.06.2026
 *
 * Today I did:
