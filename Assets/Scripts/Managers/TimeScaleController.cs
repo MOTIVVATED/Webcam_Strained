@@ -12,8 +12,8 @@ public class TimeScaleController : MonoBehaviour
 	private float _timeScaleFactor = 0.88f;
 	private float _timeScaleIncrement = 0;
 
-	[SerializeField] private float _timeScaleMin = 0.7f;
-	[SerializeField] private float _timeScaleMax = 2f;
+	[SerializeField] private float _timeScaleMin = 1f;
+	[SerializeField] private float _timeScaleMax = 3f;
 
 	[Header("timeScale Values for models")]
 	[SerializeField] private float MafuLegenda = 0.088f;
@@ -37,12 +37,13 @@ public class TimeScaleController : MonoBehaviour
 		switch (_sceneName)
 		{
 			case "MafuLegenda": _timeScaleIncrement = MafuLegenda; break;
-			case "SmellySam": _timeScaleIncrement = SmellySam; break;
 			case "ApexFunk": _timeScaleIncrement = ApexFunk; break;
+			case "SmellySam": _timeScaleIncrement = SmellySam; break;
 			case "EnterYou": _timeScaleIncrement = EnterYou; break;
 
 			default: _timeScaleIncrement = 0; break;
 		}
+
 
 		if ( !_paused && _actualTimeScale < _timeScaleMax)
 		{

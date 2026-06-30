@@ -6,10 +6,10 @@ public static class GameSceneOrder
 	{
 		"MafuLegenda",
 		"ApexFunk",
+		"PampyBam",
 		"EnterYou",
-		"MadiMeows",
 		"SmellySam",
-		"PampyBam"
+		"MadiMeows"
 	};
 
 	public static int IndexOf(string sceneName) => Array.IndexOf(Scenes, sceneName);
