@@ -45,6 +45,6 @@ public class TimerView : MonoBehaviour
 	{
 		int e = Mathf.FloorToInt(elapsed) / secondsInHour;
 		int d = Mathf.FloorToInt(duration) / secondsInHour;
-		timerText.text = $"{e}/{d}h";
+		timerText.text = $"{e}/{d}hrs";
 	}
 }
