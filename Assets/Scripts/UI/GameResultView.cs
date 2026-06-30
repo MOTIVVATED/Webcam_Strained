@@ -45,7 +45,7 @@ public class GameResultView : MonoBehaviour
 		int d = (int)(duration / TimerView.Instance.SecondsInHour);
 
 		resultText.text =
-		$"W W! \ntotal: {total}tk | stream time: {t}/{d}h";
+		$"W W! \ntotal: {total}tk \nstream time: {t}/{d}h";
 
 		nameText.text = profile.playerName;
 		rankText.text = profile.GetRank();
@@ -72,10 +72,10 @@ public class GameResultView : MonoBehaviour
 		resultText.text =
 			$"Tilt! \ntotal: {total}tk | stream time: {t}/{d}h";
 
-		nameText.text = profile.playerName;
-		rankText.text = profile.GetRank();
-		moneyText.text = $"${profile.money}";
-		avgScoreText.text = profile.GetAverageScore().ToString();
+		nameText.text = $"name: {profile.playerName}";
+		rankText.text = $"rank: {profile.GetRank()}";
+		moneyText.text = $"net worth: {profile.money}$";
+		avgScoreText.text = $"avg Total: {profile.GetAverageScore().ToString()}";
 
 		resultText.gameObject.SetActive(true);
 

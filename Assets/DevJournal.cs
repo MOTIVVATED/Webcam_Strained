@@ -11,7 +11,7 @@
 * 2) I made the same for tilt and live, also I made model much bigger, now it takes 1/3 of the screen,
 * on the right. Now game scene looks exactly as I wanted.
 * 3) I set up stats screen and settings screen in mane nenu.
-* 
+* 4) I finished working on UI.
 * 
 * 29.06.2026
 * Today I did:
