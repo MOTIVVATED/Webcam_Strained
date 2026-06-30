@@ -9,6 +9,8 @@ public class ResultsUI : MonoBehaviour
     [SerializeField] private Text historyText; // Assign a UI Text component in the Inspector
     [SerializeField] private Text bestScoreText; // Assign another UI Text element
 
+
+
   [Header("Root")]
   [SerializeField] private GameObject panelRoot;
 
