@@ -1,6 +1,15 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 30.06.2026
+* 
+* I keep working on UI.
+* 
+* Today I did:
+* 1) I made, implemented in Unity and arranged lables for viewers and total, changed text view.
+* 
+* 
+* 
 * 29.06.2026
 * Today I did:
 * 1) strained - is the name of my game.

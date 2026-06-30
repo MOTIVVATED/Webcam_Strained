@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -43,6 +44,7 @@ public class PowerUpCounterView : MonoBehaviour
 
 		countText.gameObject.SetActive(true);
 		image.gameObject.SetActive(true);
-		countText.text = $"x{charges}";
+		// countText.text = $"x{charges}";
+		countText.text = charges.ToString();
 	}
 }
