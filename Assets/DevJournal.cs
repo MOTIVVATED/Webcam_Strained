@@ -1,6 +1,12 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 01.07.2026
+* 
+* Scenes look good now.
+* I'm going to work on upgrades and progression visualization now.
+* 
+* 
 * 30.06.2026
 * 
 * I keep working on UI.
