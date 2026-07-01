@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class ModelSelectionPanelUI : MonoBehaviour
 {
 	[SerializeField] private GameObject panelRoot;
+	[SerializeField] private LevelingPanelUI levelingPanel;
 
 	//[Header ("Buttons")]
 	//[SerializeField] private GameObject[] buttons;
@@ -30,5 +31,9 @@ public class ModelSelectionPanelUI : MonoBehaviour
 		}
 
 		SceneManager.LoadScene(sceneName);
+	}
+	public void OpenLevelingPanel()
+	{
+		levelingPanel.Open();
 	}
 }

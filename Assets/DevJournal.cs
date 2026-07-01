@@ -18,6 +18,7 @@
 * In addition, two independent checkboxes: Ban (PlayerSmashing) and Enlarge (player object 
 * scales x2 y2).
 * 2) I changed may scripts and made configs.
+* 3) I added all UI objects and prefabs that needed, now I need to set it up.
 * 
 * 
 * 30.06.2026
