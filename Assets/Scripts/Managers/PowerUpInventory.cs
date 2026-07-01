@@ -5,15 +5,41 @@ public class PowerUpInventory : MonoBehaviour
 {
 	public static PowerUpInventory Instance { get; private set; }
 
+	[SerializeField] private SaveForLaterUpgradeConfig config;
+
 	public int Charges { get; private set; }
 
 	public event Action<int> OnChargesChanged;
 	public event Action OnPowerUpUsed;
 
+	// -1 means unlimited. Defaults to 0 (tier 0 = power-up not owned yet) until ApplyEquippedTier runs.
+	private int maxCharges = 0;
+
 	private void Awake()
 	{
 		if (Instance != null && Instance != this) { Destroy(gameObject); return; }
 		Instance = this;
+	}
+
+	private void Start()
+	{
+		ApplyEquippedTier();
+	}
+
+	private void ApplyEquippedTier()
+	{
+		int tier = 0;
+		if (PlayerProfileManager.Instance != null)
+			tier = PlayerProfileManager.Instance.GetProfile().saveForLaterUpgrade.equippedTier;
+
+		if (config == null || config.tiers == null || tier < 0 || tier >= config.tiers.Length)
+		{
+			Debug.LogWarning("PowerUpInventory: Missing or invalid SaveForLaterUpgradeConfig, defaulting to 0 max charges.");
+			maxCharges = 0;
+			return;
+		}
+
+		maxCharges = config.tiers[tier].maxCharges;
 	}
 
 	private void OnEnable()
@@ -36,6 +62,8 @@ public class PowerUpInventory : MonoBehaviour
 
 	private void HandleCollected()
 	{
+		if (maxCharges >= 0 && Charges >= maxCharges) return;
+
 		Charges++;
 		OnChargesChanged?.Invoke(Charges);
 	}

@@ -8,6 +8,7 @@ public static class GameEvents
 	public static event Action<FallingObjectType> OnObjectMissed;
 	public static event Action<float, float> OnMusicClipSelected;
 	public static event Action OnPowerUpCollected;
+	public static event Action OnUpgradesChanged;
 
 
 	public static void ObjectCollected(FallingObjectType type, Vector3 pos)
@@ -24,4 +25,7 @@ public static class GameEvents
 
 	public static void PowerUpCollected()
 		=> OnPowerUpCollected?.Invoke();
+
+	public static void UpgradesChanged()
+		=> OnUpgradesChanged?.Invoke();
 }

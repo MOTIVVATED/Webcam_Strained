@@ -16,7 +16,11 @@ public class Spawner : MonoBehaviour
 	[SerializeField] private SpawnRule[] rules;
 
 	[Header("Spawn Points")]
+	[Tooltip("Ordered so that taking the first N entries gives the correct active-lane subset for lane count N.")]
 	[SerializeField] private GameObject[] spawnPoints;
+
+	[Header("Lane Upgrade")]
+	[SerializeField] private LaneUpgradeConfig laneUpgradeConfig;
 
 	[Header("Spawnlimits")]
 	[SerializeField] private float minGlobalSpawnInterval = 0.5f;
@@ -24,6 +28,7 @@ public class Spawner : MonoBehaviour
 	private Coroutine[] routines;
 
 	private float nextAllowedSpawnTime;
+	private int activeSpawnPointCount;
 
 	private void OnEnable()
 	{
@@ -33,6 +38,7 @@ public class Spawner : MonoBehaviour
 			return;
 		}
 		nextAllowedSpawnTime = Time.time;
+		activeSpawnPointCount = ComputeActiveSpawnPointCount();
 
 		routines = new Coroutine[rules.Length];
 
@@ -66,9 +72,23 @@ public class Spawner : MonoBehaviour
 		}
 	}
 
+	private int ComputeActiveSpawnPointCount()
+	{
+		if (laneUpgradeConfig == null || laneUpgradeConfig.tiers == null || laneUpgradeConfig.tiers.Length == 0)
+			return spawnPoints.Length;
+
+		int tier = 0;
+		if (PlayerProfileManager.Instance != null)
+			tier = PlayerProfileManager.Instance.GetProfile().laneUpgrade.equippedTier;
+
+		tier = Mathf.Clamp(tier, 0, laneUpgradeConfig.tiers.Length - 1);
+		int count = laneUpgradeConfig.tiers[tier].activeLaneCount;
+		return Mathf.Clamp(count, 1, spawnPoints.Length);
+	}
+
 	private void Spawn(FallingObject prefab)
 	{
-		int spawnPointNumber = Random.Range(0, spawnPoints.Length);
+		int spawnPointNumber = Random.Range(0, activeSpawnPointCount);
 		GameObject spawnPoint = spawnPoints[spawnPointNumber];
 
 		FallingObject falling = Instantiate(

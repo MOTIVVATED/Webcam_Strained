@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced23d00c953615489c35e1615c7cc93, type: 3}
+  m_Name: LaneUpgradeConfig
+  m_EditorClassIdentifier: Assembly-CSharp::LaneUpgradeConfig
+  tiers:
+  - label: 2
+    activeLaneCount: 2
+    cost: 0
+  - label: 3
+    activeLaneCount: 3
+    cost: 100
+  - label: 4
+    activeLaneCount: 4
+    cost: 200
+  - label: 5
+    activeLaneCount: 5
+    cost: 350
+  - label: 6
+    activeLaneCount: 6
+    cost: 500
+  - label: 7
+    activeLaneCount: 7
+    cost: 800

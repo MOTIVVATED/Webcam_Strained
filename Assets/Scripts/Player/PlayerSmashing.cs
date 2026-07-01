@@ -3,36 +3,44 @@ using System;
 
 public class PlayerSmashing : MonoBehaviour
 {
-    [Header("Ban settings")]
-    [SerializeField] private float smashRadius = 2f;
-    [SerializeField] private LayerMask badLayer;
+	[Header("Ban settings")]
+	[SerializeField] private float smashRadius = 2f;
+	[SerializeField] private LayerMask badLayer;
 
-    public event Action OnSmash;
+	public event Action OnSmash;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            SmashFirst();
-        }
-    }
-    // smashing first object by tag
-    private void SmashFirst()
-    {
-        GameObject bad = GameObject.FindGameObjectWithTag("bad");
-        
-        if (bad == null)  return;
+	private void Start()
+	{
+		bool equipped = PlayerProfileManager.Instance != null
+				&& PlayerProfileManager.Instance.GetProfile().banEquipped;
 
-        FallingObject fallingObject = bad.GetComponent<FallingObject>();
+		enabled = equipped;
+	}
 
-        if (fallingObject != null) fallingObject.Smash();
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.DownArrow))
+		{
+			SmashFirst();
+		}
+	}
+	// smashing first object by tag
+	private void SmashFirst()
+	{
+		GameObject bad = GameObject.FindGameObjectWithTag("bad");
 
-        OnSmash?.Invoke();
-    }
+		if (bad == null) return;
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, smashRadius);
-    }
+		FallingObject fallingObject = bad.GetComponent<FallingObject>();
+
+		if (fallingObject != null) fallingObject.Smash();
+
+		OnSmash?.Invoke();
+	}
+
+	private void OnDrawGizmosSelected()
+	{
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireSphere(transform.position, smashRadius);
+	}
 }

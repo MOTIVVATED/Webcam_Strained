@@ -45,6 +45,116 @@ public class PlayerProfileManager : MonoBehaviour
 		Save();
 	}
 
+	// --- Branch upgrades (Save For Later / Movement / Lanes) ---
+	// Rank requirement for a tier is uniform across all branches: tierIndex + 1.
+
+	public bool CanPurchaseTier(UpgradeBranch branch, int tierIndex, int cost)
+	{
+		var progress = _profile.GetBranchProgress(branch);
+		if (progress == null) return false;
+		if (tierIndex < 0 || tierIndex >= progress.ownedTiers.Length) return false;
+		if (progress.ownedTiers[tierIndex]) return false;
+
+		int requiredRank = tierIndex + 1;
+		if (_profile.GetRankNumber() < requiredRank) return false;
+		if (_profile.money < cost) return false;
+
+		return true;
+	}
+
+	public void PurchaseTier(UpgradeBranch branch, int tierIndex, int cost)
+	{
+		var progress = _profile.GetBranchProgress(branch);
+		if (progress == null || tierIndex < 0 || tierIndex >= progress.ownedTiers.Length)
+		{
+			Debug.LogWarning($"PlayerProfileManager: Invalid tier {tierIndex} for branch {branch}.");
+			return;
+		}
+
+		progress.ownedTiers[tierIndex] = true;
+		_profile.money = Mathf.Max(0, _profile.money - cost);
+		Save();
+		GameEvents.UpgradesChanged();
+	}
+
+	public void EquipTier(UpgradeBranch branch, int tierIndex)
+	{
+		var progress = _profile.GetBranchProgress(branch);
+		if (progress == null || tierIndex < 0 || tierIndex >= progress.ownedTiers.Length)
+		{
+			Debug.LogWarning($"PlayerProfileManager: Invalid tier {tierIndex} for branch {branch}.");
+			return;
+		}
+
+		if (!progress.ownedTiers[tierIndex])
+		{
+			Debug.LogWarning($"PlayerProfileManager: Attempted to equip un-owned tier {tierIndex} on {branch}.");
+			return;
+		}
+
+		progress.equippedTier = tierIndex;
+		Save();
+		GameEvents.UpgradesChanged();
+	}
+
+	// --- Independent Ban / Enlarge upgrades ---
+
+	public bool CanPurchaseBan(int cost, int requiredRank)
+	{
+		if (_profile.banOwned) return false;
+		if (_profile.GetRankNumber() < requiredRank) return false;
+		if (_profile.money < cost) return false;
+		return true;
+	}
+
+	public void PurchaseBan(int cost)
+	{
+		_profile.banOwned = true;
+		_profile.money = Mathf.Max(0, _profile.money - cost);
+		Save();
+		GameEvents.UpgradesChanged();
+	}
+
+	public void SetBanEquipped(bool equipped)
+	{
+		if (equipped && !_profile.banOwned)
+		{
+			Debug.LogWarning("PlayerProfileManager: Attempted to equip Ban before owning it.");
+			return;
+		}
+		_profile.banEquipped = equipped;
+		Save();
+		GameEvents.UpgradesChanged();
+	}
+
+	public bool CanPurchaseEnlarge(int cost, int requiredRank)
+	{
+		if (_profile.enlargeOwned) return false;
+		if (_profile.GetRankNumber() < requiredRank) return false;
+		if (_profile.money < cost) return false;
+		return true;
+	}
+
+	public void PurchaseEnlarge(int cost)
+	{
+		_profile.enlargeOwned = true;
+		_profile.money = Mathf.Max(0, _profile.money - cost);
+		Save();
+		GameEvents.UpgradesChanged();
+	}
+
+	public void SetEnlargeEquipped(bool equipped)
+	{
+		if (equipped && !_profile.enlargeOwned)
+		{
+			Debug.LogWarning("PlayerProfileManager: Attempted to equip Enlarge before owning it.");
+			return;
+		}
+		_profile.enlargeEquipped = equipped;
+		Save();
+		GameEvents.UpgradesChanged();
+	}
+
 	private void TryAdvanceUnlock(string sceneName)
 	{
 		int index = GameSceneOrder.IndexOf(sceneName);

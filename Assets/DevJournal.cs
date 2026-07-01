@@ -6,6 +6,19 @@
 * Scenes look good now.
 * I'm going to work on upgrades and progression visualization now.
 * 
+* Today I did:
+* 1) I made an upgrades progression system.
+* We have ranks and currency in game. By rank player can get access to buy upgrades for currency. 
+* There are going to be 3 branches with 6  mutually exclusive checkboxes - levels of upgrades, 
+* once player unlocks (by unlocks I mean get access by rank and buy it by currency) any of them, 
+* then player can choose anyone of unlocked in each branch.
+* First branch: saveForLater maximum (0, 5, 10, 15, 20, unlimited). 
+* Second branch player movevemnt system: (laneStepMovement, inputSystem movement speed 10, 12, 13, 14) 
+* Third branch is number of lanes (active spawnpoints: 2, 3, 4, 5, 6, 7).
+* In addition, two independent checkboxes: Ban (PlayerSmashing) and Enlarge (player object 
+* scales x2 y2).
+* 2) I changed may scripts and made configs.
+* 
 * 
 * 30.06.2026
 * 

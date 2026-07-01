@@ -2373,6 +2373,7 @@ GameObject:
   - component: {fileID: 437493383}
   - component: {fileID: 437493384}
   - component: {fileID: 437493385}
+  - component: {fileID: 437493387}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2529,6 +2530,19 @@ MonoBehaviour:
   minX: -3
   maxX: 3
   looping: 0
+--- !u!114 &437493387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437493377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7afa7e18cfa80864586fa341e18bd700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementModeController
+  config: {fileID: 11400000, guid: 136e9b2c179d8cf42a0c7652654c5f47, type: 2}
 --- !u!1 &448621197
 GameObject:
   m_ObjectHideFlags: 0
@@ -6700,13 +6714,14 @@ MonoBehaviour:
     delayMax: 6
     enabled: 1
   spawnPoints:
-  - {fileID: 1315494676}
-  - {fileID: 1610729245}
   - {fileID: 520031876}
-  - {fileID: 681992740}
   - {fileID: 1132308318}
+  - {fileID: 681992740}
+  - {fileID: 1610729245}
   - {fileID: 2144348684}
+  - {fileID: 1315494676}
   - {fileID: 1121879586}
+  laneUpgradeConfig: {fileID: 11400000, guid: 99dfe9cbd114e28488704fd0b65750d8, type: 2}
   minGlobalSpawnInterval: 0.25
 --- !u!1 &1258184758
 GameObject:
@@ -9657,6 +9672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 490d5eaec3639f7499721c7e2fc2ec06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpInventory
+  config: {fileID: 11400000, guid: 7e303ef88dd16a943b237b25becc8c2d, type: 2}
 --- !u!1 &1811175167
 GameObject:
   m_ObjectHideFlags: 0
