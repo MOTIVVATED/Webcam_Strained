@@ -1,6 +1,14 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 03.07.2026
+* 
+* * Today I did:
+* 1) I lined up buttons in the leveling menu and made them look straight. It was not that easy since
+* I use buttons prefabs and containers for the first time.
+* 2) I also have a bug with leveling menu. It doesn't update after I buy or equip any upgrade. 
+* I need to fix it, but for now I have no idea how to do it.
+* 
 * 01.07.2026
 * 
 * Scenes look good now.

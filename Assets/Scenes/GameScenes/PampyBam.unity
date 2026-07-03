@@ -6722,7 +6722,7 @@ MonoBehaviour:
   - {fileID: 1315494676}
   - {fileID: 1121879586}
   laneUpgradeConfig: {fileID: 11400000, guid: 99dfe9cbd114e28488704fd0b65750d8, type: 2}
-  minGlobalSpawnInterval: 0.25
+  minGlobalSpawnInterval: 0.15
 --- !u!1 &1258184758
 GameObject:
   m_ObjectHideFlags: 0

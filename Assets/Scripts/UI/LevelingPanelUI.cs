@@ -54,6 +54,10 @@ public class LevelingPanelUI : MonoBehaviour
 	public void Open()
 	{
 		panelRoot.SetActive(true);
+
+		if (rankRows.Count == 0)
+			BuildRankColumn();
+
 		Refresh();
 	}
 
@@ -154,18 +158,10 @@ public class LevelingPanelUI : MonoBehaviour
 
 	// --- Shared tier helpers ---
 
-	// Visibility rule: every owned tier is shown, plus exactly one more - the next tier to unlock.
-	// Ownership is always contiguous from tier 0, since a tier can only ever be purchased while
-	// it's the single visible "next" tier for its branch.
+	// All tiers are always visible, regardless of ownership or rank.
 	private int GetVisibleTierCount(UpgradeBranchProgress progress, int totalTiers)
 	{
-		int highestOwned = 0;
-		for (int i = 0; i < progress.ownedTiers.Length && i < totalTiers; i++)
-		{
-			if (progress.ownedTiers[i]) highestOwned = i;
-		}
-
-		return Mathf.Min(highestOwned + 2, totalTiers);
+		return totalTiers;
 	}
 
 	private UpgradeTierButtonUI.State GetTierState(PlayerProfile profile, UpgradeBranchProgress progress, int tierIndex)
