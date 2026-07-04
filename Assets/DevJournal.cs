@@ -1,6 +1,23 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 04.07.2026
+* 
+* I have only 6 days to make working build for steam.
+* Good that I have not so many things to do.
+* Here are the most important things I need to do:
+* 
+* To Do:
+* 1) fix bug with unhighlited rank
+* 2) button back in leveling menu
+* 3) leveling menu visual style
+* 4) main menu animated banner
+* 5) steam achievements
+* 6) steam leaderboards
+* 7) steam cloud saves
+* 8) guide
+* 9) webcam almanac
+* 
 * 03.07.2026
 * 
 * * Today I did:
