@@ -23,6 +23,7 @@
 * Refresh() in Start() or in Open(), but I needed to call it in both.
 * 2) I set up leveling menu visual style. Now it looks much better.
 * 3) I can't say leveling panel is beautiful, but it works and looks finished.
+* 4) I found bugs with: sound, BAN floating text.
 * 
 * 
 * 03.07.2026
