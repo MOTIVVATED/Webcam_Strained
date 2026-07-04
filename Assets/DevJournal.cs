@@ -18,9 +18,15 @@
 * 8) guide
 * 9) webcam almanac
 * 
+* Today I did:
+* 1) I fixed bug with unhighlited rank. Now it works properly. The problem was that I tried to call
+* Refresh() in Start() or in Open(), but I needed to call it in both.
+* 2) I set up leveling menu visual style. Now it looks much better.
+* 
+* 
 * 03.07.2026
 * 
-* * Today I did:
+* Today I did:
 * 1) I lined up buttons in the leveling menu and made them look straight. It was not that easy since
 * I use buttons prefabs and containers for the first time.
 * 2) I also have a bug with leveling menu. It doesn't update after I buy or equip any upgrade. 

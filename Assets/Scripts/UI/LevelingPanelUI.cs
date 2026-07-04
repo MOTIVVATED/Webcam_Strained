@@ -39,6 +39,9 @@ public class LevelingPanelUI : MonoBehaviour
 	private void Start()
 	{
 		BuildRankColumn();
+
+		Refresh();
+
 	}
 
 	private void OnEnable()
@@ -76,7 +79,7 @@ public class LevelingPanelUI : MonoBehaviour
 
 		var profile = PlayerProfileManager.Instance.GetProfile();
 
-		if (moneyText != null) moneyText.text = $"{profile.money}";
+		if (moneyText != null) moneyText.text = $"Cash: {profile.money}$";
 		if (rankText != null) rankText.text = $"Rank {profile.GetRankNumber()}";
 
 		RefreshSaveForLaterColumn(profile);

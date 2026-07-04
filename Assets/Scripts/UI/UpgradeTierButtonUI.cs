@@ -28,8 +28,8 @@ public class UpgradeTierButtonUI : MonoBehaviour
 		if (costText != null)
 			costText.text = state == State.Buyable ? $"{cost}" : string.Empty;
 
-		if (rankRequirementText != null)
-			rankRequirementText.text = state == State.Locked ? $"Rank {requiredRank}" : string.Empty;
+		//if (rankRequirementText != null)
+		//	rankRequirementText.text = state == State.Locked ? $"Rank {requiredRank}" : string.Empty;
 
 		onClick = onClickCallback;
 
