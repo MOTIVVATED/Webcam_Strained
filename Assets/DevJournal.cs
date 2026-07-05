@@ -9,6 +9,7 @@
 * I made a template scene to make it easier to set up all 6 game scenes for each model.
 * I set up #3 PampyBam scene.
 * I set up #4 EnterYou scene.
+* I made #5 SmellySam scene.
 * 
 * 04.07.2026
 * 

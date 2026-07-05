@@ -17,11 +17,11 @@ public class TimeScaleController : MonoBehaviour
 
 	[Header("timeScale Values for models")]
 	[SerializeField] private float MafuLegenda = 0.01f;
-	[SerializeField] private float ApexFunk = 0.03f;
-	[SerializeField] private float PampyBam = 0.05f;
-	[SerializeField] private float EnterYou = 0.07f;
+	[SerializeField] private float ApexFunk = 0.015f;
+	[SerializeField] private float PampyBam = 0.02f;
+	[SerializeField] private float EnterYou = 0.025f;
+	[SerializeField] private float SmellySam = 0.03f;
 
-	[SerializeField] private float SmellySam = 0.14f;
 
 
 	private string _sceneName;
