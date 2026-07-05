@@ -1,6 +1,12 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 05.07.2026
+* 
+* Today I'm going to set up all 6 game scenes for each model.
+* 
+* 
+* 
 * 04.07.2026
 * 
 * I have only 6 days to make working build for steam.
