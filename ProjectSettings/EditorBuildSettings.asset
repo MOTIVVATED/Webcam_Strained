@@ -20,18 +20,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/GameScenes/SmellySam.unity
     guid: c08376df1546cda47a27998f5b0858c8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScenes/MafuLegenda.unity
     guid: 2948e4d62bc22314685f41fd197dfdb9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScenes/ApexFunk.unity
     guid: bc38a8f1e0ba85d4cb2577be068b4fc8
-  - enabled: 0
-    path: Assets/Scenes/GameScenes/EnterYou.unity
-    guid: 5f8592834734060489db013949ec6814
   - enabled: 1
     path: Assets/Scenes/GameScenes/PampyBam.unity
     guid: a8860ec40b1399b43a39a8ca5b92d858
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/EnterYou.unity
+    guid: 0b553e486f62ac04a817ce071e7bf7a3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

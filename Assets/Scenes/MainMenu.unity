@@ -154,8 +154,8 @@ RectTransform:
   - {fileID: 1685392631}
   - {fileID: 1488414105}
   - {fileID: 2081990747}
-  - {fileID: 1414337755}
   - {fileID: 657479289}
+  - {fileID: 1414337755}
   - {fileID: 759041653}
   m_Father: {fileID: 588128138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13511,7 +13511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bb62cfc20df5d4689f62a73f890ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  fallbackGameDuration: 30
+  fallbackGameDuration: 900
   minGameDuration: 10
   musicPlaylist: {fileID: 949503320}
 --- !u!4 &1918025094
@@ -13542,11 +13542,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeScaleController
   _timeScaleMin: 1
-  _timeScaleMax: 3
+  _timeScaleMax: 2
   MafuLegenda: 0
-  SmellySam: 0.14
   ApexFunk: 0.1
+  PampyBam: 0.1
   EnterYou: 0.1
+  SmellySam: 0.14
 --- !u!1 &1918556229
 GameObject:
   m_ObjectHideFlags: 0
