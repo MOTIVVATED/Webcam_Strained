@@ -10,6 +10,7 @@
 * I set up #3 PampyBam scene.
 * I set up #4 EnterYou scene.
 * I made #5 SmellySam scene.
+* I made #6 MadiMeows scene.
 * 
 * 04.07.2026
 * 

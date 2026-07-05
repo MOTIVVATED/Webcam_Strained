@@ -13,7 +13,7 @@ public class TimeScaleController : MonoBehaviour
 	private float _timeScaleIncrement = 0;
 
 	[SerializeField] private float _timeScaleMin = 1f;
-	[SerializeField] private float _timeScaleMax = 3f;
+	[SerializeField] private float _timeScaleMax = 1.5f;
 
 	[Header("timeScale Values for models")]
 	[SerializeField] private float MafuLegenda = 0.01f;
@@ -21,6 +21,7 @@ public class TimeScaleController : MonoBehaviour
 	[SerializeField] private float PampyBam = 0.02f;
 	[SerializeField] private float EnterYou = 0.025f;
 	[SerializeField] private float SmellySam = 0.03f;
+	[SerializeField] private float MadiMeows = 0.035f;
 
 
 
@@ -43,6 +44,7 @@ public class TimeScaleController : MonoBehaviour
 			case "PampyBam": _timeScaleIncrement = PampyBam; break;
 			case "EnterYou": _timeScaleIncrement = EnterYou; break;
 			case "SmellySam": _timeScaleIncrement = SmellySam; break;
+			case "MadiMeows": _timeScaleIncrement = MadiMeows; break;
 
 			default: _timeScaleIncrement = 0; break;
 		}

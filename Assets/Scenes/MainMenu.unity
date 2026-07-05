@@ -13542,12 +13542,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeScaleController
   _timeScaleMin: 1
-  _timeScaleMax: 2
+  _timeScaleMax: 1.5
   MafuLegenda: 0
   ApexFunk: 0.1
   PampyBam: 0.1
   EnterYou: 0.1
   SmellySam: 0.14
+  MadiMeows: 0.035
 --- !u!1 &1918556229
 GameObject:
   m_ObjectHideFlags: 0

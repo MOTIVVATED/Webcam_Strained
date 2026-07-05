@@ -15,12 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Game.unity
     guid: dc40030cca286ac428e1abbe7e45acc3
   - enabled: 0
-    path: Assets/Scenes/GameScenes/MadiMeows.unity
-    guid: fb062d2926041d8488d83fae9630ef27
-  - enabled: 0
-    path: Assets/Scenes/GameScenes/SmellySam.unity
-    guid: c08376df1546cda47a27998f5b0858c8
-  - enabled: 0
     path: Assets/Scenes/GameScenes/MafuLegenda.unity
     guid: 2948e4d62bc22314685f41fd197dfdb9
   - enabled: 0
@@ -32,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScenes/EnterYou.unity
     guid: 0b553e486f62ac04a817ce071e7bf7a3
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/SmellySam.unity
+    guid: 554275e7216d4454d8f1344cab4bfa7c
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/MadiMeows.unity
+    guid: 151eb5cd05fdf5d4fa9ec0fb6c31567e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
