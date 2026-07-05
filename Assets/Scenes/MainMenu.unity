@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 12008732}
   - component: {fileID: 12008731}
   - component: {fileID: 12008733}
+  - component: {fileID: 12008734}
   m_Layer: 5
   m_Name: ModelSelectionPanel
   m_TagString: Untagged
@@ -216,6 +217,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ModelSelectionPanelUI
   panelRoot: {fileID: 12008729}
   levelingPanel: {fileID: 1257701890}
+--- !u!114 &12008734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12008729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4deda5e5b645a29428c6411703109e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnlocksUI
+  MafuLock: {fileID: 1918556229}
+  ApexLock: {fileID: 1360447538}
+  PampyLock: {fileID: 1901584982}
+  EnterLock: {fileID: 1535706962}
+  SmellyLock: {fileID: 1301854835}
+  MadyLock: {fileID: 639625490}
 --- !u!1 &18554693
 GameObject:
   m_ObjectHideFlags: 0
