@@ -14,12 +14,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: dc40030cca286ac428e1abbe7e45acc3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameScenes/MafuLegenda.unity
-    guid: 2948e4d62bc22314685f41fd197dfdb9
-  - enabled: 0
+    guid: 4c9da688e7ef86a49a29f605731e5552
+  - enabled: 1
     path: Assets/Scenes/GameScenes/ApexFunk.unity
-    guid: bc38a8f1e0ba85d4cb2577be068b4fc8
+    guid: 9d3d23ab6ed33f04d813d7be01375cdd
   - enabled: 1
     path: Assets/Scenes/GameScenes/PampyBam.unity
     guid: a8860ec40b1399b43a39a8ca5b92d858

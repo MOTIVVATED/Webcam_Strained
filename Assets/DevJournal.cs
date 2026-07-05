@@ -11,6 +11,8 @@
 * I set up #4 EnterYou scene.
 * I made #5 SmellySam scene.
 * I made #6 MadiMeows scene.
+* I made #1 MafuLegenda scene.
+* I made #2 ApexFunk scene.
 * 
 * 04.07.2026
 * 
