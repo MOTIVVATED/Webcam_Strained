@@ -4,6 +4,8 @@
 * 06.07.2026
 * Whole day I was working in steamworks and steamworks.net. I made a working build for Steam.
 * I added game name text in mane menue.
+* I made a store page for my game in Steamworks, and now I'm waiting for approval of it.
+* I'm still not sure if I did everything right about build, I contacted Steam support.
 * 
 * 
 * 05.07.2026
