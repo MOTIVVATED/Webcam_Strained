@@ -1,6 +1,11 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 06.07.2026
+* Whole day I was working in steamworks and steamworks.net. I made a working build for Steam.
+* I added game name text in mane menue.
+* 
+* 
 * 05.07.2026
 * 
 * Today I'm going to set up all 6 game scenes for each model.

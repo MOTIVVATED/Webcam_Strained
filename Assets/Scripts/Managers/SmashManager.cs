@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
+// using static UnityEditor.PlayerSettings;
 public class SmashManager : MonoBehaviour
 {
   public static SmashManager Instance { get; private set; }
