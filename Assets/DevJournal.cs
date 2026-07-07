@@ -1,6 +1,14 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 07.07.2026
+* 
+* I did everything needed to submit the game and the soundtrack for verification in Steam.
+* Now I can have some rest for a few days. Cuz I feel tired and exhausted.
+* Then I need to add some features like: achievements, Steam cloud saves, leaderboards
+* and some balance fixes.
+* 
+* 
 * 06.07.2026
 * Whole day I was working in steamworks and steamworks.net. I made a working build for Steam.
 * I added game name text in mane menue.
