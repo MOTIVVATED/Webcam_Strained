@@ -1,6 +1,20 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 16.07.2026
+* 
+* The third itteration of steam page is waiting for approval.
+* The game build is approved and ready to be released.
+* Sicnse the release date hast to be moved to early August, I have about two weeks to 
+* finish it.
+*   
+*     The biggest things I have to do is:
+*   -correct player profile management connected to Steam account
+*   -steam achievements
+*   -steam leaderboards
+*   -game balance
+*
+* 
 * 07.07.2026
 * 
 * I did everything needed to submit the game and the soundtrack for verification in Steam.
