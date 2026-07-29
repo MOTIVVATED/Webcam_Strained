@@ -11,11 +11,18 @@ public class PlayerProfileManager : MonoBehaviour
 	private void Awake()
 	{
 		if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+		
 		Instance = this;
+		
 		transform.SetParent(null);
+
 		DontDestroyOnLoad(gameObject);
+
 		_savePath = Path.Combine(Application.persistentDataPath, "player_profile.json");
+		
 		Load();
+
+		Debug.Log(Application.persistentDataPath);
 	}
 
 	public PlayerProfile GetProfile() => _profile;
