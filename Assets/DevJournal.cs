@@ -1,6 +1,12 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 29.07.2026
+* 
+* There is a working build waiting for a release date in Steam.
+* I want to polish it as much as I can in next 4 days. And the game is going to be
+* finished.
+* 
 * 16.07.2026
 * 
 * The third itteration of steam page is waiting for approval.
