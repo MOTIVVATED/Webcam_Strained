@@ -4,6 +4,7 @@
 * 30.07.2026
 * 
 * I'm going to make Stream Achievements today!
+* I made acheavements and tasted it. It works properly.
 * 
 * 
 * 29.07.2026

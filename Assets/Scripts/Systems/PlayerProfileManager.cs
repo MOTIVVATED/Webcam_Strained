@@ -39,11 +39,20 @@ public class PlayerProfileManager : MonoBehaviour
 		_profile.totalScore += score;
 		_profile.money += CalculateMoney(score);
 
+		bool isFirstCompletion = false;
 		if (unlockNext)
+		{
+			isFirstCompletion = TryMarkSceneCompleted(sceneName);
 			TryAdvanceUnlock(sceneName);
+		}
 
 		Save();
 		Debug.Log($"Profile updated: avg={_profile.GetAverageScore()}, rank={_profile.GetRank()}, highestSceneUnlocked={_profile.highestSceneUnlocked}");
+
+		if (unlockNext)
+			GameEvents.LevelCompleted(sceneName, isFirstCompletion);
+
+		GameEvents.ProfileUpdated();
 	}
 
 	public void SpendMoney(int amount)
@@ -155,6 +164,22 @@ public class PlayerProfileManager : MonoBehaviour
 		_profile.enlargeEquipped = equipped;
 		Save();
 		GameEvents.UpgradesChanged();
+	}
+
+	private bool TryMarkSceneCompleted(string sceneName)
+	{
+		int index = GameSceneOrder.IndexOf(sceneName);
+		if (index < 0 || index >= _profile.sceneCompletedOnce.Length)
+		{
+			Debug.LogWarning($"PlayerProfileManager: '{sceneName}' is not in GameSceneOrder.Scenes. Skipping completion tracking.");
+			return false;
+		}
+
+		if (_profile.sceneCompletedOnce[index])
+			return false;
+
+		_profile.sceneCompletedOnce[index] = true;
+		return true;
 	}
 
 	private void TryAdvanceUnlock(string sceneName)

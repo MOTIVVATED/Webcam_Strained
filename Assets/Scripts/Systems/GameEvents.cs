@@ -9,6 +9,8 @@ public static class GameEvents
 	public static event Action<float, float> OnMusicClipSelected;
 	public static event Action OnPowerUpCollected;
 	public static event Action OnUpgradesChanged;
+	public static event Action<string, bool> OnLevelCompleted;
+	public static event Action OnProfileUpdated;
 
 
 	public static void ObjectCollected(FallingObjectType type, Vector3 pos)
@@ -28,4 +30,10 @@ public static class GameEvents
 
 	public static void UpgradesChanged()
 		=> OnUpgradesChanged?.Invoke();
+
+	public static void LevelCompleted(string sceneName, bool isFirstCompletion)
+		=> OnLevelCompleted?.Invoke(sceneName, isFirstCompletion);
+
+	public static void ProfileUpdated()
+		=> OnProfileUpdated?.Invoke();
 }

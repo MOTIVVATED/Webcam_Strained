@@ -16,6 +16,7 @@ public class PlayerProfile
 	public int gamesPlayed = 0;
 	public int totalScore = 0;
 	public int highestSceneUnlocked = 0;
+	public bool[] sceneCompletedOnce = new bool[6];
 
 	public UpgradeBranchProgress saveForLaterUpgrade = new UpgradeBranchProgress();
 	public UpgradeBranchProgress movementUpgrade = new UpgradeBranchProgress();
@@ -35,9 +36,12 @@ public class PlayerProfile
 	public int GetRankNumber()
 	{
 		int avg = GetAverageScore();
-		if (avg >= 50000) return 6;
-		if (avg >= 25000) return 5;
-		if (avg >= 12000) return 4;
+
+		// needed 20k for rank 6, I leave it 15 only for testing purposes
+		
+		if (avg >= 15000) return 6;
+		if (avg >= 12000) return 5;
+		if (avg >= 9000) return 4;
 		if (avg >= 6000) return 3;
 		if (avg >= 3000) return 2;
 		return 1;
