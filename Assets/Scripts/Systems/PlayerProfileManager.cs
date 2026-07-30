@@ -52,9 +52,6 @@ public class PlayerProfileManager : MonoBehaviour
 		Save();
 	}
 
-	// --- Branch upgrades (Save For Later / Movement / Lanes) ---
-	// Rank requirement for a tier is uniform across all branches: tierIndex + 1.
-
 	public bool CanPurchaseTier(UpgradeBranch branch, int tierIndex, int cost)
 	{
 		var progress = _profile.GetBranchProgress(branch);
@@ -103,8 +100,6 @@ public class PlayerProfileManager : MonoBehaviour
 		Save();
 		GameEvents.UpgradesChanged();
 	}
-
-	// --- Independent Ban / Enlarge upgrades ---
 
 	public bool CanPurchaseBan(int cost, int requiredRank)
 	{

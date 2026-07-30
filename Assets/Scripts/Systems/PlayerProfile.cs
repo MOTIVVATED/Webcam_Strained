@@ -4,7 +4,6 @@ using UnityEngine;
 [Serializable]
 public class UpgradeBranchProgress
 {
-	// Tier 0 is the starting tier of every branch: always owned, always available from rank 1.
 	public bool[] ownedTiers = new bool[6] { true, false, false, false, false, false };
 	public int equippedTier = 0;
 }
@@ -67,6 +66,8 @@ public class PlayerProfile
 			Debug.LogWarning($"PlayerProfile: '{sceneName}' is not in GameSceneOrder.Scenes. Treating as locked.");
 			return false;
 		}
+		Debug.Log($"highestSceneUnlocked={highestSceneUnlocked}");
+		Debug.Log($"index of '{sceneName}'={index}");
 		return index <= highestSceneUnlocked;
 	}
 }
