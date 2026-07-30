@@ -1,6 +1,11 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 30.07.2026
+* 
+* I'm going to make Stream Achievements today!
+* 
+* 
 * 29.07.2026
 * 
 * There is a working build waiting for a release date in Steam.
