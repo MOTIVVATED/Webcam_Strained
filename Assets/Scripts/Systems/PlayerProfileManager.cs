@@ -166,6 +166,45 @@ public class PlayerProfileManager : MonoBehaviour
 		GameEvents.UpgradesChanged();
 	}
 
+#if UNITY_EDITOR
+	[ContextMenu("DEBUG: Reset Player Profile To Zero")]
+	private void ResetProfileToZero()
+	{
+		_profile.money = 0;
+		_profile.gamesPlayed = 0;
+		_profile.totalScore = 0;
+		_profile.highestSceneUnlocked = 0;
+		_profile.sceneCompletedOnce = new bool[6];
+		_profile.saveForLaterUpgrade = new UpgradeBranchProgress();
+		_profile.movementUpgrade = new UpgradeBranchProgress();
+		_profile.laneUpgrade = new UpgradeBranchProgress();
+		_profile.banOwned = false;
+		_profile.banEquipped = false;
+		_profile.enlargeOwned = false;
+		_profile.enlargeEquipped = false;
+
+		Save();
+		Debug.Log($"PlayerProfileManager: Profile reset to zero. money=0, gamesPlayed=0, totalScore=0, highestSceneUnlocked=0, rank={_profile.GetRank()}.");
+	}
+
+	[ContextMenu("DEBUG: Max Out Player Profile")]
+	private void MaxOutProfile()
+	{
+		_profile.money = 88000;
+		_profile.gamesPlayed = 10;
+		_profile.totalScore = 1000000;
+		_profile.highestSceneUnlocked = 5;
+		_profile.sceneCompletedOnce = new bool[6] { true, true, true, true, true, true };
+		_profile.banOwned = true;
+		_profile.banEquipped = true;
+		_profile.enlargeOwned = true;
+		_profile.enlargeEquipped = true;
+
+		Save();
+		Debug.Log($"PlayerProfileManager: Profile maxed out. money={_profile.money}, gamesPlayed={_profile.gamesPlayed}, totalScore={_profile.totalScore}, rank={_profile.GetRank()}, highestSceneUnlocked={_profile.highestSceneUnlocked}.");
+	}
+#endif
+
 	private bool TryMarkSceneCompleted(string sceneName)
 	{
 		int index = GameSceneOrder.IndexOf(sceneName);
