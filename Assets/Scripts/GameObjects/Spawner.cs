@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
 	[SerializeField] private LaneUpgradeConfig laneUpgradeConfig;
 
 	[Header("Spawnlimits")]
-	[SerializeField] private float minGlobalSpawnInterval = 0.5f;
+	[SerializeField] private float minGlobalSpawnInterval = 0.1f;
 
 	private Coroutine[] routines;
 

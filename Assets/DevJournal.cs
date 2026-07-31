@@ -1,6 +1,16 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 31.07.2026
+* 
+* I finally replaced ugly icon of myltisale.
+* 
+* 
+* TO DO:
+* 1) balance
+* 2) leaderboards
+* 
+* 
 * 30.07.2026
 * 
 * I'm going to make Stream Achievements today!
