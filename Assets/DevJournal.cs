@@ -4,6 +4,8 @@
 * 01.08.2026
 * I'm going to make steam leaderboards today.
 * 
+* Today I did:
+*   Steam leaderboards are finished!
 * 
 * 31.07.2026
 * 

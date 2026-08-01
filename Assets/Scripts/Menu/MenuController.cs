@@ -6,6 +6,7 @@ public class MenuController : MonoBehaviour
 	[SerializeField] private string gameSceneName = "Game";
 	[SerializeField] private GameObject ModelSelectionPanel;
 	[SerializeField] private LevelingPanelUI levelingPanel;
+	[SerializeField] private LeaderboardsPanelUI leaderboardsPanel;
 
 	public void Start()
 	{
@@ -23,6 +24,10 @@ public class MenuController : MonoBehaviour
 	public void OpenLevelingPanel()
 	{
 		levelingPanel.Open();
+	}
+	public void OpenLeaderboardsPanel()
+	{
+		leaderboardsPanel.Open();
 	}
 	public void Quit()
 	{
