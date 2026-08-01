@@ -1,6 +1,10 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 01.08.2026
+* I'm going to make steam leaderboards today.
+* 
+* 
 * 31.07.2026
 * 
 * I finally replaced ugly icon of myltisale.
