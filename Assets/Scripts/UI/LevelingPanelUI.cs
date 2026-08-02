@@ -62,6 +62,9 @@ public class LevelingPanelUI : MonoBehaviour
 			BuildRankColumn();
 
 		Refresh();
+
+		if (PlayerProfileManager.Instance != null)
+			GuideManager.Instance?.OnLevelingPanelOpened(PlayerProfileManager.Instance.GetProfile().GetRankNumber());
 	}
 
 	public void Close()

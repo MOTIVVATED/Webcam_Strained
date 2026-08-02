@@ -11,6 +11,7 @@ public class MenuController : MonoBehaviour
 	public void Start()
 	{
 		//Time.timeScale = 0.4f;
+		GuideManager.Instance?.ShowGameLaunchGuide();
 	}
 	public void Play()
 	{
@@ -20,6 +21,7 @@ public class MenuController : MonoBehaviour
 	public void SelectModel()
 	{
 		ModelSelectionPanel.SetActive(true);
+		GuideManager.Instance?.OnModelSelectionPanelOpened();
 	}
 	public void OpenLevelingPanel()
 	{

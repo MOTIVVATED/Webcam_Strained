@@ -27,6 +27,11 @@ public class PlayerProfile
 	public bool enlargeOwned = false;
 	public bool enlargeEquipped = false;
 
+	public bool hasSeenGameIntroGuide = false;
+	public bool hasSeenModelSelectionGuide = false;
+	public bool hasSeenLevelingPanelGuide = false;
+	public int highestRankGuideShown = 0;
+
 	public int GetAverageScore()
 	{
 		if (gamesPlayed == 0) return 0;

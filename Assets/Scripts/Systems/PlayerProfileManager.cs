@@ -166,6 +166,30 @@ public class PlayerProfileManager : MonoBehaviour
 		GameEvents.UpgradesChanged();
 	}
 
+	public void SetGameIntroGuideSeen()
+	{
+		_profile.hasSeenGameIntroGuide = true;
+		Save();
+	}
+
+	public void SetModelSelectionGuideSeen()
+	{
+		_profile.hasSeenModelSelectionGuide = true;
+		Save();
+	}
+
+	public void SetLevelingPanelGuideSeen()
+	{
+		_profile.hasSeenLevelingPanelGuide = true;
+		Save();
+	}
+
+	public void SetHighestRankGuideShown(int rank)
+	{
+		_profile.highestRankGuideShown = rank;
+		Save();
+	}
+
 #if UNITY_EDITOR
 	[ContextMenu("DEBUG: Reset Player Profile To Zero")]
 	private void ResetProfileToZero()
@@ -182,6 +206,10 @@ public class PlayerProfileManager : MonoBehaviour
 		_profile.banEquipped = false;
 		_profile.enlargeOwned = false;
 		_profile.enlargeEquipped = false;
+		_profile.hasSeenGameIntroGuide = false;
+		_profile.hasSeenModelSelectionGuide = false;
+		_profile.hasSeenLevelingPanelGuide = false;
+		_profile.highestRankGuideShown = 0;
 
 		Save();
 		Debug.Log($"PlayerProfileManager: Profile reset to zero. money=0, gamesPlayed=0, totalScore=0, highestSceneUnlocked=0, rank={_profile.GetRank()}.");
@@ -202,6 +230,27 @@ public class PlayerProfileManager : MonoBehaviour
 
 		Save();
 		Debug.Log($"PlayerProfileManager: Profile maxed out. money={_profile.money}, gamesPlayed={_profile.gamesPlayed}, totalScore={_profile.totalScore}, rank={_profile.GetRank()}, highestSceneUnlocked={_profile.highestSceneUnlocked}.");
+	}
+
+	[ContextMenu("Guide/Reset Guide Flags Only")]
+	private void ResetGuideFlagsOnly()
+	{
+		_profile.hasSeenGameIntroGuide = false;
+		_profile.hasSeenModelSelectionGuide = false;
+		_profile.hasSeenLevelingPanelGuide = false;
+		_profile.highestRankGuideShown = 0;
+
+		Save();
+		Debug.Log("PlayerProfileManager: Guide flags reset. hasSeenGameIntroGuide=false, hasSeenModelSelectionGuide=false, hasSeenLevelingPanelGuide=false, highestRankGuideShown=0.");
+	}
+
+	[ContextMenu("Guide/Set Highest Rank Guide Shown To 0")]
+	private void DebugForceRankGuideRetrigger()
+	{
+		_profile.highestRankGuideShown = 0;
+
+		Save();
+		Debug.Log("PlayerProfileManager: highestRankGuideShown reset to 0.");
 	}
 #endif
 
