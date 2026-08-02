@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FallingObject
   objectType: 7
   spriteRenderer: {fileID: 0}
-  fallSpeed: 7
+  fallSpeed: 6.2
   destroyY: -5
 --- !u!1 &5052658044747997964
 GameObject:
