@@ -12,8 +12,8 @@ public class Player : MonoBehaviour
 		if (enlargeEquipped)
 		{
 			Vector3 scale = transform.localScale;
-			scale.x *= 2f;
-			scale.y *= 2f;
+			scale.x *= 1.7f;
+			scale.y *= 1.7f;
 			transform.localScale = scale;
 		}
 	}
