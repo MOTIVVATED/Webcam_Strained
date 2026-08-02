@@ -14,6 +14,14 @@ public class TimeScaleController : MonoBehaviour
 	[SerializeField] private float _timeScaleMin = 1f;
 	[SerializeField] private float _timeScaleMax = 1.5f;
 
+	[Header("Max timeScale for models")]
+	[SerializeField] private float MaxMafuLegenda = 1f;
+	[SerializeField] private float MaxApexFunk = 1.1f;
+	[SerializeField] private float MaxPampyBam = 1.2f;
+	[SerializeField] private float MaxEnterYou = 1.3f;
+	[SerializeField] private float MaxSmellySam = 1.4f;
+	[SerializeField] private float MaxMadiMeows = 1.5f;
+
 	[Header("timeScale Values for models")]
 	[SerializeField] private float MafuLegenda = 0.01f;
 	[SerializeField] private float ApexFunk = 0.015f;
@@ -21,8 +29,6 @@ public class TimeScaleController : MonoBehaviour
 	[SerializeField] private float EnterYou = 0.025f;
 	[SerializeField] private float SmellySam = 0.03f;
 	[SerializeField] private float MadiMeows = 0.035f;
-
-
 
 	private string _sceneName;
 
@@ -38,12 +44,12 @@ public class TimeScaleController : MonoBehaviour
 
 		switch (_sceneName)
 		{
-			case "MafuLegenda": _timeScaleIncrement = MafuLegenda; break;
-			case "ApexFunk": _timeScaleIncrement = ApexFunk; break;
-			case "PampyBam": _timeScaleIncrement = PampyBam; break;
-			case "EnterYou": _timeScaleIncrement = EnterYou; break;
-			case "SmellySam": _timeScaleIncrement = SmellySam; break;
-			case "MadiMeows": _timeScaleIncrement = MadiMeows; break;
+			case "MafuLegenda": { _timeScaleIncrement = MafuLegenda; _timeScaleMax = MaxMafuLegenda; } break;
+			case "ApexFunk": { _timeScaleIncrement = ApexFunk; _timeScaleMax = MaxApexFunk; } break;
+			case "PampyBam": { _timeScaleIncrement = PampyBam; _timeScaleMax = MaxPampyBam; } break;
+			case "EnterYou": { _timeScaleIncrement = EnterYou; _timeScaleMax = MaxEnterYou; } break;
+			case "SmellySam": { _timeScaleIncrement = SmellySam; _timeScaleMax = MaxSmellySam; } break;
+			case "MadiMeows": { _timeScaleIncrement = MadiMeows; _timeScaleMax = MaxMadiMeows; } break;
 
 			default: _timeScaleIncrement = 0; break;
 		}
@@ -64,13 +70,6 @@ public class TimeScaleController : MonoBehaviour
 		}
 		Apply();
 	}
-
-	//One thing to be aware of: both TiltManager and ReducerManager
-	//now call SetPenalty independently
-	//They're setting the same value, so whichever calls last wins.
-	//If we want them to stack properly — tilt penalty and reducer penalty
-	//both active at the same time —
-	//TimeScaleController needs two separate penalty slots.
 
 	public void SetPaused(bool paused)
 	{

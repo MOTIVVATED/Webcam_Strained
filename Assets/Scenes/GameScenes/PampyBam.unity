@@ -4974,7 +4974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ViewersView
   viewersText: {fileID: 895137454}
-  viewersPerTimescale: 10
+  viewersPerTimescale: 333
 --- !u!1 &883866359
 GameObject:
   m_ObjectHideFlags: 0

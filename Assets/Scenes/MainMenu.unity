@@ -3926,12 +3926,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394071231}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1354638165}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &394071234
 MonoBehaviour:
@@ -10885,10 +10885,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1918025094}
-  - {fileID: 2075195201}
   - {fileID: 1781377745}
   - {fileID: 18554695}
   - {fileID: 49689878}
+  - {fileID: 2075195201}
+  - {fileID: 394071233}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1360447538
@@ -15082,7 +15083,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimeScaleController
   _timeScaleMin: 1
   _timeScaleMax: 1.5
-  MafuLegenda: 0
+  MaxMafuLegenda: 1.1
+  MaxApexFunk: 1.2
+  MaxPampyBam: 1.3
+  MaxEnterYou: 1.4
+  MaxSmellySam: 1.5
+  MaxMadiMeows: 1.6
+  MafuLegenda: 0.04
   ApexFunk: 0.06
   PampyBam: 0.08
   EnterYou: 0.1
@@ -16767,4 +16774,3 @@ SceneRoots:
   - {fileID: 949503322}
   - {fileID: 1354638165}
   - {fileID: 588128138}
-  - {fileID: 394071233}
