@@ -6704,7 +6704,7 @@ MonoBehaviour:
   - prefab: {fileID: 5304136060711314168, guid: 32513998c28c795438935908415d1c74, type: 3}
     delayMin: 10
     delayMax: 20
-    enabled: 1
+    enabled: 0
   - prefab: {fileID: 5304136060711314168, guid: d48752722b5397d488f351087c1c654c, type: 3}
     delayMin: 5
     delayMax: 10
@@ -11448,7 +11448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicPlaylist
   parts:
-  - {fileID: 8300000, guid: b55d38174640f5c419c06b14cab7e467, type: 3}
+  - {fileID: 8300000, guid: 351752e02e7484647a76f4ae6574bb1e, type: 3}
   source: {fileID: 2051319536}
   dontRepeatSameTwice: 1
 --- !u!82 &2051319536
