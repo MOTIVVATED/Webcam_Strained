@@ -8,6 +8,7 @@ public class LevelingPanelUI : MonoBehaviour
 	[SerializeField] private GameObject panelRoot;
 	[SerializeField] private TMP_Text moneyText;
 	[SerializeField] private TMP_Text rankText;
+	[SerializeField] private GameObject infoButton;
 
 	[Header("Branch Columns")]
 	[SerializeField] private Transform saveForLaterColumnContent;
@@ -62,14 +63,29 @@ public class LevelingPanelUI : MonoBehaviour
 			BuildRankColumn();
 
 		Refresh();
-
-		if (PlayerProfileManager.Instance != null)
-			GuideManager.Instance?.OnLevelingPanelOpened(PlayerProfileManager.Instance.GetProfile().GetRankNumber());
 	}
 
 	public void Close()
 	{
 		panelRoot.SetActive(false);
+	}
+
+	public void OnInfoButtonClicked()
+	{
+		infoButton.SetActive(false);
+
+		if (GuideManager.Instance == null)
+		{
+			OnGuideFinished();
+			return;
+		}
+
+		GuideManager.Instance.ShowLevelingGuide(OnGuideFinished);
+	}
+
+	private void OnGuideFinished()
+	{
+		infoButton.SetActive(true);
 	}
 
 	private void Refresh()

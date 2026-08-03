@@ -22,6 +22,7 @@ public class GuideCharacterUI : MonoBehaviour
 	private List<string> currentLines;
 	private int currentIndex;
 	private Coroutine fadeRoutine;
+	private Action currentOnComplete;
 
 	private void Awake()
 	{
@@ -35,22 +36,19 @@ public class GuideCharacterUI : MonoBehaviour
 			nextButton.onClick.RemoveListener(HandleNextClicked);
 	}
 
-	public void PlaySequence(List<string> lines)
+	public void PlaySequence(List<string> lines, Action onComplete = null)
 	{
 		if (lines == null || lines.Count == 0)
 		{
+			onComplete?.Invoke();
 			OnSequenceCompleted?.Invoke();
 			return;
 		}
 
 		currentLines = lines;
 		currentIndex = 0;
+		currentOnComplete = onComplete;
 		StartSequence();
-	}
-
-	public void PlaySingleLine(string line)
-	{
-		PlaySequence(new List<string> { line });
 	}
 
 	private void StartSequence()
@@ -90,6 +88,11 @@ public class GuideCharacterUI : MonoBehaviour
 		fadeRoutine = StartCoroutine(Fade(1f, 0f, () =>
 		{
 			panelRoot.SetActive(false);
+
+			var onComplete = currentOnComplete;
+			currentOnComplete = null;
+			onComplete?.Invoke();
+
 			OnSequenceCompleted?.Invoke();
 		}));
 	}

@@ -6706,8 +6706,8 @@ MonoBehaviour:
     delayMax: 20
     enabled: 0
   - prefab: {fileID: 5304136060711314168, guid: d48752722b5397d488f351087c1c654c, type: 3}
-    delayMin: 1
-    delayMax: 2
+    delayMin: 5
+    delayMax: 6
     enabled: 1
   - prefab: {fileID: 5304136060711314168, guid: 26418b501d3690b429bcd921eb076bf7, type: 3}
     delayMin: 5

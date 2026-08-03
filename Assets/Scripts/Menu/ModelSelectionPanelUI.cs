@@ -5,6 +5,7 @@ public class ModelSelectionPanelUI : MonoBehaviour
 {
 	[SerializeField] private GameObject panelRoot;
 	[SerializeField] private LevelingPanelUI levelingPanel;
+	[SerializeField] private GameObject infoButton;
 
 	//[Header ("Buttons")]
 	//[SerializeField] private GameObject[] buttons;
@@ -35,5 +36,23 @@ public class ModelSelectionPanelUI : MonoBehaviour
 	public void OpenLevelingPanel()
 	{
 		levelingPanel.Open();
+	}
+
+	public void OnInfoButtonClicked()
+	{
+		infoButton.SetActive(false);
+
+		if (GuideManager.Instance == null)
+		{
+			OnGuideFinished();
+			return;
+		}
+
+		GuideManager.Instance.ShowModelSelectionGuide(OnGuideFinished);
+	}
+
+	private void OnGuideFinished()
+	{
+		infoButton.SetActive(true);
 	}
 }
