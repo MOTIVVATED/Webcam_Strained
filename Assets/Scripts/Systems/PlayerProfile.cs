@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 [Serializable]
@@ -70,8 +70,8 @@ public class PlayerProfile
 			Debug.LogWarning($"PlayerProfile: '{sceneName}' is not in GameSceneOrder.Scenes. Treating as locked.");
 			return false;
 		}
-		Debug.Log($"highestSceneUnlocked={highestSceneUnlocked}");
+		Debug.Log($"laneUpgrade.equippedTier={laneUpgrade.equippedTier}");
 		Debug.Log($"index of '{sceneName}'={index}");
-		return index <= highestSceneUnlocked;
+		return index <= laneUpgrade.equippedTier;
 	}
 }

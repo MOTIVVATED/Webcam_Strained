@@ -15,10 +15,10 @@ public class LaneUpgradeConfig : ScriptableObject
 	public Tier[] tiers = new Tier[6]
 	{
 		new Tier { label = "2", activeLaneCount = 2, cost = 0 },
-		new Tier { label = "3", activeLaneCount = 3, cost = 100 },
-		new Tier { label = "4", activeLaneCount = 4, cost = 200 },
-		new Tier { label = "5", activeLaneCount = 5, cost = 350 },
-		new Tier { label = "6", activeLaneCount = 6, cost = 500 },
-		new Tier { label = "7", activeLaneCount = 7, cost = 800 },
+		new Tier { label = "3", activeLaneCount = 3, cost = 25 },
+		new Tier { label = "4", activeLaneCount = 4, cost = 50 },
+		new Tier { label = "5", activeLaneCount = 5, cost = 100 },
+		new Tier { label = "6", activeLaneCount = 6, cost = 200 },
+		new Tier { label = "7", activeLaneCount = 7, cost = 500 },
 	};
 }

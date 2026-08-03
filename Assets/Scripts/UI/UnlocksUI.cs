@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class UnlocksUI : MonoBehaviour
 {
@@ -14,7 +14,28 @@ public class UnlocksUI : MonoBehaviour
 	void Start()
   {
     if (Instance != null && Instance != this) { Destroy(gameObject); return; } Instance = this;
-    
+
+    RefreshLocks();
+	}
+
+  private void OnEnable()
+  {
+    GameEvents.OnUpgradesChanged += HandleUpgradesChanged;
+    RefreshLocks();
+  }
+
+  private void OnDisable()
+  {
+    GameEvents.OnUpgradesChanged -= HandleUpgradesChanged;
+  }
+
+  private void HandleUpgradesChanged()
+  {
+    RefreshLocks();
+  }
+
+  private void RefreshLocks()
+  {
     if (PlayerProfileManager.Instance == null)
     {
       Debug.LogWarning("UnlocksUI: PlayerProfileManager instance not found.");

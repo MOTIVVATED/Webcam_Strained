@@ -2696,7 +2696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &455037350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6710,9 +6710,9 @@ MonoBehaviour:
     delayMax: 6
     enabled: 1
   - prefab: {fileID: 5304136060711314168, guid: 26418b501d3690b429bcd921eb076bf7, type: 3}
-    delayMin: 5
-    delayMax: 6
-    enabled: 0
+    delayMin: 15
+    delayMax: 20
+    enabled: 1
   spawnPoints:
   - {fileID: 520031876}
   - {fileID: 1132308318}
@@ -7423,7 +7423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1311938563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9269,7 +9269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1671741390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11161,7 +11161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1997109682
 MonoBehaviour:
   m_ObjectHideFlags: 0
