@@ -7,12 +7,6 @@ public class ModelSelectionPanelUI : MonoBehaviour
 	[SerializeField] private LevelingPanelUI levelingPanel;
 	[SerializeField] private GameObject infoButton;
 
-	//[Header ("Buttons")]
-	//[SerializeField] private GameObject[] buttons;
-
-	//[Header ("Scene Name")]
-	//[SerializeField] private string[] gameScenes;
-
 	public void Close()
 	{
 		panelRoot.SetActive(false);
