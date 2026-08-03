@@ -16,10 +16,10 @@ public class SaveForLaterUpgradeConfig : ScriptableObject
 	public Tier[] tiers = new Tier[6]
 	{
 		new Tier { label = "0", maxCharges = 0, cost = 0 },
-		new Tier { label = "5", maxCharges = 5, cost = 100 },
-		new Tier { label = "10", maxCharges = 10, cost = 200 },
-		new Tier { label = "15", maxCharges = 15, cost = 350 },
-		new Tier { label = "20", maxCharges = 20, cost = 500 },
-		new Tier { label = "Unlimited", maxCharges = -1, cost = 800 },
+		new Tier { label = "5", maxCharges = 5, cost = 25 },
+		new Tier { label = "10", maxCharges = 10, cost = 100 },
+		new Tier { label = "15", maxCharges = 15, cost = 150 },
+		new Tier { label = "20", maxCharges = 20, cost = 200 },
+		new Tier { label = "Unlimited", maxCharges = -1, cost = 250 },
 	};
 }

@@ -39,9 +39,9 @@ public class PlayerProfile
 
 		// needed 20k for rank 6, I leave it 15 only for testing purposes
 		
-		if (avg >= 24000) return 6;
-		if (avg >= 18000) return 5;
-		if (avg >= 12000) return 4;
+		if (avg >= 15000) return 6;
+		if (avg >= 12000) return 5;
+		if (avg >= 9000) return 4;
 		if (avg >= 6000) return 3;
 		if (avg >= 3000) return 2;
 		return 1;
