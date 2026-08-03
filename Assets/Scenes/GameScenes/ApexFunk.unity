@@ -6686,20 +6686,20 @@ MonoBehaviour:
     delayMax: 20
     enabled: 1
   - prefab: {fileID: 3247108239030646150, guid: 571b84797a10e744e9c398b323209e66, type: 3}
-    delayMin: 20
-    delayMax: 40
+    delayMin: 40
+    delayMax: 70
     enabled: 1
   - prefab: {fileID: 3247108239030646150, guid: 0bda84e6eb200dc4f9f749e502d51015, type: 3}
-    delayMin: 40
-    delayMax: 80
+    delayMin: 70
+    delayMax: 130
     enabled: 1
   - prefab: {fileID: 3247108239030646150, guid: bf71477936f0fdd47b86cc5bb6cde0e4, type: 3}
-    delayMin: 40
-    delayMax: 80
+    delayMin: 70
+    delayMax: 130
     enabled: 1
   - prefab: {fileID: 3247108239030646150, guid: 66f5fb3862f4a8947895caa542aba599, type: 3}
-    delayMin: 50
-    delayMax: 100
+    delayMin: 85
+    delayMax: 160
     enabled: 1
   - prefab: {fileID: 5304136060711314168, guid: 32513998c28c795438935908415d1c74, type: 3}
     delayMin: 10

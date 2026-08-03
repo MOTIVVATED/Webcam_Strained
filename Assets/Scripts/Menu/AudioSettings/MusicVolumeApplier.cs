@@ -6,6 +6,7 @@ public class MusicVolumeApplier : MonoBehaviour
 {
 	private AudioSource audioSource;
 	private bool subscribed;
+	private SettingsManager subscribedManager;
 
 	private void Awake()
 	{
@@ -23,16 +24,23 @@ public class MusicVolumeApplier : MonoBehaviour
 
 		if (subscribed) yield break;
 
-		SettingsManager.Instance.OnMusicChanged += ApplyFromSettings;
+		subscribedManager = SettingsManager.Instance;
+		subscribedManager.OnMusicChanged += ApplyFromSettings;
 		subscribed = true;
 	}
 	private void OnDisable()
 	{
-	if (SettingsManager.Instance != null)
-		SettingsManager.Instance.OnMusicChanged -= ApplyFromSettings;
+	if (subscribedManager != null)
+		subscribedManager.OnMusicChanged -= ApplyFromSettings;
 	}
 	private void ApplyFromSettings()
 	{
+		if (audioSource == null)
+		{
+			if (subscribedManager != null)
+				subscribedManager.OnMusicChanged -= ApplyFromSettings;
+			return;
+		}
 		audioSource.volume = SettingsManager.Instance.musicVolume;
 	}
 	private void ApplyFromPrefs()
