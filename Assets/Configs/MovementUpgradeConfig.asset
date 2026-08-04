@@ -20,20 +20,20 @@ MonoBehaviour:
   - label: Speed 10
     useLegacyLaneStep: 0
     speed: 10
-    cost: 100
+    cost: 25
   - label: Speed 11
     useLegacyLaneStep: 0
     speed: 11
-    cost: 200
+    cost: 100
   - label: Speed 12
     useLegacyLaneStep: 0
     speed: 12
-    cost: 350
+    cost: 150
   - label: Speed 13
     useLegacyLaneStep: 0
     speed: 13
-    cost: 500
+    cost: 200
   - label: Speed 14
     useLegacyLaneStep: 0
     speed: 14
-    cost: 800
+    cost: 250

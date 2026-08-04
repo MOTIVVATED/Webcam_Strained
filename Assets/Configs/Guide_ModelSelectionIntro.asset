@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: Guide_ModelSelectionIntro
   m_EditorClassIdentifier: Assembly-CSharp::GuideDialogueSet
   lines:
-  - Here are our wonderful ladies!
-  - Each of them has her own musical taste. Lord, forgive us...
-  - The more sites you unlock, the better the lady available to you.
-  - We all started with a training one, to survive the first day and figure out how
-    things work.
   - You must always improve, or leave!
+  - To move further - you must unlock more websites.
+  - Use LEVELING panel in Main Menu.
+  - It doesn't matter win or lose, the outcome is recorded.

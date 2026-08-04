@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Guide_LevelingPanelIntro
   m_EditorClassIdentifier: Assembly-CSharp::GuideDialogueSet
   lines:
-  - RANK! The more you earn, the higher your rank.
-  - More WEBSITES, better model, more money!
-  - MOVEMENT SPEED! Use ARROW KEYS to move from side to side. Don't have time to
-    be everywhere? Switch between sites faster.
-  - Without MULTI-SALE, you won't get far! When you learn them, use ENTER!
-  - Use BAN to get rid of annoying plebs (DOWN ARROW KEY).
-  - If you succeed in everything, but feel that something is missing, just try ENLARGE.
+  - CURRENT RANK... Depends on your average score, increases automatically and unlocks
+    upgrades.
+  - WEBSITES NUMBER... Purchase to unlock new ladies.
+  - MOVEMENT SPEED... Purchase to move between sites faster and easier.
+  - MULTI SALE MAX... Purchase to collect. Use ENTER to catch everything!
+  - BAN... Purchase to use DOWN ARROW to ban webcams on approach.
+  - ENLARGE... Purchase to survive when you master everything else.

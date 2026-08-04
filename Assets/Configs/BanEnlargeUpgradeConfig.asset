@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BanEnlargeUpgradeConfig
   m_EditorClassIdentifier: Assembly-CSharp::BanEnlargeUpgradeConfig
   banRank: 2
-  banCost: 150
+  banCost: 25
   enlargeRank: 4
-  enlargeCost: 400
+  enlargeCost: 200

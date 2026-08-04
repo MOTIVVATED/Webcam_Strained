@@ -1,8 +1,10 @@
 /*
 * == DEV JOURNAL ==
 * 
-* 02.08.2026
+* 04.08.2026
 * 
+* The game is released in Steam.
+* I'm working on a first day patch. I changed guide lines.
 * 
 * 
 * 01.08.2026

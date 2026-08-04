@@ -18,16 +18,16 @@ MonoBehaviour:
     cost: 0
   - label: 5
     maxCharges: 5
-    cost: 100
+    cost: 25
   - label: 10
     maxCharges: 10
-    cost: 200
+    cost: 100
   - label: 15
     maxCharges: 15
-    cost: 350
+    cost: 150
   - label: 20
     maxCharges: 20
-    cost: 500
+    cost: 200
   - label: Unlimited
     maxCharges: -1
-    cost: 800
+    cost: 250

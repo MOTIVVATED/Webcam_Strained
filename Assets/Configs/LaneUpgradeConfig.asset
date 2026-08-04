@@ -18,16 +18,16 @@ MonoBehaviour:
     cost: 0
   - label: 3
     activeLaneCount: 3
-    cost: 100
+    cost: 25
   - label: 4
     activeLaneCount: 4
-    cost: 200
+    cost: 25
   - label: 5
     activeLaneCount: 5
-    cost: 350
+    cost: 25
   - label: 6
     activeLaneCount: 6
-    cost: 500
+    cost: 25
   - label: 7
     activeLaneCount: 7
-    cost: 800
+    cost: 25
