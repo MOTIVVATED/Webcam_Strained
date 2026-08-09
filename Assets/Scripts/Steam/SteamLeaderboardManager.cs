@@ -131,7 +131,7 @@ public class SteamLeaderboardManager : MonoBehaviour
 		if (_uploadScoreCallResult == null)
 			_uploadScoreCallResult = CallResult<LeaderboardScoreUploaded_t>.Create(OnUploadScore);
 
-		SteamAPICall_t handle = SteamUserStats.UploadLeaderboardScore(_leaderboard, ELeaderboardUploadScoreMethod.k_ELeaderboardUploadScoreMethodKeepBest, avg, null, 0);
+		SteamAPICall_t handle = SteamUserStats.UploadLeaderboardScore(_leaderboard, ELeaderboardUploadScoreMethod.k_ELeaderboardUploadScoreMethodForceUpdate, avg, null, 0);
 		_uploadScoreCallResult.Set(handle);
 	}
 
