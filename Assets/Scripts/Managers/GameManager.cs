@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
 			Debug.LogWarning("GameManager: No GameResultsManager instance found, result not saved.");
 
 		if (PlayerProfileManager.Instance != null)
-			PlayerProfileManager.Instance.RecordGame(score, sceneName, unlockNext);
+			PlayerProfileManager.Instance.RecordGame(score, sceneName, unlockNext, outcome);
 		else
 			Debug.LogWarning("GameManager: No PlayerProfileManager instance found, profile not updated.");
 	}

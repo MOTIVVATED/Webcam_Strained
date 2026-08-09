@@ -8,6 +8,7 @@ public class LevelingPanelUI : MonoBehaviour
 	[SerializeField] private GameObject panelRoot;
 	[SerializeField] private TMP_Text moneyText;
 	[SerializeField] private TMP_Text rankText;
+	[SerializeField] private TMP_Text averageScoreText;
 	[SerializeField] private GameObject infoButton;
 
 	[Header("Branch Columns")]
@@ -100,6 +101,7 @@ public class LevelingPanelUI : MonoBehaviour
 
 		if (moneyText != null) moneyText.text = $"Cash: {profile.money}$";
 		if (rankText != null) rankText.text = $"Rank {profile.GetRankNumber()}";
+		if (averageScoreText != null) averageScoreText.text = $"Avg Score: {profile.GetAverageScore()}";
 
 		RefreshSaveForLaterColumn(profile);
 		RefreshMovementColumn(profile);

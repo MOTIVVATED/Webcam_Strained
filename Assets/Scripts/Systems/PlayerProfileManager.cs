@@ -33,10 +33,14 @@ public class PlayerProfileManager : MonoBehaviour
 		Save();
 	}
 
-	public void RecordGame(int score, string sceneName, bool unlockNext)
+	public void RecordGame(int score, string sceneName, bool unlockNext, GameOutcome outcome)
 	{
-		_profile.gamesPlayed++;
-		_profile.totalScore += score;
+		bool isWin = outcome == GameOutcome.Win;
+		if (isWin)
+		{
+			_profile.gamesPlayed++;
+			_profile.totalScore += score;
+		}
 		_profile.money += CalculateMoney(score);
 
 		bool isFirstCompletion = false;

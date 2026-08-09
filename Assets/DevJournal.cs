@@ -1,6 +1,9 @@
 /*
 * == DEV JOURNAL ==
 * 
+* 07.08.2026
+* 
+* 
 * 04.08.2026
 * 
 * The game is released in Steam.
